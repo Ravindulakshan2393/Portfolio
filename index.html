@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadeepa Lakshan | Software Engineering & Full-Stack Developer</title>
+    <meta name="description" content="Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ UoM (CGPA: 3.12). Software Engineering Intern & Full-Stack Web Developer.">
+    
+    <!-- Favicon Symbol -->
+    <link rel="icon" type="image/png" href="assets/symbol.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome & DevIcons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Ambient Background Glow Effects -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <img src="assets/symbol.png" alt="Emblem" class="brand-symbol-img">
+                <span class="brand-name">Sadeepa Lakshan</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active" id="nav-link-hero">Home</a>
+                <a href="#about" class="nav-link" id="nav-link-about">About</a>
+                <a href="#skills" class="nav-link" id="nav-link-skills">Skills</a>
+                <a href="#projects" class="nav-link" id="nav-link-projects">Projects</a>
+                <a href="#awards" class="nav-link" id="nav-link-awards">Awards</a>
+                <a href="#github-stats" class="nav-link" id="nav-link-stats">Stats</a>
+                <a href="#contact" class="nav-link" id="nav-link-contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Seeking Software Engineering / Software Development Internships</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Hi, I'm <span class="text-gradient">Sadeepa Lakshan</span>
+                </h1>
+
+                <h2 class="hero-subtitle">
+                    <span id="typing-text"></span><span class="cursor">|</span>
+                </h2>
+
+                <p class="hero-description">
+                    BSc (Hons) IT & Management Undergraduate at <strong class="highlight-text">University of Moratuwa</strong> (CGPA: 3.12 | Grad 2028). Building practical software solutions in full-stack web engineering, database architecture, and IoT systems.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary btn-glow">
+                        <i class="fa-solid fa-rocket"></i> View My Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="tel:+94714252175" class="btn btn-icon" title="Call Me: +94 71 425 2175">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sadeepa-lakshan-587690308" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">.12</span>
+                        <span class="stat-label">UoM CGPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="2028">0</span>
+                        <span class="stat-label">Exp Graduation</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-text-badge">2nd Place</span>
+                        <span class="stat-label">IEEE Mini-Ideathon</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="avatar-card">
+                    <div class="avatar-ring">
+                        <div class="avatar-inner">
+                            <img src="assets/symbol.png" alt="Sadeepa Lakshan Emblem" class="avatar-img-symbol">
+                        </div>
+                    </div>
+                    
+                    <div class="floating-badge badge-top-right">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React Developer</span>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-left">
+                        <i class="devicon-express-original colored"></i>
+                        <span>Node & Supabase</span>
+                    </div>
+
+                    <div class="floating-badge badge-middle-right">
+                        <i class="devicon-arduino-plain colored"></i>
+                        <span>Arduino / ESP8266</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// DISCOVER MY PROFILE</span>
+                <h2 class="section-title">About <span class="text-gradient">Sadeepa Lakshan</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <!-- YAML Terminal Window -->
+                <div class="terminal-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">sadeepa-cv.yaml</span>
+                    </div>
+                    <div class="terminal-body">
+<pre><code class="yaml-code"><span class="yaml-key">name</span>        : <span class="yaml-str">"Sadeepa Lakshan"</span>
+<span class="yaml-key">degree</span>      : <span class="yaml-str">"BSc. (Hons) IT & Management"</span>
+<span class="yaml-key">university</span>  : <span class="yaml-str">"University of Moratuwa (UoM)"</span>
+<span class="yaml-key">cgpa</span>        : <span class="yaml-val">3.12</span>
+<span class="yaml-key">graduation</span>  : <span class="yaml-str">"Expected 2028"</span>
+<span class="yaml-key">interests</span>   : 
+  - <span class="yaml-val">Software Engineering & Development</span>
+  - <span class="yaml-val">Full-Stack Web (React, Node, Supabase)</span>
+  - <span class="yaml-val">Embedded IoT & Microcontrollers</span>
+<span class="yaml-key">status</span>      : <span class="yaml-str">"Seeking Software Engineering Internship"</span>
+<span class="yaml-key">languages</span>   : <span class="yaml-str">"Sinhala (Native), English (Proficient)"</span></code></pre>
+                    </div>
+                </div>
+
+                <!-- Bio Text & Key Highlights -->
+                <div class="about-text-content">
+                    <h3>Motivated IT & Management Undergraduate passionate about Software Engineering.</h3>
+                    <p>
+                        I am an Information Technology and Management undergraduate at the <strong>University of Moratuwa</strong> seeking an internship opportunity in Software Engineering or Software Development. I focus on building real-world, practical software systems and gaining hands-on industry experience.
+                    </p>
+                    <p>
+                        My expertise spans full-stack web applications using <strong>React, Node.js, Express.js, Supabase, PostgreSQL, MySQL, and MongoDB</strong>, as well as hardware integration with <strong>Arduino Mega and ESP8266</strong> microcontrollers.
+                    </p>
+
+                    <div class="quote-box">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p class="quote-text">"Interested in developing practical software solutions and gaining industry experience through real-world projects."</p>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education & CGPA</h4>
+                                <p>University of Moratuwa (3.12 CGPA)</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-award"></i>
+                            <div>
+                                <h4>Leadership Role</h4>
+                                <p>Level 3 IT Faculty Batch Representative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Focus Areas Grid -->
+            <div class="focus-title">
+                <h3>Core Capabilities & Focus Areas</h3>
+            </div>
+
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4>Software Engineering</h4>
+                    <p>Writing clean, maintainable, and structured application logic in JavaScript and C programming.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h4>Full-Stack Web Development</h4>
+                    <p>Developing responsive supplier interfaces, RESTful backends, and modular services with React, Node.js & Express.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h4>Database Engineering</h4>
+                    <p>Designing and configuring relational and NoSQL database schemas in PostgreSQL, Supabase, MySQL & MongoDB.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4>Embedded IoT Devices</h4>
+                    <p>Building interactive hardware devices with Arduino Mega, ESP8266 wireless communication, sensors & LCD displays.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h4>Faculty & Community Leadership</h4>
+                    <p>Serving as IT Faculty Batch Representative and Rotaract Project Co-Chairperson at UoM.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h4>Collaborative Git Workflows</h4>
+                    <p>Utilizing Git, GitHub, branching strategies, and team pull request code reviews for seamless project delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// MY TOOLBOX</span>
+                <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all" id="skill-filter-all">All Skills</button>
+                <button class="filter-btn" data-category="languages" id="skill-filter-lang">Programming</button>
+                <button class="filter-btn" data-category="frameworks" id="skill-filter-fw">Web Dev</button>
+                <button class="filter-btn" data-category="databases" id="skill-filter-db">Databases</button>
+                <button class="filter-btn" data-category="tools" id="skill-filter-tools">Tools & Hardware</button>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid" id="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-card" data-category="languages">
+                    <i class="devicon-javascript-plain colored skill-icon"></i>
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-card" data-category="languages">
+                    <i class="devicon-c-plain colored skill-icon"></i>
+                    <span class="skill-name">C</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+                <div class="skill-card" data-category="languages">
+                    <i class="devicon-html5-plain colored skill-icon"></i>
+                    <span class="skill-name">HTML5</span>
+                    <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-card" data-category="languages">
+                    <i class="devicon-css3-plain colored skill-icon"></i>
+                    <span class="skill-name">CSS3</span>
+                    <span class="skill-badge">Advanced</span>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-card" data-category="frameworks">
+                    <i class="devicon-react-original colored skill-icon"></i>
+                    <span class="skill-name">React</span>
+                    <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-card" data-category="frameworks">
+                    <i class="devicon-nodejs-plain colored skill-icon"></i>
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+                <div class="skill-card" data-category="frameworks">
+                    <i class="devicon-express-original skill-icon"></i>
+                    <span class="skill-name">Express.js</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-card" data-category="databases">
+                    <i class="devicon-mysql-plain colored skill-icon"></i>
+                    <span class="skill-name">MySQL</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+                <div class="skill-card" data-category="databases">
+                    <i class="devicon-postgresql-plain colored skill-icon"></i>
+                    <span class="skill-name">PostgreSQL</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+                <div class="skill-card" data-category="databases">
+                    <i class="devicon-supabase-plain colored skill-icon"></i>
+                    <span class="skill-name">Supabase</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+                <div class="skill-card" data-category="databases">
+                    <i class="devicon-mongodb-plain colored skill-icon"></i>
+                    <span class="skill-name">MongoDB</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+
+                <!-- Tools & Hardware -->
+                <div class="skill-card" data-category="tools">
+                    <i class="devicon-git-plain colored skill-icon"></i>
+                    <span class="skill-name">Git</span>
+                    <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <i class="devicon-github-original skill-icon"></i>
+                    <span class="skill-name">GitHub</span>
+                    <span class="skill-badge">Advanced</span>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <i class="devicon-vscode-plain colored skill-icon"></i>
+                    <span class="skill-name">VS Code</span>
+                    <span class="skill-badge">Expert</span>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <i class="devicon-arduino-plain colored skill-icon"></i>
+                    <span class="skill-name">Arduino Mega & ESP8266</span>
+                    <span class="skill-badge">Proficient</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Featured Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// PORTFOLIO PROJECTS</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="category-filters">
+                <button class="project-filter-btn active" data-project-category="all" id="proj-filter-all">All</button>
+                <button class="project-filter-btn" data-project-category="web" id="proj-filter-web">Web Apps</button>
+                <button class="project-filter-btn" data-project-category="iot" id="proj-filter-iot">IoT Devices</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Real Project 1: ConTrack -->
+                <div class="project-card" data-project-cat="web">
+                    <div class="project-image-wrapper">
+                        <div class="project-graphic web-graphic">
+                            <div class="window-bar">
+                                <span class="dot-btn"></span><span class="dot-btn"></span><span class="dot-btn"></span>
+                                <span class="window-title">ConTrack: Container Logistics System</span>
+                            </div>
+                            <div class="graphic-content">
+                                <div class="mock-header"></div>
+                                <div class="mock-grid">
+                                    <div class="mock-card glow-cyan"></div>
+                                    <div class="mock-card glow-purple"></div>
+                                    <div class="mock-card glow-blue"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="btn btn-sm btn-primary view-project-btn" data-project="contrack">
+                                <i class="fa-solid fa-eye"></i> View Project Specs
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-type">Full-Stack Logistics Web App</span>
+                        <h3 class="project-title">ConTrack: Container Transport Logistics</h3>
+                        <p class="project-desc">
+                            Supplier-side management application engineered with React, Node.js, Express.js, and Supabase/PostgreSQL database tables for transport tracking.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                            <button class="link-btn view-project-btn" data-project="contrack">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Project 2: Abacus Genius 1.0 -->
+                <div class="project-card" data-project-cat="iot">
+                    <div class="project-image-wrapper">
+                        <div class="project-graphic iot-graphic">
+                            <div class="window-bar">
+                                <span class="dot-btn"></span><span class="dot-btn"></span><span class="dot-btn"></span>
+                                <span class="window-title">Abacus Genius 1.0 Device</span>
+                            </div>
+                            <div class="graphic-content iot-content">
+                                <div class="sensor-chip">
+                                    <i class="fa-solid fa-microchip"></i>
+                                    <span>Arduino Mega + ESP8266</span>
+                                </div>
+                                <div class="sensor-values">
+                                    <div class="s-val"><span>Input</span><b>Keypad & Sensors</b></div>
+                                    <div class="s-val"><span>Output</span><b>LCD & Speaker</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="btn btn-sm btn-primary view-project-btn" data-project="abacus">
+                                <i class="fa-solid fa-eye"></i> View Project Specs
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <span class="project-type">Arduino Educational Device</span>
+                        <h3 class="project-title">Abacus Genius 1.0</h3>
+                        <p class="project-desc">
+                            Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, keypad, LCD screen, sensors, speaker & sleep mode.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Arduino Mega</span>
+                            <span class="tag">ESP8266</span>
+                            <span class="tag">Embedded C</span>
+                            <span class="tag">LCD & Keypad</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                            <button class="link-btn view-project-btn" data-project="abacus">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards, Leadership & Recognition Section -->
+    <section class="awards section" id="awards">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// RECOGNITION & LEADERSHIP</span>
+                <h2 class="section-title">Awards & <span class="text-gradient">Leadership</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="awards-grid">
+                <!-- Award 1 -->
+                <div class="award-card highlight-award">
+                    <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="award-info">
+                        <span class="award-badge">2nd Place Winner</span>
+                        <h3>IEEE CS R10 Summer School 2026 Mini-Ideathon</h3>
+                        <p>Awarded 2nd Place with <strong>Team Busy Bees</strong> for innovative technical solution design and presentation.</p>
+                    </div>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="award-card">
+                    <div class="award-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="award-info">
+                        <span class="award-badge">Rotaract Recognition</span>
+                        <h3>Spirit of Service Award 2024/25</h3>
+                        <p>Awarded by the <strong>Rotaract Club of University of Moratuwa</strong> for outstanding dedication to community impact projects.</p>
+                    </div>
+                </div>
+
+                <!-- Leadership 1 -->
+                <div class="award-card">
+                    <div class="award-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="award-info">
+                        <span class="award-badge">University Leadership</span>
+                        <h3>Batch Representative (Level 3)</h3>
+                        <p>Faculty of Information Technology, <strong>University of Moratuwa</strong>. Representing student body and coordinating faculty initiatives.</p>
+                    </div>
+                </div>
+
+                <!-- Leadership 2 -->
+                <div class="award-card">
+                    <div class="award-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <div class="award-info">
+                        <span class="award-badge">Project Leadership</span>
+                        <h3>Co-Chairperson: Nena Aruna Project</h3>
+                        <p>Rotaract Club of University of Moratuwa (2024/25). Led community education projects and volunteer teams (Binara Pedura, Manusath Handa).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Dashboard Section -->
+    <section class="github-stats section" id="github-stats">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// LIVE ACTIVITY</span>
+                <h2 class="section-title">GitHub Analytics & <span class="text-gradient">Trophies</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="stats-wrapper">
+                <div class="stats-grid">
+                    <div class="stat-card-embed">
+                        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Ravindulakshan2393&theme=tokyonight" alt="GitHub Profile Summary" class="github-img" loading="lazy">
+                    </div>
+                    <div class="stat-card-embed">
+                        <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Ravindulakshan2393&theme=tokyonight" alt="Repos Per Language" class="github-img" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="trophies-container">
+                    <img src="https://github-profile-trophies.vercel.app/?username=Ravindulakshan2393&theme=tokyonight&no-frame=true" alt="GitHub Trophies" class="github-img-full" loading="lazy">
+                </div>
+
+                <div class="github-cta-box">
+                    <div class="cta-info">
+                        <i class="fa-brands fa-github cta-icon"></i>
+                        <div>
+                            <h4>Explore My Code Repositories</h4>
+                            <p>Follow my journey, star my projects, or fork repos on GitHub.</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-brands fa-github"></i> Visit @Ravindulakshan2393
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// GET IN TOUCH</span>
+                <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Seeking Software Engineering & Software Development Internships</h3>
+                    <p>
+                        I am actively seeking an internship opportunity in Software Engineering or Software Development. Feel free to contact me via phone, email, or LinkedIn!
+                    </p>
+
+                    <div class="info-list">
+                        <a href="tel:+94714252175" class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <span>Phone Number</span>
+                                <strong>+94 71 425 2175 (071 425 2175)</strong>
+                            </div>
+                        </a>
+
+                        <a href="mailto:pererawslr@gmail.com" class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span>Email Me</span>
+                                <strong>pererawslr@gmail.com</strong>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sadeepa-lakshan-587690308" target="_blank" rel="noopener noreferrer" class="info-item">
+                            <div class="info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div>
+                                <span>LinkedIn Profile</span>
+                                <strong>in/sadeepa-lakshan-587690308</strong>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="info-item">
+                            <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <span>GitHub Username</span>
+                                <strong>@Ravindulakshan2393</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Software Engineering Internship / Inquiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Hi Sadeepa, I'd like to invite you for an interview..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Project Details -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="modal-body">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#hero" class="nav-brand">
+                    <img src="assets/symbol.png" alt="Emblem" class="brand-symbol-img">
+                    <span class="brand-name">Sadeepa Lakshan</span>
+                </a>
+                <p>© 2026 Sadeepa Lakshan. BSc (Hons) IT & Management @ University of Moratuwa.</p>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sadeepa-lakshan-587690308" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="tel:+94714252175" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:pererawslr@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="js/main.js"></script>
+</body>
+</html>
