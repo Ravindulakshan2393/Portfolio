@@ -104,7 +104,7 @@ Inside `<div class="awards-grid">` in `index.html`:
 
 ## 4. How to Update Contact Information
 
-Edit the `.info-list` items in `index.html`:
-- Phone link: `<a href="tel:+94714252175">`
+Edit the `.info-list` items in `src/components/Contact.astro`:
 - Email link: `<a href="mailto:pererawslr@gmail.com">`
 - LinkedIn: `https://www.linkedin.com/in/sadeepa-lakshan-587690308`
+- GitHub: `https://github.com/Ravindulakshan2393`

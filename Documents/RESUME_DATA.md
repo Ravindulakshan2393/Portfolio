@@ -1,13 +1,13 @@
 # Sadeepa Lakshan - Master Resume Data Reference
 
-> **Auto-generated** on 2026-09-15 14:55:11 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-10-20 16:57:07 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
 
 ## Contact Information
 
-- **Phone Number**: `+94 71 425 2175 (071 425 2175)`
+- **Location**: `Moratuwa / Colombo, Sri Lanka`
 - **Email Me**: `pererawslr@gmail.com`
 - **LinkedIn Profile**: `in/sadeepa-lakshan-587690308`
 - **GitHub Username**: `@Ravindulakshan2393`

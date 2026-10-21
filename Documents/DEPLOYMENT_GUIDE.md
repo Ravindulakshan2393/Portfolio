@@ -23,11 +23,11 @@ git push -u origin main
 2. Click **Settings** (top navigation tab).
 3. On the left sidebar, click **Pages**.
 4. Under **Build and deployment**:
-   - **Source**: Select `Deploy from a branch`
-   - **Branch**: Select `main` branch and `/ (root)` folder.
-5. Click **Save**.
-6. Wait 1–2 minutes. Your website will be live at:
+   - **Source**: Select **`GitHub Actions`**.
+5. The included [deploy.yml](file:///.github/workflows/deploy.yml) workflow will automatically build and publish your Astro site on every `git push origin main`.
+6. Your website will be live at:
    - **`https://Ravindulakshan2393.github.io/Portfolio/`**
+
 
 ---
 

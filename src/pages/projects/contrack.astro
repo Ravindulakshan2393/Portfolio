@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<BaseLayout 
+    title="ConTrack Logistics - Case Study | Sadeepa Lakshan"
+    description="In-depth Case Study of ConTrack: Container Transport Logistics Management System engineered with React, Node.js, Express, and Supabase."
+    isHome={false}
+>
+    <section class="section" style="padding-top: 140px; min-height: 85vh;">
+        <div class="container" style="max-width: 900px;">
+            <!-- Breadcrumbs / Back Link -->
+            <div style="margin-bottom: 2rem;">
+                <a href={`${baseUrl}#projects`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to All Projects
+                </a>
+            </div>
+
+            <!-- Header -->
+            <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
+                <span class="section-tag">// CASE STUDY & SYSTEM ARCHITECTURE</span>
+                <h1 class="section-title" style="font-size: 2.5rem; margin-top: 0.5rem;">
+                    ConTrack: <span class="text-gradient">Container Logistics Management</span>
+                </h1>
+                <div class="project-tags" style="margin-top: 1rem;">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express.js</span>
+                    <span class="tag">Supabase</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Git & GitHub</span>
+                </div>
+            </div>
+
+            <!-- Overview Card -->
+            <div class="terminal-card" style="margin-bottom: 2.5rem;">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">contrack-overview.md</span>
+                </div>
+                <div class="terminal-body" style="line-height: 1.8; color: var(--text-main);">
+                    <h3 style="color: var(--primary); margin-bottom: 0.8rem; font-size: 1.2rem;">Project Purpose & Challenge</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">
+                        Managing commercial container logistics involves multiple moving entities: suppliers, transport dispatchers, drivers, and port terminals. Traditional paper or disconnected spreadsheet workflows lead to shipment delays, inconsistent tracking, and poor supplier transparency.
+                    </p>
+                    <p style="color: var(--text-muted);">
+                        <strong>ConTrack</strong> was engineered to solve this through a centralized supplier portal and real-time backend pipeline that streamlines supplier interactions, vehicle tracking, and container movement.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Architectural Highlights -->
+            <div class="focus-title" style="margin-top: 2.5rem;">
+                <h3>Key Engineering Achievements</h3>
+            </div>
+
+            <div class="focus-grid" style="margin-bottom: 3rem;">
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h4>Supplier-Side React UI</h4>
+                    <p>Designed and built an intuitive, modular dashboard for suppliers to create booking orders, monitor status changes, and view container itineraries.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h4>RESTful Node & Express Backend</h4>
+                    <p>Implemented robust REST API endpoints handling container dispatching, status transitions, supplier authentication, and validation guards.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h4>Supabase & PostgreSQL</h4>
+                    <p>Designed relational schemas with foreign key integrity, row-level security policies, and optimized queries for rapid lookup.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h4>Team Git Workflow</h4>
+                    <p>Collaborated via Git branches, feature branches, and structured pull request reviews adhering to clean coding standards.</p>
+                </div>
+            </div>
+
+            <!-- Bottom Action CTA -->
+            <div class="github-cta-box" style="margin-top: 2rem;">
+                <div class="cta-info">
+                    <i class="fa-brands fa-github cta-icon"></i>
+                    <div>
+                        <h4>Interested in the Source Code or Collaboration?</h4>
+                        <p>Check out my GitHub repository or get in touch for software engineering inquiries.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-brands fa-github"></i> View GitHub Profile
+                    </a>
+                    <a href={`${baseUrl}#contact`} class="btn btn-secondary">
+                        <i class="fa-solid fa-envelope"></i> Contact Sadeepa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

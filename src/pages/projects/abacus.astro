@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<BaseLayout 
+    title="Abacus Genius 1.0 - Case Study | Sadeepa Lakshan"
+    description="Case study of Abacus Genius 1.0: Arduino Mega & ESP8266 based interactive educational hardware device."
+    isHome={false}
+>
+    <section class="section" style="padding-top: 140px; min-height: 85vh;">
+        <div class="container" style="max-width: 900px;">
+            <!-- Breadcrumbs / Back Link -->
+            <div style="margin-bottom: 2rem;">
+                <a href={`${baseUrl}#projects`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to All Projects
+                </a>
+            </div>
+
+            <!-- Header -->
+            <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
+                <span class="section-tag">// HARDWARE PROTOTYPING & EMBEDDED SYSTEMS</span>
+                <h1 class="section-title" style="font-size: 2.5rem; margin-top: 0.5rem;">
+                    Abacus Genius 1.0: <span class="text-gradient">Interactive Educational Device</span>
+                </h1>
+                <div class="project-tags" style="margin-top: 1rem;">
+                    <span class="tag">Arduino Mega</span>
+                    <span class="tag">ESP8266</span>
+                    <span class="tag">Embedded C / C++</span>
+                    <span class="tag">Keypad & LCD</span>
+                    <span class="tag">Sensors & Audio</span>
+                </div>
+            </div>
+
+            <!-- Overview Card -->
+            <div class="terminal-card" style="margin-bottom: 2.5rem;">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">abacus-specs.md</span>
+                </div>
+                <div class="terminal-body" style="line-height: 1.8; color: var(--text-main);">
+                    <h3 style="color: var(--primary); margin-bottom: 0.8rem; font-size: 1.2rem;">Project Purpose & Concept</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">
+                        Early childhood and foundational mathematics education often suffers from passive screen addiction without tactile feedback. <strong>Abacus Genius 1.0</strong> was created as a tangible, interactive physical computing device that fuses tactile input with digital evaluation.
+                    </p>
+                    <p style="color: var(--text-muted);">
+                        The device guides learners through progressive math challenges, detects inputs via microswitches and keypad matrix, and provides real-time audiovisual feedback through an LCD display and audio transducer.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Embedded Highlights -->
+            <div class="focus-title" style="margin-top: 2.5rem;">
+                <h3>Core Hardware & Firmware Engineering</h3>
+            </div>
+
+            <div class="focus-grid" style="margin-bottom: 3rem;">
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4>Arduino Mega Architecture</h4>
+                    <p>Programmed the ATmega2560 microcontroller using Embedded C/C++ to drive state machines, interrupt handling, and game mode logic.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h4>ESP8266 Wireless Module</h4>
+                    <p>Integrated the ESP8266 Wi-Fi module over UART communication to allow remote telemetry, score tracking, and wireless configuration.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h4>Keypad & Liquid Crystal Display</h4>
+                    <p>Constructed an intuitive interface with custom character sets, mathematical prompt menus, and responsive debounced tactile input.</p>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon-box">
+                        <i class="fa-solid fa-battery-half"></i>
+                    </div>
+                    <h4>Power Management & Sleep Mode</h4>
+                    <p>Engineered low-power sleep state intervals with external interrupt wakeups to maximize portable battery endurance.</p>
+                </div>
+            </div>
+
+            <!-- Bottom Action CTA -->
+            <div class="github-cta-box" style="margin-top: 2rem;">
+                <div class="cta-info">
+                    <i class="fa-brands fa-github cta-icon"></i>
+                    <div>
+                        <h4>Explore More Embedded Projects</h4>
+                        <p>Discover firmware source code, pinouts, and hardware prototypes on my GitHub profile.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-brands fa-github"></i> View GitHub Profile
+                    </a>
+                    <a href={`${baseUrl}#contact`} class="btn btn-secondary">
+                        <i class="fa-solid fa-envelope"></i> Contact Sadeepa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

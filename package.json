@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "Personal Portfolio Website for Sadeepa Lakshan - BSc (Hons) IT & Management @ University of Moratuwa",
   "scripts": {
-    "docs": "node scripts/update_docs.js",
-    "predeploy": "node scripts/update_docs.js",
-    "serve": "npx -y serve . -p 8080"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "docs": "node scripts/update_docs.js"
   },
   "author": "Sadeepa Lakshan",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "astro": "^7.4.1"
+  },
+  "devDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.2.14"
+  }
 }

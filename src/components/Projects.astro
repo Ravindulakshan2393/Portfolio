@@ -1,0 +1,126 @@
+---
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<!-- Featured Projects Section -->
+<section class="projects section" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">// PORTFOLIO PROJECTS</span>
+            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+            <div class="section-line"></div>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="category-filters">
+            <button class="project-filter-btn active" data-project-category="all" id="proj-filter-all">All</button>
+            <button class="project-filter-btn" data-project-category="web" id="proj-filter-web">Web Apps</button>
+            <button class="project-filter-btn" data-project-category="iot" id="proj-filter-iot">IoT Devices</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1: ConTrack -->
+            <div class="project-card" data-project-cat="web">
+                <div class="project-image-wrapper">
+                    <div class="project-graphic web-graphic">
+                        <div class="window-bar">
+                            <span class="dot-btn"></span><span class="dot-btn"></span><span class="dot-btn"></span>
+                            <span class="window-title">ConTrack: Container Logistics System</span>
+                        </div>
+                        <div class="graphic-content">
+                            <div class="mock-header"></div>
+                            <div class="mock-grid">
+                                <div class="mock-card glow-cyan"></div>
+                                <div class="mock-card glow-purple"></div>
+                                <div class="mock-card glow-blue"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <button class="btn btn-sm btn-primary view-project-btn" data-project="contrack">
+                            <i class="fa-solid fa-eye"></i> Quick Specs
+                        </button>
+                        <a href={`${baseUrl}projects/contrack`} class="btn btn-sm btn-secondary" style="margin-left: 8px;">
+                            <i class="fa-solid fa-file-lines"></i> Full Case Study
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <span class="project-type">Full-Stack Logistics Web App</span>
+                    <h3 class="project-title">ConTrack: Container Transport Logistics</h3>
+                    <p class="project-desc">
+                        Supplier-side management application engineered with React, Node.js, Express.js, and Supabase/PostgreSQL database tables for transport tracking.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href={`${baseUrl}projects/contrack`} class="link-btn">
+                            Case Study <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Abacus Genius 1.0 -->
+            <div class="project-card" data-project-cat="iot">
+                <div class="project-image-wrapper">
+                    <div class="project-graphic iot-graphic">
+                        <div class="window-bar">
+                            <span class="dot-btn"></span><span class="dot-btn"></span><span class="dot-btn"></span>
+                            <span class="window-title">Abacus Genius 1.0 Device</span>
+                        </div>
+                        <div class="graphic-content iot-content">
+                            <div class="sensor-chip">
+                                <i class="fa-solid fa-microchip"></i>
+                                <span>Arduino Mega + ESP8266</span>
+                            </div>
+                            <div class="sensor-values">
+                                <div class="s-val"><span>Input</span><b>Keypad & Sensors</b></div>
+                                <div class="s-val"><span>Output</span><b>LCD & Speaker</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <button class="btn btn-sm btn-primary view-project-btn" data-project="abacus">
+                            <i class="fa-solid fa-eye"></i> Quick Specs
+                        </button>
+                        <a href={`${baseUrl}projects/abacus`} class="btn btn-sm btn-secondary" style="margin-left: 8px;">
+                            <i class="fa-solid fa-file-lines"></i> Full Case Study
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <span class="project-type">Arduino Educational Device</span>
+                    <h3 class="project-title">Abacus Genius 1.0</h3>
+                    <p class="project-desc">
+                        Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, keypad, LCD screen, sensors, speaker & sleep mode.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Arduino Mega</span>
+                        <span class="tag">ESP8266</span>
+                        <span class="tag">Embedded C</span>
+                        <span class="tag">LCD & Keypad</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href={`${baseUrl}projects/abacus`} class="link-btn">
+                            Case Study <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

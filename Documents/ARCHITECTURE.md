@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-09-15 14:55:11 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-10-20 16:57:07 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -10,7 +10,7 @@
 | Field | Value |
 | :--- | :--- |
 | **Page Title** | Sadeepa Lakshan | Software Engineering & Full-Stack Developer |
-| **Meta Description** | Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ UoM (CGPA: 3.12). Software Engineering Intern & Full-Stack Web Developer. |
+| **Meta Description** | Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ University of Moratuwa. Software Engineering Intern & Full-Stack Web Developer. |
 | **Total Skills** | 15 |
 | **Total Projects** | 2 |
 | **Total Awards** | 4 |
@@ -25,17 +25,57 @@ assets/
 └── symbol.png  (954.6 KB)
 css/
 └── styles.css  (30.2 KB)
+dist/
+├── _astro/
+│   ├── BaseLayout.astro_astro_type_script_index_0_lang.DtR-ymbc.js  (6.8 KB)
+│   └── BaseLayout.CDd9ZyG9.css  (21.7 KB)
+├── assets/
+│   └── symbol.png  (954.6 KB)
+├── projects/
+│   ├── abacus/
+│   │   └── index.html  (7.7 KB)
+│   └── contrack/
+│       └── index.html  (7.7 KB)
+└── index.html  (24.3 KB)
 Documents/
-├── ARCHITECTURE.md  (3.0 KB)
-├── DEPLOYMENT_GUIDE.md  (2.3 KB)
+├── ARCHITECTURE.md  (4.8 KB)
+├── DEPLOYMENT_GUIDE.md  (2.4 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
-└── RESUME_DATA.md  (3.4 KB)
+└── RESUME_DATA.md  (2.2 KB)
 js/
 └── main.js  (12.7 KB)
+public/
+└── assets/
+    └── symbol.png  (954.6 KB)
 scripts/
 └── update_docs.js  (14.5 KB)
+src/
+├── components/
+│   ├── About.astro  (6.1 KB)
+│   ├── Awards.astro  (2.5 KB)
+│   ├── Contact.astro  (3.8 KB)
+│   ├── Footer.astro  (1.0 KB)
+│   ├── Hero.astro  (3.8 KB)
+│   ├── Navbar.astro  (1.6 KB)
+│   ├── ProjectModal.astro  (0.6 KB)
+│   ├── Projects.astro  (6.7 KB)
+│   ├── Skills.astro  (5.2 KB)
+│   └── Stats.astro  (1.9 KB)
+├── layouts/
+│   └── BaseLayout.astro  (1.9 KB)
+├── pages/
+│   ├── projects/
+│   │   ├── abacus.astro  (6.0 KB)
+│   │   └── contrack.astro  (6.0 KB)
+│   └── index.astro  (0.6 KB)
+├── scripts/
+│   └── main.js  (12.7 KB)
+└── styles/
+    └── styles.css  (30.2 KB)
+astro.config.mjs  (0.2 KB)
 index.html  (36.0 KB)
-package.json  (0.4 KB)
+package-lock.json  (125.8 KB)
+package.json  (0.5 KB)
 README.md  (2.6 KB)
 ```
 
