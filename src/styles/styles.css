@@ -504,7 +504,7 @@ img {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 1.5rem;
+    padding: 0;
     position: relative;
 }
 
@@ -520,6 +520,22 @@ img {
 
 .avatar-img-symbol:hover {
     transform: scale(1.08);
+}
+
+/* Real Profile Photo */
+.avatar-img-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    transition: transform var(--transition-normal), filter var(--transition-normal);
+    filter: brightness(1.05) contrast(1.05);
+}
+
+.avatar-img-profile:hover {
+    transform: scale(1.04);
+    filter: brightness(1.1) contrast(1.08);
 }
 
 .floating-badge {
