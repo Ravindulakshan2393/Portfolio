@@ -123,47 +123,112 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
 
     if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+        // Create backdrop overlay
+        const menuBackdrop = document.createElement('div');
+        menuBackdrop.id = 'menu-backdrop';
+        menuBackdrop.style.cssText = `
+            position: fixed; inset: 0; z-index: 998;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s ease;
+            top: 80px;
+        `;
+        document.body.appendChild(menuBackdrop);
+
+        function openMenu() {
+            navMenu.classList.add('active');
+            menuBackdrop.style.opacity = '1';
+            menuBackdrop.style.pointerEvents = 'auto';
             const icon = mobileMenuBtn.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
+            if (icon) { icon.classList.replace('fa-bars', 'fa-xmark'); }
+        }
+
+        function closeMenu() {
+            navMenu.classList.remove('active');
+            menuBackdrop.style.opacity = '0';
+            menuBackdrop.style.pointerEvents = 'none';
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) { icon.classList.replace('fa-xmark', 'fa-bars'); }
+        }
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.contains('active') ? closeMenu() : openMenu();
         });
+
+        menuBackdrop.addEventListener('click', closeMenu);
 
         // Close mobile menu on link click
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                }
-            });
+            link.addEventListener('click', closeMenu);
         });
     }
 
-    // 5. Theme Toggle (Dark / Light)
+    // 5. Theme Toggle (Dark / Light) with persistence and GitHub card theme sync
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            const icon = themeToggleBtn.querySelector('i');
+    function updateGithubCards(isLight) {
+        const ghImgs = document.querySelectorAll('.github-img');
+        ghImgs.forEach(img => {
+            const currentSrc = img.getAttribute('src');
+            if (currentSrc) {
+                if (isLight) {
+                    img.src = currentSrc.replace('theme=tokyonight', 'theme=github_light');
+                } else {
+                    img.src = currentSrc.replace('theme=github_light', 'theme=tokyonight');
+                }
+            }
+        });
+        const trophyImg = document.querySelector('.github-img-full');
+        if (trophyImg) {
+            const currentSrc = trophyImg.getAttribute('src');
+            if (currentSrc) {
+                if (isLight) {
+                    trophyImg.src = currentSrc.replace('theme=tokyonight', 'theme=flat');
+                } else {
+                    trophyImg.src = currentSrc.replace('theme=flat', 'theme=tokyonight');
+                }
+            }
+        }
+    }
 
-            if (body.classList.contains('light-theme')) {
+    function applyTheme(theme) {
+        const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+        if (theme === 'light') {
+            body.classList.add('light-theme');
+            if (icon) {
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
-            } else {
+            }
+            updateGithubCards(true);
+        } else {
+            body.classList.remove('light-theme');
+            if (icon) {
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
             }
+            updateGithubCards(false);
+        }
+        try {
+            localStorage.setItem('portfolio-theme', theme);
+        } catch (e) {
+            // ignore localStorage errors
+        }
+    }
+
+    // Load saved theme if any
+    try {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') {
+            applyTheme('light');
+        }
+    } catch (e) {}
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const isLight = body.classList.contains('light-theme');
+            applyTheme(isLight ? 'dark' : 'light');
         });
     }
 
