@@ -108,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const id = entry.target.getAttribute('id');
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
+                    const href = link.getAttribute('href');
+                    if (href === `#${id}` || href?.endsWith(`#${id}`)) {
                         link.classList.add('active');
                     }
                 });
