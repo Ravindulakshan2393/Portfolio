@@ -140,10 +140,13 @@ function extractFromHTML(html) {
     const projRe = /<div\s+class="project-card"\s+data-project-cat="(\w+)"[\s\S]*?<h3\s+class="project-title">(.*?)<\/h3>[\s\S]*?<p\s+class="project-desc">\s*([\s\S]*?)\s*<\/p>/gi;
     while ((m = projRe.exec(html)) !== null) {
         const tags = [];
-        const tagRe = /<span\s+class="tag">(.*?)<\/span>/gi;
-        const cardBlock = html.slice(m.index, m.index + 2000);
-        let t;
-        while ((t = tagRe.exec(cardBlock)) !== null) tags.push(t[1].trim());
+        const cardBlock = html.slice(m.index, m.index + 4000);
+        const tagBlockMatch = cardBlock.match(/<div class="project-tags">([\s\S]*?)<\/div>/i);
+        if (tagBlockMatch) {
+            const tagRe = /<span\s+class="tag">(.*?)<\/span>/gi;
+            let t;
+            while ((t = tagRe.exec(tagBlockMatch[1])) !== null) tags.push(t[1].trim());
+        }
         data.projects.push({
             category: m[1],
             title: m[2].trim(),

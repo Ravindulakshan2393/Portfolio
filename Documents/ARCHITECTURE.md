@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-07 11:44:34 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 12:37:32 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -57,6 +57,7 @@ dist/
 │       └── index.html  (25.7 KB)
 └── index.html  (28.0 KB)
 Documents/
+├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
 ├── ARCHITECTURE.md  (6.1 KB)
 ├── DEPLOYMENT_GUIDE.md  (2.4 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
@@ -74,7 +75,7 @@ public/
     ├── profile.jpg  (100.2 KB)
     └── symbol.png  (954.6 KB)
 scripts/
-└── update_docs.js  (14.9 KB)
+└── update_docs.js  (15.0 KB)
 src/
 ├── components/
 │   ├── About.astro  (6.3 KB)

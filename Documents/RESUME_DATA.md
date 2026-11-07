@@ -1,6 +1,6 @@
 # Sadeepa Lakshan - Master Resume Data Reference
 
-> **Auto-generated** on 2026-11-07 11:44:34 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 12:37:32 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -46,17 +46,17 @@
 ### 1. ConTrack: Container Transportation Management System
 - **Category**: web
 - **Description**: Container transport management web platform built for Rysera Innovations featuring supplier bidding engine, driver/fleet management, checkpoint clearance tracking, and document upload workflow leveraging Supabase Storage.
-- **Tech Stack**: N/A
+- **Tech Stack**: React.js, Node.js, Express.js, Supabase, Tailwind CSS
 
 ### 2. Abacus Genius 1.0
 - **Category**: iot
 - **Description**: Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, rotary encoders, 16×2 LCD, 4×4 keypad, DFPlayer Mini audio module, motion/touch sensors, and smart power management. Exhibited at FIT Expo 2025 (UoM).
-- **Tech Stack**: N/A
+- **Tech Stack**: Arduino Mega, ESP8266, Embedded C++, Rotary Encoders, DFPlayer Mini
 
 ### 3. AE-SSS: Smart Surveillance & Response System
 - **Category**: iot
 - **Description**: Decentralized multi-agent edge-AI architecture for high-density transit hubs (Pettah Bus Stand) running on NVIDIA Jetson Orin Nano with 5-stage control loop and privacy-by-design RAM scrubbing.
-- **Tech Stack**: N/A
+- **Tech Stack**: System Architecture, Multi-Agent AI, Edge Computing, Jetson Orin Nano
 
 ---
 
