@@ -1,6 +1,6 @@
 # Sadeepa Lakshan - Master Resume Data Reference
 
-> **Auto-generated** on 2026-11-07 08:53:01 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 10:05:46 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -43,10 +43,10 @@
 
 ## Featured Projects
 
-### 1. ConTrack: Container Transport Logistics
+### 1. ConTrack: Container Transportation Management System
 - **Category**: web
-- **Description**: Supplier-side management application engineered with React, Node.js, Express.js, and Supabase/PostgreSQL database tables for transport tracking.
-- **Tech Stack**: React, Node.js
+- **Description**: Container transport management web platform built for Rysera Innovations featuring supplier bidding engine, driver/fleet management, checkpoint clearance tracking, and document upload workflow leveraging Supabase Storage.
+- **Tech Stack**: N/A
 
 ### 2. Abacus Genius 1.0
 - **Category**: iot

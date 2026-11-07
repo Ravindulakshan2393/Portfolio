@@ -2,116 +2,907 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const project = {
+  title: "ConTrack: Container Transportation Management System",
+  subtitle: "Full-Stack Logistics Management Platform for Rysera Innovations",
+  context: "IS2901 Software Development Project — Faculty of Information Technology, University of Moratuwa",
+  client: "Rysera Innovations (Moratuwa)",
+  supervisors: [
+    "Mrs. Nipuni Chandimali",
+    "Prof. Thanuja Sandanayake"
+  ],
+  repository: "https://github.com/hemi-chk/conntrack-new.git",
+  image: `${baseUrl}assets/projects/contrack-banner.jpg`,
+  team: [
+    { name: "Sadeepa Lakshan", role: "Supplier Portal & Document Engine Lead", inst: "UOM" },
+    { name: "Hemindi Kalubovila", role: "Admin Portal & DevOps / Deployment Lead", inst: "UOM" },
+    { name: "Binuwara Yasan", role: "Logistics Portal & Tracking Systems Lead", inst: "UOM" },
+    { name: "Fathima Ramaza", role: "Operations Web Application Lead", inst: "UOM" },
+    { name: "Shimra Foumy", role: "Mobile Driver Application Lead (React Native)", inst: "UOM" }
+  ],
+  techStack: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "Supabase (PostgreSQL)",
+    "Supabase Storage",
+    "Tailwind CSS",
+    "Turborepo Monorepo",
+    "Docker",
+    "AWS EC2"
+  ],
+  metrics: [
+    { label: "System Portals", value: "4 Web/Mobile Portals" },
+    { label: "Database & Storage", value: "Supabase PostgreSQL" },
+    { label: "Monorepo Pipeline", value: "Turborepo + Docker" },
+    { label: "Cloud Deployment", value: "AWS EC2 Hosting" }
+  ]
+};
 ---
 
 <BaseLayout 
-    title="ConTrack Logistics - Case Study | Sadeepa Lakshan"
-    description="In-depth Case Study of ConTrack: Container Transport Logistics Management System engineered with React, Node.js, Express, and Supabase."
-    isHome={false}
+  title={`${project.title} | Case Study`}
+  description="In-depth Case Study of ConTrack: Container Transportation Management System built for Rysera Innovations using React, Node.js, Express, Supabase, and Turborepo."
+  isHome={false}
 >
-    <section class="section" style="padding-top: 140px; min-height: 85vh;">
-        <div class="container" style="max-width: 900px;">
-            <!-- Breadcrumbs / Back Link -->
-            <div style="margin-bottom: 2rem;">
-                <a href={`${baseUrl}#projects`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-arrow-left"></i> Back to All Projects
-                </a>
-            </div>
+  <section class="section contrack-container" style="padding-top: 130px; min-height: 85vh;">
+    <div class="container" style="max-width: 1100px;">
+      
+      <!-- Top Back Navigation -->
+      <div style="margin-bottom: 2rem;">
+        <a href={`${baseUrl}#projects`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+      </div>
 
-            <!-- Header -->
-            <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
-                <span class="section-tag">// CASE STUDY & SYSTEM ARCHITECTURE</span>
-                <h1 class="section-title" style="font-size: 2.5rem; margin-top: 0.5rem;">
-                    ConTrack: <span class="text-gradient">Container Logistics Management</span>
-                </h1>
-                <div class="project-tags" style="margin-top: 1rem;">
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">Express.js</span>
-                    <span class="tag">Supabase</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">Git & GitHub</span>
-                </div>
-            </div>
-
-            <!-- Overview Card -->
-            <div class="terminal-card" style="margin-bottom: 2.5rem;">
-                <div class="terminal-header">
-                    <div class="terminal-dots">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <span class="terminal-title">contrack-overview.md</span>
-                </div>
-                <div class="terminal-body" style="line-height: 1.8; color: var(--text-main);">
-                    <h3 style="color: var(--primary); margin-bottom: 0.8rem; font-size: 1.2rem;">Project Purpose & Challenge</h3>
-                    <p style="margin-bottom: 1rem; color: var(--text-muted);">
-                        Managing commercial container logistics involves multiple moving entities: suppliers, transport dispatchers, drivers, and port terminals. Traditional paper or disconnected spreadsheet workflows lead to shipment delays, inconsistent tracking, and poor supplier transparency.
-                    </p>
-                    <p style="color: var(--text-muted);">
-                        <strong>ConTrack</strong> was engineered to solve this through a centralized supplier portal and real-time backend pipeline that streamlines supplier interactions, vehicle tracking, and container movement.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Architectural Highlights -->
-            <div class="focus-title" style="margin-top: 2.5rem;">
-                <h3>Key Engineering Achievements</h3>
-            </div>
-
-            <div class="focus-grid" style="margin-bottom: 3rem;">
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-desktop"></i>
-                    </div>
-                    <h4>Supplier-Side React UI</h4>
-                    <p>Designed and built an intuitive, modular dashboard for suppliers to create booking orders, monitor status changes, and view container itineraries.</p>
-                </div>
-
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-server"></i>
-                    </div>
-                    <h4>RESTful Node & Express Backend</h4>
-                    <p>Implemented robust REST API endpoints handling container dispatching, status transitions, supplier authentication, and validation guards.</p>
-                </div>
-
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-database"></i>
-                    </div>
-                    <h4>Supabase & PostgreSQL</h4>
-                    <p>Designed relational schemas with foreign key integrity, row-level security policies, and optimized queries for rapid lookup.</p>
-                </div>
-
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-code-branch"></i>
-                    </div>
-                    <h4>Team Git Workflow</h4>
-                    <p>Collaborated via Git branches, feature branches, and structured pull request reviews adhering to clean coding standards.</p>
-                </div>
-            </div>
-
-            <!-- Bottom Action CTA -->
-            <div class="github-cta-box" style="margin-top: 2rem;">
-                <div class="cta-info">
-                    <i class="fa-brands fa-github cta-icon"></i>
-                    <div>
-                        <h4>Interested in the Source Code or Collaboration?</h4>
-                        <p>Check out my GitHub repository or get in touch for software engineering inquiries.</p>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <i class="fa-brands fa-github"></i> View GitHub Profile
-                    </a>
-                    <a href={`${baseUrl}#contact`} class="btn btn-secondary">
-                        <i class="fa-solid fa-envelope"></i> Contact Sadeepa
-                    </a>
-                </div>
-            </div>
+      <!-- Hero Header Banner Card with Logistics Image Overlay -->
+      <div class="hero-banner-card">
+        <div class="banner-image-wrapper">
+          <img 
+            src={project.image} 
+            alt="ConTrack Container Transportation & Logistics Management Platform" 
+            class="banner-image"
+          />
+          <div class="banner-overlay"></div>
         </div>
-    </section>
+        
+        <div class="banner-content">
+          <div class="badge-row">
+            <span class="pill-badge pill-sky">
+              <i class="fa-solid fa-building"></i> Client: {project.client}
+            </span>
+            <span class="pill-badge pill-emerald">
+              <i class="fa-solid fa-graduation-cap"></i> IS2901 Software Project (UoM)
+            </span>
+            <span class="pill-badge pill-gold">
+              <i class="fa-solid fa-users"></i> Team InnoWave (Group 06)
+            </span>
+          </div>
+          
+          <h1 class="banner-title">
+            ConTrack: <span class="text-gradient">Container Transportation</span> Management System
+          </h1>
+          <p class="banner-desc">
+            An enterprise-grade container transportation and logistics management web platform engineered for <strong>Rysera Innovations</strong> to digitize supplier bidding, driver & fleet compliance, real-time checkpoint clearance, and container tracking across Sri Lankan port corridors.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Core Architecture Metrics Grid -->
+      <div class="metrics-grid">
+        {project.metrics.map(m => (
+          <div class="metric-card">
+            <div class="metric-value">{m.value}</div>
+            <div class="metric-label">{m.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Main Content & Sidebar Layout -->
+      <div class="detail-layout">
+        
+        <!-- Main Case Study Content -->
+        <div class="detail-main">
+          
+          <!-- 1. Industry Context & Business Problem -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Industry Context & Business Problem</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-truck-ramp-box" style="color: var(--primary); margin-right: 8px;"></i>
+                1. Industry Problem & Project Background
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                Container drayage and haulage logistics in Sri Lanka frequently suffer from operational fragmentation. Shippers, freight forwarders, container yards, and independent transport suppliers rely heavily on uncoordinated telephone calls, WhatsApp groups, and manual paper manifests.
+              </p>
+              <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                This absence of a centralized digital ecosystem creates severe recurring bottlenecks for companies like <strong>Rysera Innovations</strong>:
+              </p>
+              
+              <div class="bottlenecks-list">
+                <div class="bottleneck-item">
+                  <div class="bottleneck-icon"><i class="fa-solid fa-handshake-simple-slash"></i></div>
+                  <div>
+                    <h4 style="color: var(--text-main); margin-bottom: 4px;">Fragmented Bidding & Price Opacity</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                      Transport allocation occurs via arbitrary phone negotiations rather than competitive, transparent digital bidding pipelines.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bottleneck-item">
+                  <div class="bottleneck-icon"><i class="fa-solid fa-id-card-clip"></i></div>
+                  <div>
+                    <h4 style="color: var(--text-main); margin-bottom: 4px;">Compliance & Document Verification Failures</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                      Drivers arriving at terminal gates without verified Port Entry Passes, commercial insurance, or valid revenue licenses cause costly demurrage delays.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bottleneck-item">
+                  <div class="bottleneck-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                  <div>
+                    <h4 style="color: var(--text-main); margin-bottom: 4px;">Blind Shipment Transitions</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                      Stakeholders lack visibility into intermediate transit states (Gate Out, Yard Arrival, Customs Inspection, Gate In).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. System Architecture & Monorepo Hierarchy -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">System Architecture & Monorepo Hierarchy</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-sitemap" style="color: var(--secondary); margin-right: 8px;"></i>
+                2. System Architecture & Turborepo Design
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.4rem;">
+                ConTrack was engineered as an enterprise-grade monorepo managed with <strong>Turborepo</strong>, strictly decoupling client presentation layers, shared component packages, microservices, and persistence:
+              </p>
+
+              <div class="architecture-grid">
+                <div class="arch-card">
+                  <div class="arch-badge">PORTAL 1</div>
+                  <h4>Supplier Web Portal</h4>
+                  <p>React.js application empowering transport contractors to manage fleets, register verified drivers, participate in real-time order bidding, and monitor shipment milestones.</p>
+                </div>
+
+                <div class="arch-card">
+                  <div class="arch-badge">PORTAL 2</div>
+                  <h4>Logistics Coordinator Portal</h4>
+                  <p>Operational control center for dispatchers to publish container transit requests, evaluate supplier bids, assign route checkpoints, and verify cargo handoffs.</p>
+                </div>
+
+                <div class="arch-card">
+                  <div class="arch-badge">PORTAL 3</div>
+                  <h4>Admin & Governance Portal</h4>
+                  <p>Comprehensive system administration interface for platform user onboarding, compliance approvals, tariff controls, and operational analytics.</p>
+                </div>
+
+                <div class="arch-card">
+                  <div class="arch-badge">APP 4</div>
+                  <h4>Driver Mobile Application</h4>
+                  <p>React Native cross-platform application providing drivers with assigned trip itineraries, digital turn-by-turn navigation, and terminal QR checkpoint scanning.</p>
+                </div>
+              </div>
+
+              <div class="infra-highlight" style="margin-top: 1.5rem;">
+                <h4 style="color: var(--text-main); font-size: 0.95rem; margin-bottom: 6px;">
+                  <i class="fa-solid fa-server" style="color: var(--primary); margin-right: 6px;"></i>
+                  Backend & Database Tier
+                </h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; margin: 0;">
+                  Built with <strong>Node.js & Express.js</strong> microservices exposing secure REST APIs. Data persistence is managed via <strong>Supabase (PostgreSQL)</strong> utilizing relational constraints, foreign keys, and Row-Level Security (RLS) policies. Document binaries are managed through isolated <strong>Supabase Storage buckets</strong> with authenticated URL signing.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Key Functional Modules -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Core Functional Modules</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-gears" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                3. Core Functional Modules
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.4rem;">
+                The platform orchestrates end-to-end container shipment lifecycles:
+              </p>
+
+              <div class="modules-stack">
+                <div class="module-item">
+                  <div class="module-icon"><i class="fa-solid fa-gavel"></i></div>
+                  <div>
+                    <h4>Dynamic Bidding Engine</h4>
+                    <p>Allows registered suppliers to place binding price bids on posted container consignments within scheduled auction windows, automating optimal vendor selection.</p>
+                  </div>
+                </div>
+
+                <div class="module-item">
+                  <div class="module-icon"><i class="fa-solid fa-truck"></i></div>
+                  <div>
+                    <h4>Fleet & Driver CRUD Interfaces</h4>
+                    <p>Enables transport suppliers to maintain live inventories of prime movers, multi-axle trailers, and designated drivers with real-time duty status flags.</p>
+                  </div>
+                </div>
+
+                <div class="module-item">
+                  <div class="module-icon"><i class="fa-solid fa-route"></i></div>
+                  <div>
+                    <h4>Checkpoint & Clearance Tracking</h4>
+                    <p>Propagates shipment status milestones from pickup through yard customs to port gate clearance with timestamped audit records.</p>
+                  </div>
+                </div>
+
+                <div class="module-item">
+                  <div class="module-icon"><i class="fa-solid fa-file-shield"></i></div>
+                  <div>
+                    <h4>Secure Document Upload & Verification</h4>
+                    <p>Integrates multi-file validation and Supabase cloud bucket storage for regulatory certificates, preventing uncertified vehicles from entering port terminals.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Individual Contributions Highlight (Sadeepa Lakshan) -->
+          <article class="terminal-card content-card" style="border-color: rgba(56, 189, 248, 0.4);">
+            <div class="terminal-header" style="background: rgba(56, 189, 248, 0.1);">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title" style="color: var(--primary);">Individual Contributions — Sadeepa Lakshan</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading" style="color: var(--primary);">
+                <i class="fa-solid fa-user-check" style="margin-right: 8px;"></i>
+                4. Individual Engineering Contributions
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                As the <strong>Supplier Portal & Document Engine Lead</strong>, my primary focus was designing, implementing, and integrating the critical supplier-side interactions:
+              </p>
+
+              <div class="contributions-list">
+                <div class="contribution-item">
+                  <div class="contrib-bullet"></div>
+                  <div>
+                    <h4>Architected & Developed the Supplier Web Portal in React.js</h4>
+                    <p>Built the core application structure, responsive navigation, and component hierarchy for the Supplier Portal, encompassing the Supplier Profile, Bidding Dashboard, Driver/Vehicle Management, My Bids, and Live Tracking views.</p>
+                  </div>
+                </div>
+
+                <div class="contribution-item">
+                  <div class="contrib-bullet"></div>
+                  <div>
+                    <h4>Driver & Vehicle Fleet CRUD Management</h4>
+                    <p>Engineered comprehensive CRUD user interfaces enabling suppliers to add, modify, audit, and activate prime movers, container trailers, and drivers with live availability states.</p>
+                  </div>
+                </div>
+
+                <div class="contribution-item">
+                  <div class="contrib-bullet"></div>
+                  <div>
+                    <h4>End-to-End Document Upload Engine</h4>
+                    <p>Engineered a multi-document upload and verification pipeline supporting Driver Driving Licenses, Police Clearance Certificates, Vehicle Insurance Policies, and Port Entry Permits with MIME-type and size validation.</p>
+                  </div>
+                </div>
+
+                <div class="contribution-item">
+                  <div class="contrib-bullet"></div>
+                  <div>
+                    <h4>Reusable Supabase Storage Cloud Utility</h4>
+                    <p>Authored a modular JavaScript upload utility interfacing directly with Supabase Storage buckets, executing encrypted multi-part binary uploads and generating secure public/signed URLs for API integration.</p>
+                  </div>
+                </div>
+
+                <div class="contribution-item">
+                  <div class="contrib-bullet"></div>
+                  <div>
+                    <h4>Relational Database Schema Design</h4>
+                    <p>Contributed to Supabase PostgreSQL database schema design, entity-relationship diagrams (ERD), foreign key constraints, and indexing for optimal query throughput.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Right Sidebar Info Cards -->
+        <aside class="detail-sidebar">
+          
+          <!-- Client & Supervision Box -->
+          <div class="sidebar-box client-supervision-card">
+            <div class="sidebar-header-badge">
+              <span class="badge-icon">🏢</span>
+              <h3>Project Client & Context</h3>
+            </div>
+            <div class="supervision-info">
+              <div class="sup-row">
+                <span class="sup-label">Client Organization:</span>
+                <strong class="sup-val">Rysera Innovations (Moratuwa)</strong>
+              </div>
+              <div class="sup-row">
+                <span class="sup-label">Academic Module:</span>
+                <strong class="sup-val">IS2901 Software Project</strong>
+              </div>
+              <div class="sup-row">
+                <span class="sup-label">Academic Supervisors:</span>
+                <div class="sup-val-list">
+                  <div>Mrs. Nipuni Chandimali</div>
+                  <div>Prof. Thanuja Sandanayake</div>
+                </div>
+              </div>
+              <div class="sup-row">
+                <span class="sup-label">Faculty:</span>
+                <strong class="sup-val">Faculty of IT, University of Moratuwa</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proposed Tech Stack Card -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Technology Stack</h3>
+            <div class="stack-tags-list">
+              {project.techStack.map(tech => (
+                <span class="tech-pill">{tech}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Team InnoWave (Group 06) Roster -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Team InnoWave (Group 06)</h3>
+            <ul class="team-list">
+              {project.team.map(m => (
+                <li class="team-member-item">
+                  <div>
+                    <span class="member-name"><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 6px;"></i>{m.name}</span>
+                    <span class="member-role">{m.role}</span>
+                  </div>
+                  <span class="member-inst">{m.inst}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Repository CTA Card -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">GitHub Repository</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Explore the Turborepo monorepo, React supplier components, and Express API services on GitHub.
+            </p>
+            <a 
+              href={project.repository} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%; justify-content: center; font-size: 0.9rem;"
+            >
+              <i class="fa-brands fa-github"></i> View Repository <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bottom Action CTA -->
+      <div class="github-cta-box" style="margin-top: 3.5rem;">
+        <div class="cta-info">
+          <i class="fa-solid fa-truck-fast cta-icon" style="color: var(--primary);"></i>
+          <div>
+            <h4>Looking for Full-Stack Web Engineering?</h4>
+            <p>Explore React, Node.js, Express, and database-driven applications on Sadeepa's GitHub.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href={`${baseUrl}#projects`} class="btn btn-primary">
+            <i class="fa-solid fa-folder-open"></i> View All Projects
+          </a>
+          <a href={`${baseUrl}#contact`} class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Contact Sadeepa
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Hero Banner */
+  .hero-banner-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .banner-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-banner-card:hover .banner-image {
+    transform: scale(1.03);
+  }
+
+  .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(7, 10, 18, 0.97) 0%, rgba(7, 10, 18, 0.65) 45%, rgba(7, 10, 18, 0.25) 100%);
+  }
+
+  .banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2.5rem;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.2rem;
+  }
+
+  .pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+  }
+
+  .pill-sky {
+    background: rgba(56, 189, 248, 0.15);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+  }
+
+  .pill-emerald {
+    background: rgba(62, 207, 142, 0.15);
+    color: #a7f3d0;
+    border: 1px solid rgba(62, 207, 142, 0.4);
+  }
+
+  .pill-gold {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fde68a;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+
+  .banner-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+  }
+
+  .banner-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 860px;
+    line-height: 1.6;
+  }
+
+  /* Metrics Grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .metric-card {
+    padding: 1.4rem 1rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-backdrop);
+    text-align: center;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+  }
+
+  .metric-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+  }
+
+  .metric-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    font-weight: 600;
+  }
+
+  /* Layout */
+  .detail-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .content-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+  }
+
+  .section-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Bottlenecks */
+  .bottlenecks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .bottleneck-item {
+    display: flex;
+    gap: 14px;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .bottleneck-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    padding-top: 2px;
+  }
+
+  /* Architecture Grid */
+  .architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .arch-card {
+    padding: 1.2rem;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+  }
+
+  .arch-badge {
+    font-size: 0.68rem;
+    font-family: var(--font-code);
+    font-weight: 700;
+    color: var(--secondary);
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .arch-card h4 {
+    font-size: 0.92rem;
+    color: var(--text-main);
+    margin-bottom: 6px;
+  }
+
+  .arch-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .infra-highlight {
+    padding: 1rem 1.2rem;
+    border-radius: var(--radius-sm);
+    background: rgba(56, 189, 248, 0.05);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+  }
+
+  /* Modules Stack */
+  .modules-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .module-item {
+    display: flex;
+    gap: 14px;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+  }
+
+  .module-icon {
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+    padding-top: 2px;
+  }
+
+  .module-item h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+  }
+
+  .module-item p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Contributions List */
+  .contributions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .contribution-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .contrib-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    margin-top: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px var(--primary);
+  }
+
+  .contribution-item h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+  }
+
+  .contribution-item p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Sidebar */
+  .detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar-box {
+    padding: 1.4rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-backdrop);
+  }
+
+  .sidebar-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* Client & Supervision Card */
+  .client-supervision-card {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.1);
+  }
+
+  .sidebar-header-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.8rem;
+  }
+
+  .badge-icon {
+    font-size: 1.2rem;
+  }
+
+  .sidebar-header-badge h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #bae6fd;
+  }
+
+  .supervision-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.82rem;
+  }
+
+  .sup-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .sup-label {
+    color: var(--text-dim);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: var(--font-code);
+  }
+
+  .sup-val {
+    color: var(--text-main);
+  }
+
+  .sup-val-list {
+    color: var(--text-main);
+    font-weight: 600;
+  }
+
+  /* Stack Tags */
+  .stack-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tech-pill {
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-family: var(--font-code);
+    color: var(--primary);
+  }
+
+  /* Team List */
+  .team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .team-member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+  }
+
+  .member-name {
+    display: block;
+    color: var(--text-main);
+    font-weight: 600;
+  }
+
+  .member-role {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-left: 14px;
+  }
+
+  .member-inst {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: var(--font-code);
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 900px) {
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .detail-layout {
+      grid-template-columns: 1fr;
+    }
+    .hero-banner-card {
+      padding: 1.8rem;
+    }
+    .banner-title {
+      font-size: 1.7rem;
+    }
+    .architecture-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .banner-title {
+      font-size: 1.4rem;
+    }
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

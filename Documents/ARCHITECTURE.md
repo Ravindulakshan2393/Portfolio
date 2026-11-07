@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-07 08:53:01 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 10:05:46 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -26,7 +26,8 @@ assets/
 │   ├── abacus-certificate.jpg  (153.0 KB)
 │   ├── abacus-hardware-setup.jpg  (172.2 KB)
 │   ├── abacus-team.jpg  (211.9 KB)
-│   └── aesss-team.jpg  (204.0 KB)
+│   ├── aesss-team.jpg  (204.0 KB)
+│   └── contrack-banner.jpg  (178.5 KB)
 ├── profile.jpg  (100.2 KB)
 └── symbol.png  (954.6 KB)
 css/
@@ -36,13 +37,15 @@ dist/
 │   ├── abacus.BYZPNiGj.css  (8.1 KB)
 │   ├── ae-sss.Bf5_kIlf.css  (9.4 KB)
 │   ├── BaseLayout.astro_astro_type_script_index_0_lang.BP9gLYNk.js  (7.8 KB)
-│   └── BaseLayout.B79Ns7_N.css  (26.1 KB)
+│   ├── BaseLayout.B79Ns7_N.css  (26.1 KB)
+│   └── contrack.Baq977qh.css  (7.9 KB)
 ├── assets/
 │   ├── projects/
 │   │   ├── abacus-certificate.jpg  (153.0 KB)
 │   │   ├── abacus-hardware-setup.jpg  (172.2 KB)
 │   │   ├── abacus-team.jpg  (211.9 KB)
-│   │   └── aesss-team.jpg  (204.0 KB)
+│   │   ├── aesss-team.jpg  (204.0 KB)
+│   │   └── contrack-banner.jpg  (178.5 KB)
 │   ├── profile.jpg  (100.2 KB)
 │   └── symbol.png  (954.6 KB)
 ├── projects/
@@ -51,13 +54,13 @@ dist/
 │   ├── ae-sss/
 │   │   └── index.html  (29.2 KB)
 │   └── contrack/
-│       └── index.html  (7.7 KB)
-└── index.html  (27.7 KB)
+│       └── index.html  (25.7 KB)
+└── index.html  (28.0 KB)
 Documents/
-├── ARCHITECTURE.md  (5.2 KB)
+├── ARCHITECTURE.md  (5.8 KB)
 ├── DEPLOYMENT_GUIDE.md  (2.4 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
-└── RESUME_DATA.md  (2.5 KB)
+└── RESUME_DATA.md  (2.9 KB)
 js/
 └── main.js  (12.7 KB)
 public/
@@ -66,7 +69,8 @@ public/
     │   ├── abacus-certificate.jpg  (153.0 KB)
     │   ├── abacus-hardware-setup.jpg  (172.2 KB)
     │   ├── abacus-team.jpg  (211.9 KB)
-    │   └── aesss-team.jpg  (204.0 KB)
+    │   ├── aesss-team.jpg  (204.0 KB)
+    │   └── contrack-banner.jpg  (178.5 KB)
     ├── profile.jpg  (100.2 KB)
     └── symbol.png  (954.6 KB)
 scripts/
@@ -80,7 +84,7 @@ src/
 │   ├── Hero.astro  (3.8 KB)
 │   ├── Navbar.astro  (1.6 KB)
 │   ├── ProjectModal.astro  (0.6 KB)
-│   ├── Projects.astro  (10.3 KB)
+│   ├── Projects.astro  (10.6 KB)
 │   ├── Skills.astro  (5.2 KB)
 │   └── Stats.astro  (1.9 KB)
 ├── layouts/
@@ -89,14 +93,14 @@ src/
 │   ├── projects/
 │   │   ├── abacus.astro  (28.3 KB)
 │   │   ├── ae-sss.astro  (34.9 KB)
-│   │   └── contrack.astro  (6.0 KB)
+│   │   └── contrack.astro  (29.8 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
 │   └── main.js  (14.9 KB)
 └── styles/
     └── styles.css  (37.0 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (40.9 KB)
+index.html  (41.0 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)
