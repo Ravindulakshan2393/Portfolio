@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-07 10:05:46 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 11:44:34 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -57,12 +57,12 @@ dist/
 │       └── index.html  (25.7 KB)
 └── index.html  (28.0 KB)
 Documents/
-├── ARCHITECTURE.md  (5.8 KB)
+├── ARCHITECTURE.md  (6.1 KB)
 ├── DEPLOYMENT_GUIDE.md  (2.4 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
-└── RESUME_DATA.md  (2.9 KB)
+└── RESUME_DATA.md  (3.0 KB)
 js/
-└── main.js  (12.7 KB)
+└── main.js  (13.0 KB)
 public/
 └── assets/
     ├── projects/
@@ -74,14 +74,14 @@ public/
     ├── profile.jpg  (100.2 KB)
     └── symbol.png  (954.6 KB)
 scripts/
-└── update_docs.js  (14.5 KB)
+└── update_docs.js  (14.9 KB)
 src/
 ├── components/
-│   ├── About.astro  (6.1 KB)
+│   ├── About.astro  (6.3 KB)
 │   ├── Awards.astro  (4.0 KB)
 │   ├── Contact.astro  (5.1 KB)
 │   ├── Footer.astro  (1.0 KB)
-│   ├── Hero.astro  (3.8 KB)
+│   ├── Hero.astro  (3.9 KB)
 │   ├── Navbar.astro  (1.6 KB)
 │   ├── ProjectModal.astro  (0.6 KB)
 │   ├── Projects.astro  (10.6 KB)
@@ -96,11 +96,11 @@ src/
 │   │   └── contrack.astro  (29.8 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
-│   └── main.js  (14.9 KB)
+│   └── main.js  (15.3 KB)
 └── styles/
     └── styles.css  (37.0 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (41.0 KB)
+index.html  (41.9 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)
