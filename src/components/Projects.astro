@@ -121,6 +121,58 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
                     </div>
                 </div>
             </div>
+
+            <!-- Project 3: AE-SSS Smart Surveillance System -->
+            <div class="project-card" data-project-cat="iot">
+                <div class="project-image-wrapper">
+                    <div class="project-graphic iot-graphic" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(15, 23, 42, 0.95) 100%);">
+                        <div class="window-bar">
+                            <span class="dot-btn"></span><span class="dot-btn"></span><span class="dot-btn"></span>
+                            <span class="window-title">AE-SSS: Edge-AI Surveillance</span>
+                        </div>
+                        <div class="graphic-content iot-content">
+                            <div class="sensor-chip" style="border-color: rgba(56, 189, 248, 0.4);">
+                                <i class="fa-solid fa-brain" style="color: var(--primary);"></i>
+                                <span>Jetson Orin Nano + Edge-AI</span>
+                            </div>
+                            <div class="sensor-values">
+                                <div class="s-val"><span>Latency</span><b>&lt; 50 ms</b></div>
+                                <div class="s-val"><span>Bandwidth Saved</span><b>&gt; 99%</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <a href={`${baseUrl}projects/ae-sss`} class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-file-lines"></i> View Concept Case Study
+                        </a>
+                        <a href="https://github.com/chamika-u/mini-ideathon-smart-ecosystem.git" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" style="margin-left: 8px;">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <span class="project-type">Edge-AI Multi-Agent Architecture</span>
+                    <h3 class="project-title">AE-SSS: Smart Surveillance & Response System</h3>
+                    <p class="project-desc">
+                        Decentralized multi-agent edge-AI architecture for high-density transit hubs (Pettah Bus Stand) running on NVIDIA Jetson Orin Nano with 5-stage control loop and privacy-by-design RAM scrubbing.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">System Architecture</span>
+                        <span class="tag">Multi-Agent AI</span>
+                        <span class="tag">Edge Computing</span>
+                        <span class="tag">Jetson Orin Nano</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/chamika-u/mini-ideathon-smart-ecosystem.git" target="_blank" rel="noopener noreferrer" class="link-btn">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href={`${baseUrl}projects/ae-sss`} class="link-btn">
+                            Case Study <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

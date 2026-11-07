@@ -1,0 +1,1054 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const project = {
+  title: "AE-SSS: Agentic Edge-AI Smart Surveillance & Response System",
+  subtitle: "IEEE CS R10 Summer School 2026 Mini-Ideathon — 2nd Place Winner",
+  award: "2nd Place Winner (IEEE CS R10 Summer School 2026 Mini-Ideathon)",
+  target: "Pettah Central Bus Stand, Colombo, Sri Lanka",
+  team: [
+    { name: "Sadeepa Lakshan", inst: "UOM" },
+    { name: "Chamika Umesh", inst: "UOS" },
+    { name: "Aadhil Akuthub", inst: "OUSL" },
+    { name: "Hiumie Hungampola", inst: "UOK" },
+    { name: "Rometh De Silva", inst: "UOK" },
+    { name: "Amanda Ariyaratne", inst: "UOM" }
+  ],
+  repository: "https://github.com/chamika-u/mini-ideathon-smart-ecosystem.git",
+  image: `${baseUrl}assets/projects/aesss-team.jpg`,
+  techStack: [
+    "NVIDIA Jetson Orin Nano (8GB)",
+    "YOLOv8 + TensorRT INT8",
+    "Acoustic NLP (Sinhala / Tamil / English)",
+    "Local LLM + RAG (Vector DB)",
+    "mTLS 1.3 + TPM 2.0 / ATECC608A",
+    "MQTT over TLS 1.3",
+    "Edge System Architecture"
+  ],
+  metrics: [
+    { label: "Inference Latency", value: "< 50 ms" },
+    { label: "Bandwidth & Power Saved", value: "> 99%" },
+    { label: "HITL Override Window", value: "30 Seconds" },
+    { label: "Ephemeral Buffer", value: "10-min FIFO RAM" }
+  ]
+};
+---
+
+<BaseLayout 
+  title={`${project.title} | Case Study`}
+  description="IEEE CS R10 Summer School 2026 Mini-Ideathon 2nd Place Winner — Agentic Edge-AI Smart Surveillance System by Team Busy Bees."
+  isHome={false}
+>
+  <section class="section aesss-container" style="padding-top: 130px; min-height: 85vh;">
+    <div class="container" style="max-width: 1100px;">
+      
+      <!-- Top Back Navigation -->
+      <div style="margin-bottom: 2rem;">
+        <a href={`${baseUrl}#awards`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-arrow-left"></i> Back to Awards & Recognition
+        </a>
+      </div>
+
+      <!-- Hero Header Banner with Group Photo Overlay -->
+      <div class="hero-banner-card">
+        <div class="banner-image-wrapper">
+          <img 
+            src={project.image} 
+            alt="Team Busy Bees - IEEE CS R10 Mini-Ideathon 2nd Place Winners" 
+            class="banner-image"
+          />
+          <div class="banner-overlay"></div>
+        </div>
+        
+        <div class="banner-content">
+          <div class="badge-row">
+            <span class="pill-badge pill-gold">
+              <i class="fa-solid fa-trophy"></i> {project.award}
+            </span>
+            <span class="pill-badge pill-sky">
+              <i class="fa-solid fa-brain"></i> System Architecture Proposal
+            </span>
+            <span class="pill-badge pill-emerald">
+              <i class="fa-solid fa-location-dot"></i> {project.target}
+            </span>
+          </div>
+          
+          <h1 class="banner-title">
+            AE-SSS: <span class="text-gradient">Agentic Edge-AI</span> Smart Surveillance & Response System
+          </h1>
+          <p class="banner-desc">
+            A future-oriented multi-agent edge-AI surveillance architecture designed to convert passive CCTV infrastructure into autonomous real-time safety guardians for high-density public transit terminals.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Core Architecture Metrics Grid -->
+      <div class="metrics-grid">
+        {project.metrics.map(m => (
+          <div class="metric-card">
+            <div class="metric-value">{m.value}</div>
+            <div class="metric-label">{m.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Main Content & Sidebar Layout -->
+      <div class="detail-layout">
+        
+        <!-- Main Case Study Content -->
+        <div class="detail-main">
+          
+          <!-- 1. Problem Context & Proposal Objectives -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Problem Context & Proposal Objectives</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-orange); margin-right: 8px;"></i>
+                1. Problem Context & Objectives
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                <strong>Pettah Central Bus Stand</strong> is Sri Lanka's largest and most congested ground transit terminal, handling hundreds of thousands of daily commuters. High passenger density, continuous vehicular turnover, and open-air platforms create distinct vulnerabilities: pickpocketing, crowd surge stampedes, unauthorized commercial obstruction, and delayed responses to peak-heat cardiac or dehydration collapses.
+              </p>
+              <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                The <strong>AE-SSS architecture</strong> resolves four chronic structural deficiencies of conventional municipal CCTV setups:
+              </p>
+              
+              <div class="bottlenecks-list">
+                <div class="bottleneck-item">
+                  <div class="bottleneck-icon"><i class="fa-solid fa-hourglass-end"></i></div>
+                  <div>
+                    <h4 style="color: var(--text-main); margin-bottom: 4px;">Passive Forensic Delay</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                      Transforms retroactive, post-incident forensic video scrubbing into sub-second autonomous threat classification and real-time deterrence.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bottleneck-item">
+                  <div class="bottleneck-icon"><i class="fa-solid fa-network-wired"></i></div>
+                  <div>
+                    <h4 style="color: var(--text-main); margin-bottom: 4px;">Severe WAN Bandwidth & Power Drain</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                      Halts continuous 24/7 cloud RTSP raw streaming, slashing WAN bandwidth utilization and cloud transmission power by over <strong>99%</strong> via localized compute on the edge.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bottleneck-item">
+                  <div class="bottleneck-icon"><i class="fa-solid fa-filter"></i></div>
+                  <div>
+                    <h4 style="color: var(--text-main); margin-bottom: 4px;">False Alarm Fatigue</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                      Suppresses false triggers in chaotic crowd environments using multi-sensor spatial-temporal fusion (visual bounding box coordinates cross-validated with acoustic beamforming arrays).
+                    </p>
+                  </div>
+                </div>
+
+                <div class="bottleneck-item">
+                  <div class="bottleneck-icon"><i class="fa-solid fa-user-shield"></i></div>
+                  <div>
+                    <h4 style="color: var(--text-main); margin-bottom: 4px;">Mass Public Privacy Violations</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                      Guarantees privacy-by-design by running exclusively in volatile RAM and discarding unflagged footage through continuous rolling buffer overwrites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. 5-Tier System Architecture -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">5-Tier Edge System Architecture</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-layer-group" style="color: var(--primary); margin-right: 8px;"></i>
+                2. 5-Tier Architecture Hierarchy
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.4rem;">
+                The complete system spans five decoupled, resilient tiers designed for zero single points of failure:
+              </p>
+
+              <div class="tiers-stack">
+                <div class="tier-card">
+                  <div class="tier-number">Tier 1</div>
+                  <div class="tier-info">
+                    <h4>Physical Sensors & Ingestion</h4>
+                    <p>4K optical surveillance cameras, 4-microphone beamforming directional audio arrays, and environmental temperature/PIR occupancy sensors.</p>
+                  </div>
+                </div>
+
+                <div class="tier-card">
+                  <div class="tier-number">Tier 2</div>
+                  <div class="tier-info">
+                    <h4>Device & Capture Tier</h4>
+                    <p>Edge frame grabbing, hardware-accelerated H.264/H.265 decoding, audio beam steering, and volatile memory ring-buffering.</p>
+                  </div>
+                </div>
+
+                <div class="tier-card tier-highlight">
+                  <div class="tier-number" style="color: var(--primary);">Tier 3</div>
+                  <div class="tier-info">
+                    <h4>Edge Gateway & Compute (NVIDIA Jetson Orin Nano 8GB)</h4>
+                    <p>Hosts TensorRT-accelerated YOLOv8 object detection, acoustic keyword spotters, local lightweight LLM + vector database for policy checking, and multi-agent coordination.</p>
+                  </div>
+                </div>
+
+                <div class="tier-card">
+                  <div class="tier-number">Tier 4</div>
+                  <div class="tier-info">
+                    <h4>Secure Network & Transport</h4>
+                    <p>mTLS 1.3 encrypted mesh, MQTT over TLS 1.3 message broker, with hardware-backed cryptographic identity secured via TPM 2.0 / ATECC608A secure elements.</p>
+                  </div>
+                </div>
+
+                <div class="tier-card">
+                  <div class="tier-number">Tier 5</div>
+                  <div class="tier-info">
+                    <h4>Platform, Cloud & Application Dispatch</h4>
+                    <p>Aggregated telemetry audit logs, model retraining triggers, transit security mobile application, Sri Lanka Police dispatch console, and 1990 Suwa Seriya ambulance API.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. 5-Stage Agentic Control Loop -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">5-Stage Agentic Control Loop</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-arrows-spin" style="color: var(--secondary); margin-right: 8px;"></i>
+                3. The 5-Stage Control Loop
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.4rem;">
+                Autonomous edge agents collaborate through a cyclical 5-stage feedback pipeline:
+              </p>
+
+              <div class="loop-grid">
+                <div class="loop-step">
+                  <div class="loop-badge">1. MONITOR</div>
+                  <h4>Sensory Ingestion</h4>
+                  <p>In-memory visual frames & acoustic signals ingested with sub-50ms inference via INT8 YOLOv8 and multilingual acoustic spotters.</p>
+                </div>
+
+                <div class="loop-step">
+                  <div class="loop-badge">2. REASON</div>
+                  <h4>Multi-Sensor Fusion</h4>
+                  <p>Cross-references visual bounding boxes with acoustic distress keywords in Sinhala, Tamil, and English to verify incident context.</p>
+                </div>
+
+                <div class="loop-step">
+                  <div class="loop-badge">3. VALIDATE</div>
+                  <h4>Policy & HITL Guard</h4>
+                  <p>Queries localized LLM + RAG vector DB against municipal safety bylaws; initiates 30s Human-in-the-Loop override window.</p>
+                </div>
+
+                <div class="loop-step">
+                  <div class="loop-badge">4. ACT</div>
+                  <h4>Targeted Actuation</h4>
+                  <p>Triggers tiered responses: directional PA announcements, transit guard mobile alerts, or encrypted emergency API dispatch payloads.</p>
+                </div>
+
+                <div class="loop-step">
+                  <div class="loop-badge">5. LEARN</div>
+                  <h4>Adaptive Telemetry</h4>
+                  <p>Aggregates anonymized detection confidence metrics to refine localized threshold weights without exposing raw private video.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Automated Response Matrix -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Automated Incident Response Matrix</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-table-cells" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                4. Automated Incident Response Matrix
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                Based on incident severity, the system executes progressive escalations:
+              </p>
+
+              <div class="table-responsive">
+                <table class="custom-table">
+                  <thead>
+                    <tr>
+                      <th>Severity Tier</th>
+                      <th>Detected Event</th>
+                      <th>Automated Actuation</th>
+                      <th>Target Endpoint</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="tier-badge tier-l1">Level 1</span></td>
+                      <td>Littering, unauthorized hawker stalls, terminal aisle obstruction</td>
+                      <td>Localized directional PA advisory broadcast</td>
+                      <td>On-site platform directional PA</td>
+                    </tr>
+                    <tr>
+                      <td><span class="tier-badge tier-l2">Level 2</span></td>
+                      <td>Pickpocketing, crowd surge bottlenecks, dispute escalation</td>
+                      <td>30s HITL confirmation warning + silent vibration alert</td>
+                      <td>Bus Stand Security Mobile App</td>
+                    </tr>
+                    <tr>
+                      <td><span class="tier-badge tier-l3a">Level 3A</span></td>
+                      <td>Physical assault, dangerous weapon flag, organized violence</td>
+                      <td>Live suspect tracking vector + encrypted alert packet</td>
+                      <td>Sri Lanka Police (Pettah Division)</td>
+                    </tr>
+                    <tr>
+                      <td><span class="tier-badge tier-l3b">Level 3B</span></td>
+                      <td>Commuter collapse, heat stroke, unconscious individual</td>
+                      <td>Instant GPS coordinate payload & vital telemetry flag</td>
+                      <td>1990 Suwa Seriya Ambulance API</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Verification Suite & Passing Tests -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Verification & Testing Suite</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald); margin-right: 8px;"></i>
+                5. Verification Suite (13 Automated Tests Passing)
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                The prototype codebase includes a Python <code>unittest</code> suite with <strong>13 automated test cases passing</strong>, verifying multi-agent state machines, FIFO memory recycling, and emergency API dispatchers:
+              </p>
+
+              <div class="tests-grid">
+                <div class="test-item">
+                  <i class="fa-solid fa-check test-icon"></i>
+                  <span>FIFO RAM Buffer 10-minute overwrite recycling & memory ceiling bounds</span>
+                </div>
+                <div class="test-item">
+                  <i class="fa-solid fa-check test-icon"></i>
+                  <span>Spatial-temporal cross-correlation between audio spikes and YOLOv8 visual boxes</span>
+                </div>
+                <div class="test-item">
+                  <i class="fa-solid fa-check test-icon"></i>
+                  <span>30-second HITL countdown expiration, manual override, and escalation triggers</span>
+                </div>
+                <div class="test-item">
+                  <i class="fa-solid fa-check test-icon"></i>
+                  <span>1990 Suwa Seriya payload formatting & GPS coordinates encryption schema</span>
+                </div>
+                <div class="test-item">
+                  <i class="fa-solid fa-check test-icon"></i>
+                  <span>mTLS 1.3 handshake & TPM 2.0 key verification on MQTT publish/subscribe</span>
+                </div>
+                <div class="test-item">
+                  <i class="fa-solid fa-check test-icon"></i>
+                  <span>Graceful edge gateway failover during simulated WAN disconnects</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Privacy & SDG Alignment -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Privacy-by-Design & UN SDG Alignment</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-earth-americas" style="color: var(--accent-emerald); margin-right: 8px;"></i>
+                6. Privacy-by-Design & UN SDG Alignment
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                Public surveillance must respect civil liberties. AE-SSS incorporates an ephemeral <strong style="color: var(--text-main);">10-Minute Rolling FIFO RAM Buffer</strong> encrypted with <strong style="color: var(--text-main);">AES-256-GCM</strong> directly on hardware memory. Unflagged footage is permanently overwritten every second, ensuring raw public imagery never touches persistent non-volatile disks.
+              </p>
+
+              <div class="sdg-grid">
+                <div class="sdg-card">
+                  <div class="sdg-num" style="color: var(--primary);">SDG 11</div>
+                  <h4>Sustainable Cities & Communities</h4>
+                  <p>Guarantees secure, accessible public transportation hubs for women, children, and elderly citizens.</p>
+                </div>
+                <div class="sdg-card">
+                  <div class="sdg-num" style="color: var(--accent-emerald);">SDG 13</div>
+                  <h4>Climate Action</h4>
+                  <p>Reduces cloud streaming bandwidth and server farm carbon footprints by &gt;99% via edge inference.</p>
+                </div>
+                <div class="sdg-card">
+                  <div class="sdg-num" style="color: var(--accent-purple);">SDG 3</div>
+                  <h4>Good Health & Well-Being</h4>
+                  <p>Cuts emergency medical response times during heat exhaustion or cardiac events through direct 1990 dispatch.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Right Sidebar Info Cards -->
+        <aside class="detail-sidebar">
+          
+          <!-- Social Impact Box (Medicine Purchase Highlight) -->
+          <div class="sidebar-box social-impact-card">
+            <div class="social-impact-header">
+              <span class="impact-emoji">💊</span>
+              <h3>Social Impact Donation</h3>
+            </div>
+            <p class="social-impact-text">
+              Demonstrating social responsibility, <strong>Team Busy Bees</strong> utilized their entire IEEE CS R10 Ideathon 2nd Place cash prize to purchase and donate essential chemotherapy and supportive medications for pediatric cancer patients at the <strong>Apeksha National Cancer Hospital (Maharagama)</strong>.
+            </p>
+          </div>
+
+          <!-- Proposed Tech Stack Card -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Proposed Tech Stack</h3>
+            <div class="stack-tags-list">
+              {project.techStack.map(tech => (
+                <span class="tech-pill">{tech}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Team Members Card (Verified Roster) -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Team Busy Bees</h3>
+            <ul class="team-list">
+              {project.team.map(m => (
+                <li class="team-member-item">
+                  <span class="member-name"><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 6px;"></i>{m.name}</span>
+                  <span class="member-inst">{m.inst}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Repository CTA Card -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Ideathon Repository</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Explore the full system architecture documentation, data schemas, and edge agent pipeline definitions.
+            </p>
+            <a 
+              href={project.repository} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%; justify-content: center; font-size: 0.9rem;"
+            >
+              <i class="fa-brands fa-github"></i> View GitHub Repository <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bottom Action CTA -->
+      <div class="github-cta-box" style="margin-top: 3.5rem;">
+        <div class="cta-info">
+          <i class="fa-solid fa-trophy cta-icon" style="color: var(--accent-gold);"></i>
+          <div>
+            <h4>Honored by IEEE Computer Society Region 10</h4>
+            <p>Team Busy Bees presented this edge-AI architecture at the IEEE CS R10 Summer School 2026 Mini-Ideathon.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href={`${baseUrl}#awards`} class="btn btn-primary">
+            <i class="fa-solid fa-award"></i> View All Awards
+          </a>
+          <a href={`${baseUrl}#contact`} class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Contact Sadeepa
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Banner */
+  .hero-banner-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .banner-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-banner-card:hover .banner-image {
+    transform: scale(1.03);
+  }
+
+  .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(7, 10, 18, 0.97) 0%, rgba(7, 10, 18, 0.65) 45%, rgba(7, 10, 18, 0.2) 100%);
+  }
+
+  .banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2.5rem;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+  }
+
+  .pill-gold {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fde68a;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+
+  .pill-sky {
+    background: rgba(56, 189, 248, 0.15);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+  }
+
+  .pill-emerald {
+    background: rgba(62, 207, 142, 0.15);
+    color: #a7f3d0;
+    border: 1px solid rgba(62, 207, 142, 0.4);
+  }
+
+  .banner-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-main);
+    margin-bottom: 0.6rem;
+  }
+
+  .banner-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 820px;
+    line-height: 1.6;
+  }
+
+  /* Metrics Grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .metric-card {
+    padding: 1.4rem 1rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-backdrop);
+    text-align: center;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+  }
+
+  .metric-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+  }
+
+  .metric-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    font-weight: 600;
+  }
+
+  /* Layout */
+  .detail-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .content-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+  }
+
+  .section-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Bottlenecks */
+  .bottlenecks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .bottleneck-item {
+    display: flex;
+    gap: 14px;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .bottleneck-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    padding-top: 2px;
+  }
+
+  /* 5-Tier Architecture Stack */
+  .tiers-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .tier-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 1.1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+  }
+
+  .tier-highlight {
+    background: rgba(56, 189, 248, 0.06);
+    border-color: rgba(56, 189, 248, 0.35);
+  }
+
+  .tier-number {
+    font-size: 0.85rem;
+    font-family: var(--font-code);
+    font-weight: 700;
+    color: var(--accent-gold);
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .tier-info h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+  }
+
+  .tier-info p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* 5-Stage Control Loop */
+  .loop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .loop-step {
+    padding: 1.1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+  }
+
+  .loop-badge {
+    font-size: 0.7rem;
+    font-family: var(--font-code);
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  .loop-step h4 {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+  }
+
+  .loop-step p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Table */
+  .table-responsive {
+    overflow-x: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+  }
+
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    text-align: left;
+  }
+
+  .custom-table th {
+    background: rgba(15, 23, 42, 0.95);
+    color: var(--text-muted);
+    padding: 10px 14px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .custom-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    vertical-align: middle;
+  }
+
+  .custom-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .tier-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: var(--font-code);
+  }
+
+  .tier-l1 {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--accent-gold);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+  }
+
+  .tier-l2 {
+    background: rgba(249, 115, 22, 0.15);
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+  }
+
+  .tier-l3a {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .tier-l3b {
+    background: rgba(244, 63, 94, 0.15);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+  }
+
+  /* Tests Grid */
+  .tests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+
+  .test-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(62, 207, 142, 0.05);
+    border: 1px solid rgba(62, 207, 142, 0.2);
+    font-size: 0.82rem;
+    color: var(--text-main);
+    line-height: 1.5;
+  }
+
+  .test-icon {
+    color: var(--accent-emerald);
+    margin-top: 3px;
+    font-size: 0.85rem;
+  }
+
+  /* SDG Grid */
+  .sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  .sdg-card {
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+  }
+
+  .sdg-num {
+    font-size: 0.8rem;
+    font-weight: 800;
+    font-family: var(--font-code);
+    margin-bottom: 4px;
+  }
+
+  .sdg-card h4 {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+  }
+
+  .sdg-card p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Sidebar */
+  .detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar-box {
+    padding: 1.4rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-backdrop);
+  }
+
+  .sidebar-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* Social Impact Card */
+  .social-impact-card {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.1);
+  }
+
+  .social-impact-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.6rem;
+  }
+
+  .impact-emoji {
+    font-size: 1.2rem;
+  }
+
+  .social-impact-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fde68a;
+  }
+
+  .social-impact-text {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .social-impact-text strong {
+    color: var(--text-main);
+  }
+
+  /* Stack Tags */
+  .stack-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tech-pill {
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-family: var(--font-code);
+    color: var(--primary);
+  }
+
+  /* Team List */
+  .team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .team-member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    font-family: var(--font-code);
+  }
+
+  .member-name {
+    color: var(--text-main);
+  }
+
+  .member-inst {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 900px) {
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .detail-layout {
+      grid-template-columns: 1fr;
+    }
+    .banner-image-wrapper {
+      height: 440px;
+    }
+    .banner-content {
+      padding: 1.5rem;
+    }
+    .banner-title {
+      font-size: 1.6rem;
+    }
+    .tests-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .banner-image-wrapper {
+      height: 480px;
+    }
+    .banner-title {
+      font-size: 1.35rem;
+    }
+    .sdg-grid {
+      grid-template-columns: 1fr;
+    }
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+    .tier-card {
+      flex-direction: column;
+    }
+  }
+</style>

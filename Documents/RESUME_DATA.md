@@ -1,6 +1,6 @@
 # Sadeepa Lakshan - Master Resume Data Reference
 
-> **Auto-generated** on 2026-10-20 16:57:07 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 08:05:36 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -51,6 +51,11 @@
 ### 2. Abacus Genius 1.0
 - **Category**: iot
 - **Description**: Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, keypad, LCD screen, sensors, speaker & sleep mode.
+- **Tech Stack**: N/A
+
+### 3. AE-SSS: Smart Surveillance & Response System
+- **Category**: iot
+- **Description**: Decentralized multi-agent edge-AI architecture for high-density transit hubs (Pettah Bus Stand) running on NVIDIA Jetson Orin Nano with 5-stage control loop and privacy-by-design RAM scrubbing.
 - **Tech Stack**: N/A
 
 ---

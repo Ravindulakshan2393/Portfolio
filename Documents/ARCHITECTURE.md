@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-10-20 16:57:07 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 08:05:36 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -12,7 +12,7 @@
 | **Page Title** | Sadeepa Lakshan | Software Engineering & Full-Stack Developer |
 | **Meta Description** | Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ University of Moratuwa. Software Engineering Intern & Full-Stack Web Developer. |
 | **Total Skills** | 15 |
-| **Total Projects** | 2 |
+| **Total Projects** | 3 |
 | **Total Awards** | 4 |
 
 ---
@@ -22,23 +22,32 @@
 ```
 Portfolio/
 assets/
+├── projects/
+│   └── aesss-team.jpg  (204.0 KB)
+├── profile.jpg  (100.2 KB)
 └── symbol.png  (954.6 KB)
 css/
-└── styles.css  (30.2 KB)
+└── styles.css  (30.5 KB)
 dist/
 ├── _astro/
-│   ├── BaseLayout.astro_astro_type_script_index_0_lang.DtR-ymbc.js  (6.8 KB)
-│   └── BaseLayout.CDd9ZyG9.css  (21.7 KB)
+│   ├── ae-sss.Bf5_kIlf.css  (9.4 KB)
+│   ├── BaseLayout.astro_astro_type_script_index_0_lang.BP9gLYNk.js  (7.8 KB)
+│   └── BaseLayout.B79Ns7_N.css  (26.1 KB)
 ├── assets/
+│   ├── projects/
+│   │   └── aesss-team.jpg  (204.0 KB)
+│   ├── profile.jpg  (100.2 KB)
 │   └── symbol.png  (954.6 KB)
 ├── projects/
 │   ├── abacus/
-│   │   └── index.html  (7.7 KB)
+│   │   └── index.html  (7.6 KB)
+│   ├── ae-sss/
+│   │   └── index.html  (29.2 KB)
 │   └── contrack/
 │       └── index.html  (7.7 KB)
-└── index.html  (24.3 KB)
+└── index.html  (26.6 KB)
 Documents/
-├── ARCHITECTURE.md  (4.8 KB)
+├── ARCHITECTURE.md  (5.2 KB)
 ├── DEPLOYMENT_GUIDE.md  (2.4 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
 └── RESUME_DATA.md  (2.2 KB)
@@ -46,19 +55,22 @@ js/
 └── main.js  (12.7 KB)
 public/
 └── assets/
+    ├── projects/
+    │   └── aesss-team.jpg  (204.0 KB)
+    ├── profile.jpg  (100.2 KB)
     └── symbol.png  (954.6 KB)
 scripts/
 └── update_docs.js  (14.5 KB)
 src/
 ├── components/
 │   ├── About.astro  (6.1 KB)
-│   ├── Awards.astro  (2.5 KB)
-│   ├── Contact.astro  (3.8 KB)
+│   ├── Awards.astro  (3.0 KB)
+│   ├── Contact.astro  (5.1 KB)
 │   ├── Footer.astro  (1.0 KB)
 │   ├── Hero.astro  (3.8 KB)
 │   ├── Navbar.astro  (1.6 KB)
 │   ├── ProjectModal.astro  (0.6 KB)
-│   ├── Projects.astro  (6.7 KB)
+│   ├── Projects.astro  (10.0 KB)
 │   ├── Skills.astro  (5.2 KB)
 │   └── Stats.astro  (1.9 KB)
 ├── layouts/
@@ -66,16 +78,17 @@ src/
 ├── pages/
 │   ├── projects/
 │   │   ├── abacus.astro  (6.0 KB)
+│   │   ├── ae-sss.astro  (34.9 KB)
 │   │   └── contrack.astro  (6.0 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
-│   └── main.js  (12.7 KB)
+│   └── main.js  (14.9 KB)
 └── styles/
-    └── styles.css  (30.2 KB)
+    └── styles.css  (37.0 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (36.0 KB)
+index.html  (39.6 KB)
 package-lock.json  (125.8 KB)
-package.json  (0.5 KB)
+package.json  (0.4 KB)
 README.md  (2.6 KB)
 ```
 
