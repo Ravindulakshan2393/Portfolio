@@ -1,6 +1,6 @@
 # Sadeepa Lakshan - Master Resume Data Reference
 
-> **Auto-generated** on 2026-11-07 08:05:36 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 08:53:01 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -50,7 +50,7 @@
 
 ### 2. Abacus Genius 1.0
 - **Category**: iot
-- **Description**: Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, keypad, LCD screen, sensors, speaker & sleep mode.
+- **Description**: Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, rotary encoders, 16×2 LCD, 4×4 keypad, DFPlayer Mini audio module, motion/touch sensors, and smart power management. Exhibited at FIT Expo 2025 (UoM).
 - **Tech Stack**: N/A
 
 ### 3. AE-SSS: Smart Surveillance & Response System
@@ -63,6 +63,7 @@
 ## Awards & Leadership
 
 - **2nd Place Winner** — IEEE CS R10 Summer School 2026 Mini-Ideathon: Awarded 2nd Place with Team Busy Bees for innovative technical solution design and presentation.
+- **Exhibition Recognition** — Certificate of Appreciation — FIT Expo 2025: Awarded by the Faculty of Information Technology, University of Moratuwa to Batch 23 for microcontroller-based project AbacusGenius 1.0 demonstrated at the exhibition.
 - **Rotaract Recognition** — Spirit of Service Award 2024/25: Awarded by the Rotaract Club of University of Moratuwa for outstanding dedication to community impact projects.
 - **University Leadership** — Batch Representative (Level 3): Faculty of Information Technology, University of Moratuwa. Representing student body and coordinating faculty initiatives.
 - **Project Leadership** — Co-Chairperson: Nena Aruna Project: Rotaract Club of University of Moratuwa (2024/25). Led community education projects and volunteer teams (Binara Pedura, Manusath Handa).

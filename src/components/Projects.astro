@@ -84,35 +84,36 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
                                 <span>Arduino Mega + ESP8266</span>
                             </div>
                             <div class="sensor-values">
-                                <div class="s-val"><span>Input</span><b>Keypad & Sensors</b></div>
-                                <div class="s-val"><span>Output</span><b>LCD & Speaker</b></div>
+                                <div class="s-val"><span>Input</span><b>Keypad & 4 Encoders</b></div>
+                                <div class="s-val"><span>Audio</span><b>DFPlayer Mini</b></div>
                             </div>
                         </div>
                     </div>
                     <div class="project-overlay">
-                        <button class="btn btn-sm btn-primary view-project-btn" data-project="abacus">
-                            <i class="fa-solid fa-eye"></i> Quick Specs
-                        </button>
-                        <a href={`${baseUrl}projects/abacus`} class="btn btn-sm btn-secondary" style="margin-left: 8px;">
-                            <i class="fa-solid fa-file-lines"></i> Full Case Study
+                        <a href={`${baseUrl}projects/abacus`} class="btn btn-sm btn-primary">
+                            <i class="fa-solid fa-file-lines"></i> View Case Study
+                        </a>
+                        <a href="https://github.com/Ravindulakshan2393/Abacus-Genius-1.0.git" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" style="margin-left: 8px;">
+                            <i class="fa-brands fa-github"></i> Repository
                         </a>
                     </div>
                 </div>
 
                 <div class="project-content">
-                    <span class="project-type">Arduino Educational Device</span>
+                    <span class="project-type"><i class="fa-solid fa-certificate" style="color: var(--accent-gold); margin-right: 4px;"></i> FIT Expo 2025 Exhibitor</span>
                     <h3 class="project-title">Abacus Genius 1.0</h3>
                     <p class="project-desc">
-                        Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, keypad, LCD screen, sensors, speaker & sleep mode.
+                        Interactive educational hardware device integrated with Arduino Mega, ESP8266 wireless communication, rotary encoders, 16×2 LCD, 4×4 keypad, DFPlayer Mini audio module, motion/touch sensors, and smart power management. Exhibited at FIT Expo 2025 (UoM).
                     </p>
                     <div class="project-tags">
                         <span class="tag">Arduino Mega</span>
                         <span class="tag">ESP8266</span>
-                        <span class="tag">Embedded C</span>
-                        <span class="tag">LCD & Keypad</span>
+                        <span class="tag">Embedded C++</span>
+                        <span class="tag">Rotary Encoders</span>
+                        <span class="tag">DFPlayer Mini</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="link-btn">
+                        <a href="https://github.com/Ravindulakshan2393/Abacus-Genius-1.0.git" target="_blank" rel="noopener noreferrer" class="link-btn">
                             <i class="fa-brands fa-github"></i> Repository
                         </a>
                         <a href={`${baseUrl}projects/abacus`} class="link-btn">

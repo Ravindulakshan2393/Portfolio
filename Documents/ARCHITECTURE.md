@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-07 08:05:36 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-07 08:53:01 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -13,7 +13,7 @@
 | **Meta Description** | Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ University of Moratuwa. Software Engineering Intern & Full-Stack Web Developer. |
 | **Total Skills** | 15 |
 | **Total Projects** | 3 |
-| **Total Awards** | 4 |
+| **Total Awards** | 5 |
 
 ---
 
@@ -23,6 +23,9 @@
 Portfolio/
 assets/
 ├── projects/
+│   ├── abacus-certificate.jpg  (153.0 KB)
+│   ├── abacus-hardware-setup.jpg  (172.2 KB)
+│   ├── abacus-team.jpg  (211.9 KB)
 │   └── aesss-team.jpg  (204.0 KB)
 ├── profile.jpg  (100.2 KB)
 └── symbol.png  (954.6 KB)
@@ -30,32 +33,39 @@ css/
 └── styles.css  (30.5 KB)
 dist/
 ├── _astro/
+│   ├── abacus.BYZPNiGj.css  (8.1 KB)
 │   ├── ae-sss.Bf5_kIlf.css  (9.4 KB)
 │   ├── BaseLayout.astro_astro_type_script_index_0_lang.BP9gLYNk.js  (7.8 KB)
 │   └── BaseLayout.B79Ns7_N.css  (26.1 KB)
 ├── assets/
 │   ├── projects/
+│   │   ├── abacus-certificate.jpg  (153.0 KB)
+│   │   ├── abacus-hardware-setup.jpg  (172.2 KB)
+│   │   ├── abacus-team.jpg  (211.9 KB)
 │   │   └── aesss-team.jpg  (204.0 KB)
 │   ├── profile.jpg  (100.2 KB)
 │   └── symbol.png  (954.6 KB)
 ├── projects/
 │   ├── abacus/
-│   │   └── index.html  (7.6 KB)
+│   │   └── index.html  (24.0 KB)
 │   ├── ae-sss/
 │   │   └── index.html  (29.2 KB)
 │   └── contrack/
 │       └── index.html  (7.7 KB)
-└── index.html  (26.6 KB)
+└── index.html  (27.7 KB)
 Documents/
 ├── ARCHITECTURE.md  (5.2 KB)
 ├── DEPLOYMENT_GUIDE.md  (2.4 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
-└── RESUME_DATA.md  (2.2 KB)
+└── RESUME_DATA.md  (2.5 KB)
 js/
 └── main.js  (12.7 KB)
 public/
 └── assets/
     ├── projects/
+    │   ├── abacus-certificate.jpg  (153.0 KB)
+    │   ├── abacus-hardware-setup.jpg  (172.2 KB)
+    │   ├── abacus-team.jpg  (211.9 KB)
     │   └── aesss-team.jpg  (204.0 KB)
     ├── profile.jpg  (100.2 KB)
     └── symbol.png  (954.6 KB)
@@ -64,20 +74,20 @@ scripts/
 src/
 ├── components/
 │   ├── About.astro  (6.1 KB)
-│   ├── Awards.astro  (3.0 KB)
+│   ├── Awards.astro  (4.0 KB)
 │   ├── Contact.astro  (5.1 KB)
 │   ├── Footer.astro  (1.0 KB)
 │   ├── Hero.astro  (3.8 KB)
 │   ├── Navbar.astro  (1.6 KB)
 │   ├── ProjectModal.astro  (0.6 KB)
-│   ├── Projects.astro  (10.0 KB)
+│   ├── Projects.astro  (10.3 KB)
 │   ├── Skills.astro  (5.2 KB)
 │   └── Stats.astro  (1.9 KB)
 ├── layouts/
 │   └── BaseLayout.astro  (1.9 KB)
 ├── pages/
 │   ├── projects/
-│   │   ├── abacus.astro  (6.0 KB)
+│   │   ├── abacus.astro  (28.3 KB)
 │   │   ├── ae-sss.astro  (34.9 KB)
 │   │   └── contrack.astro  (6.0 KB)
 │   └── index.astro  (0.6 KB)
@@ -86,7 +96,7 @@ src/
 └── styles/
     └── styles.css  (37.0 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (39.6 KB)
+index.html  (40.9 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)

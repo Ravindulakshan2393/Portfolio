@@ -2,115 +2,888 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const project = {
+  title: "Abacus Genius 1.0: Interactive Educational Computing Device",
+  subtitle: "FIT Expo 2025 Exhibitor — Faculty of Information Technology, University of Moratuwa",
+  recognition: "Certificate of Appreciation (FIT Expo 2025)",
+  category: "Embedded Systems / Educational Technology",
+  institution: "Faculty of Information Technology, University of Moratuwa",
+  team: [
+    { name: "Sadeepa Lakshan", role: "Team Lead & Embedded Firmware", inst: "UOM" },
+    { name: "Sandavi Nuthara", role: "Hardware & Integration", inst: "UOM" },
+    { name: "Naviru Dissanayake", role: "Circuit Design & Sensors", inst: "UOM" },
+    { name: "Nethmini Rathnakaye", role: "UI & Component Assembly", inst: "UOM" },
+    { name: "Pamithra Jithmi", role: "Audio & Testing", inst: "UOM" }
+  ],
+  repository: "https://github.com/Ravindulakshan2393/Abacus-Genius-1.0.git",
+  heroImage: `${baseUrl}assets/projects/abacus-team.jpg`,
+  hardwareImage: `${baseUrl}assets/projects/abacus-hardware-setup.jpg`,
+  certificateImage: `${baseUrl}assets/projects/abacus-certificate.jpg`,
+  techStack: [
+    "Arduino Mega 2560",
+    "ESP8266 Wi-Fi (UART)",
+    "Embedded C / C++",
+    "Rotary Encoders (4 Rods)",
+    "DFPlayer Mini + Speaker",
+    "16×2 I2C LCD",
+    "4×4 Matrix Keypad",
+    "PIR Motion Sensor",
+    "Capacitive Touch Sensor",
+    "Haptic Vibration Motors"
+  ],
+  metrics: [
+    { label: "Abacus Rods", value: "4 Decimal Rods" },
+    { label: "Audio Feedback", value: "DFPlayer Mini" },
+    { label: "Wireless Sync", value: "ESP8266 Wi-Fi" },
+    { label: "Microcontroller", value: "ATmega2560" }
+  ]
+};
 ---
 
 <BaseLayout 
-    title="Abacus Genius 1.0 - Case Study | Sadeepa Lakshan"
-    description="Case study of Abacus Genius 1.0: Arduino Mega & ESP8266 based interactive educational hardware device."
-    isHome={false}
+  title={`${project.title} | Case Study`}
+  description="Batch 23 microcontroller-based educational hardware device exhibited at FIT Expo 2025, Faculty of Information Technology, University of Moratuwa."
+  isHome={false}
 >
-    <section class="section" style="padding-top: 140px; min-height: 85vh;">
-        <div class="container" style="max-width: 900px;">
-            <!-- Breadcrumbs / Back Link -->
-            <div style="margin-bottom: 2rem;">
-                <a href={`${baseUrl}#projects`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-arrow-left"></i> Back to All Projects
-                </a>
-            </div>
+  <section class="section abacus-container" style="padding-top: 130px; min-height: 85vh;">
+    <div class="container" style="max-width: 1100px;">
+      
+      <!-- Top Back Navigation -->
+      <div style="margin-bottom: 2rem;">
+        <a href={`${baseUrl}#projects`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+      </div>
 
-            <!-- Header -->
-            <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
-                <span class="section-tag">// HARDWARE PROTOTYPING & EMBEDDED SYSTEMS</span>
-                <h1 class="section-title" style="font-size: 2.5rem; margin-top: 0.5rem;">
-                    Abacus Genius 1.0: <span class="text-gradient">Interactive Educational Device</span>
-                </h1>
-                <div class="project-tags" style="margin-top: 1rem;">
-                    <span class="tag">Arduino Mega</span>
-                    <span class="tag">ESP8266</span>
-                    <span class="tag">Embedded C / C++</span>
-                    <span class="tag">Keypad & LCD</span>
-                    <span class="tag">Sensors & Audio</span>
-                </div>
-            </div>
-
-            <!-- Overview Card -->
-            <div class="terminal-card" style="margin-bottom: 2.5rem;">
-                <div class="terminal-header">
-                    <div class="terminal-dots">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <span class="terminal-title">abacus-specs.md</span>
-                </div>
-                <div class="terminal-body" style="line-height: 1.8; color: var(--text-main);">
-                    <h3 style="color: var(--primary); margin-bottom: 0.8rem; font-size: 1.2rem;">Project Purpose & Concept</h3>
-                    <p style="margin-bottom: 1rem; color: var(--text-muted);">
-                        Early childhood and foundational mathematics education often suffers from passive screen addiction without tactile feedback. <strong>Abacus Genius 1.0</strong> was created as a tangible, interactive physical computing device that fuses tactile input with digital evaluation.
-                    </p>
-                    <p style="color: var(--text-muted);">
-                        The device guides learners through progressive math challenges, detects inputs via microswitches and keypad matrix, and provides real-time audiovisual feedback through an LCD display and audio transducer.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Embedded Highlights -->
-            <div class="focus-title" style="margin-top: 2.5rem;">
-                <h3>Core Hardware & Firmware Engineering</h3>
-            </div>
-
-            <div class="focus-grid" style="margin-bottom: 3rem;">
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <h4>Arduino Mega Architecture</h4>
-                    <p>Programmed the ATmega2560 microcontroller using Embedded C/C++ to drive state machines, interrupt handling, and game mode logic.</p>
-                </div>
-
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-wifi"></i>
-                    </div>
-                    <h4>ESP8266 Wireless Module</h4>
-                    <p>Integrated the ESP8266 Wi-Fi module over UART communication to allow remote telemetry, score tracking, and wireless configuration.</p>
-                </div>
-
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-calculator"></i>
-                    </div>
-                    <h4>Keypad & Liquid Crystal Display</h4>
-                    <p>Constructed an intuitive interface with custom character sets, mathematical prompt menus, and responsive debounced tactile input.</p>
-                </div>
-
-                <div class="focus-card">
-                    <div class="focus-icon-box">
-                        <i class="fa-solid fa-battery-half"></i>
-                    </div>
-                    <h4>Power Management & Sleep Mode</h4>
-                    <p>Engineered low-power sleep state intervals with external interrupt wakeups to maximize portable battery endurance.</p>
-                </div>
-            </div>
-
-            <!-- Bottom Action CTA -->
-            <div class="github-cta-box" style="margin-top: 2rem;">
-                <div class="cta-info">
-                    <i class="fa-brands fa-github cta-icon"></i>
-                    <div>
-                        <h4>Explore More Embedded Projects</h4>
-                        <p>Discover firmware source code, pinouts, and hardware prototypes on my GitHub profile.</p>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <i class="fa-brands fa-github"></i> View GitHub Profile
-                    </a>
-                    <a href={`${baseUrl}#contact`} class="btn btn-secondary">
-                        <i class="fa-solid fa-envelope"></i> Contact Sadeepa
-                    </a>
-                </div>
-            </div>
+      <!-- Hero Header Banner with Group Photo Overlay -->
+      <div class="hero-banner-card">
+        <div class="banner-image-wrapper">
+          <img 
+            src={project.heroImage} 
+            alt="Batch 23 Project Team - FIT Expo 2025 Abacus Genius 1.0" 
+            class="banner-image"
+          />
+          <div class="banner-overlay"></div>
         </div>
-    </section>
+        
+        <div class="banner-content">
+          <div class="badge-row">
+            <span class="pill-badge pill-gold">
+              <i class="fa-solid fa-certificate"></i> {project.recognition}
+            </span>
+            <span class="pill-badge pill-sky">
+              <i class="fa-solid fa-microchip"></i> Batch 23 Hardware Project
+            </span>
+            <span class="pill-badge pill-emerald">
+              <i class="fa-solid fa-graduation-cap"></i> FIT Expo 2025 (UoM)
+            </span>
+          </div>
+          
+          <h1 class="banner-title">
+            Abacus Genius 1.0: <span class="text-gradient">Interactive Educational</span> Computing Device
+          </h1>
+          <p class="banner-desc">
+            A physical computing educational platform fusing traditional Chinese bead arithmetic with modern microcontroller sensing, voice interaction, and real-time math evaluation.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Core Architecture Metrics Grid -->
+      <div class="metrics-grid">
+        {project.metrics.map(m => (
+          <div class="metric-card">
+            <div class="metric-value">{m.value}</div>
+            <div class="metric-label">{m.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Main Content & Sidebar Layout -->
+      <div class="detail-layout">
+        
+        <!-- Main Case Study Content -->
+        <div class="detail-main">
+          
+          <!-- 1. Project Genesis & Educational Impact -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Project Genesis & Educational Mission</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-lightbulb" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                1. Project Genesis & Educational Purpose
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                Early childhood mathematical education often faces two divergent extremes: dry, non-interactive paper textbooks or screen-heavy mobile games that lack tactile engagement and physical hand-eye coordination. <strong>Abacus Genius 1.0</strong> was engineered to bridge this divide by supercharging the time-tested tactile abacus with digital intelligence.
+              </p>
+              <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                Developed as a <strong>Batch 23 Microcontroller-Based Applications Project</strong> at the <strong>Faculty of Information Technology, University of Moratuwa</strong>, the device transforms bead sliding into interactive self-learning through instant voice readings, visual LCD verification, tactile vibration, and quiz challenges.
+              </p>
+              
+              <div class="impact-cards-grid">
+                <div class="impact-mini-card">
+                  <div class="impact-mini-icon"><i class="fa-solid fa-hand"></i></div>
+                  <div>
+                    <h4>Tactile Learning</h4>
+                    <p>Preserves essential motor-skill memory by physically moving beads across decimal rods.</p>
+                  </div>
+                </div>
+
+                <div class="impact-mini-card">
+                  <div class="impact-mini-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                  <div>
+                    <h4>Voice Guidance</h4>
+                    <p>Speaks arithmetic sums aloud using DFPlayer Mini, reinforcing auditory number retention.</p>
+                  </div>
+                </div>
+
+                <div class="impact-mini-card">
+                  <div class="impact-mini-icon"><i class="fa-solid fa-check-double"></i></div>
+                  <div>
+                    <h4>Automated Evaluation</h4>
+                    <p>Validates student calculations in real time without requiring continuous teacher intervention.</p>
+                  </div>
+                </div>
+
+                <div class="impact-mini-card">
+                  <div class="impact-mini-icon"><i class="fa-solid fa-leaf"></i></div>
+                  <div>
+                    <h4>Smart Power Saving</h4>
+                    <p>Conserves battery using PIR motion detection and capacitive touch sleep states.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Physical Computing & Hardware Architecture -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Physical Computing & Subsystem Architecture</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-microchip" style="color: var(--primary); margin-right: 8px;"></i>
+                2. Hardware Subsystems & Engineering
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.4rem;">
+                The device architecture decouples physical bead sensing, debounced user inputs, dynamic audio synthesis, and wireless telemetry:
+              </p>
+
+              <div class="hardware-stack">
+                <!-- Arduino Mega -->
+                <div class="hw-item">
+                  <div class="hw-icon-box"><i class="fa-solid fa-microchip"></i></div>
+                  <div class="hw-content">
+                    <h4>Arduino Mega 2560 (ATmega2560)</h4>
+                    <p>Acts as the central processing brain. Manages non-blocking finite state machines (FSM), external interrupt handlers, and communication buses with 54 digital I/O pins and 4 UART hardware serial ports.</p>
+                  </div>
+                </div>
+
+                <!-- Rotary Encoders -->
+                <div class="hw-item">
+                  <div class="hw-icon-box"><i class="fa-solid fa-arrows-spin"></i></div>
+                  <div class="hw-content">
+                    <h4>4-Rod Rotary Encoder Array</h4>
+                    <p>Replaces optical sensors with high-reliability rotary encoders mounted on 4 decade rods (Units, Tens, Hundreds, Thousands). Detects bidirectional angular rotation to track bead positions and instantly calculates the decimal sum.</p>
+                  </div>
+                </div>
+
+                <!-- DFPlayer Mini Audio -->
+                <div class="hw-item">
+                  <div class="hw-icon-box"><i class="fa-solid fa-volume-high"></i></div>
+                  <div class="hw-content">
+                    <h4>DFPlayer Mini Audio Module & Speaker</h4>
+                    <p>Integrated over UART with an SD card containing custom voice sample libraries. Provides voice guidance for math questions, reads computed numbers aloud, and plays celebratory chimes upon correct answers.</p>
+                  </div>
+                </div>
+
+                <!-- LCD & Keypad -->
+                <div class="hw-item">
+                  <div class="hw-icon-box"><i class="fa-solid fa-tv"></i></div>
+                  <div class="hw-content">
+                    <h4>16×2 I2C Character LCD & 4×4 Matrix Keypad</h4>
+                    <p>The I2C backpack slashes pin overhead from 16 to 2 wires (SDA/SCL). Displays current math challenges, mode menus, and scores. The 4×4 tactile keypad provides debounced input for selecting quiz levels and answering prompts.</p>
+                  </div>
+                </div>
+
+                <!-- Smart Energy & Haptics -->
+                <div class="hw-item">
+                  <div class="hw-icon-box"><i class="fa-solid fa-battery-half"></i></div>
+                  <div class="hw-content">
+                    <h4>PIR Motion & Capacitive Touch Power Management</h4>
+                    <p>Equipped with a PIR motion sensor and capacitive touch pad that put the LCD backlight and audio amplifier into ultra-low-power sleep during idle periods. Includes coin vibration motors for tactile haptic feedback.</p>
+                  </div>
+                </div>
+
+                <!-- ESP8266 Wi-Fi -->
+                <div class="hw-item">
+                  <div class="hw-icon-box"><i class="fa-solid fa-wifi"></i></div>
+                  <div class="hw-content">
+                    <h4>ESP8266 Wi-Fi Wireless Telemetry</h4>
+                    <p>Communicates with the ATmega2560 via hardware serial AT commands, transmitting student quiz scores, response latency, and usage metrics to a web dashboard for educator monitoring.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Interactive Quiz Engine -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">Interactive Quiz & Evaluation Modes</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-gamepad" style="color: var(--secondary); margin-right: 8px;"></i>
+                3. Interactive Learning & Quiz Modes
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.4rem;">
+                The firmware offers three distinct operational modes accessible via the 4×4 keypad:
+              </p>
+
+              <div class="modes-grid">
+                <div class="mode-card">
+                  <span class="mode-badge">MODE 1</span>
+                  <h4>Free Exploration & Speech</h4>
+                  <p>As the learner moves physical beads across rods, the LCD instantly displays the number while the speaker announces the spoken digit (e.g., "Two Thousand Three Hundred Forty-Five").</p>
+                </div>
+
+                <div class="mode-card">
+                  <span class="mode-badge">MODE 2</span>
+                  <h4>Interactive Math Challenge</h4>
+                  <p>The system poses an addition or subtraction puzzle (e.g., <code>145 + 32 = ?</code>). The student arranges the answer on the physical abacus rods and hits <code>#</code> to verify.</p>
+                </div>
+
+                <div class="mode-card">
+                  <span class="mode-badge">MODE 3</span>
+                  <h4>Timed Speed Drills</h4>
+                  <p>Presents sequential rapid arithmetic drills with a countdown timer, tracking speed, accuracy, and error recovery on the 16×2 LCD screen.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Exhibition Booth & Hardware Showcase -->
+          <article class="terminal-card content-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">FIT Expo 2025 Exhibition Showcase</span>
+            </div>
+            <div class="terminal-body" style="line-height: 1.8;">
+              <h2 class="section-heading">
+                <i class="fa-solid fa-building-columns" style="color: var(--accent-emerald); margin-right: 8px;"></i>
+                4. Exhibition Booth at FIT Expo 2025
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 1.2rem;">
+                Demonstrated live to faculty members, engineering students, and visiting school delegations at the <strong>FIT Expo 2025</strong> organized by the Faculty of Information Technology, University of Moratuwa:
+              </p>
+
+              <div class="showcase-image-box">
+                <img 
+                  src={project.hardwareImage} 
+                  alt="Abacus Genius 1.0 Exhibition Booth at FIT Expo 2025" 
+                  class="showcase-img"
+                />
+                <div class="showcase-caption">
+                  <i class="fa-solid fa-camera"></i> Live demonstration table at FIT Expo 2025 featuring the Abacus Genius 1.0 wooden chassis, technical poster, interactive tablet dashboard, and multimedia display.
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Right Sidebar Info Cards -->
+        <aside class="detail-sidebar">
+          
+          <!-- Certificate of Appreciation Card -->
+          <div class="sidebar-box cert-card">
+            <div class="cert-header">
+              <span class="cert-icon">🏅</span>
+              <h3>FIT Expo 2025 Recognition</h3>
+            </div>
+            <p class="cert-subtext">
+              Awarded a <strong>Certificate of Appreciation</strong> by the Faculty of Information Technology, University of Moratuwa for active participation and project demonstration.
+            </p>
+            <div class="cert-image-wrapper">
+              <img 
+                src={project.certificateImage} 
+                alt="FIT Expo 2025 Certificate of Appreciation - AbacusGenius 1.0" 
+                class="cert-img"
+              />
+            </div>
+            <div class="cert-signatures">
+              <span><strong>Signed:</strong> B.H. Sudantha (Dean, FIT)</span>
+              <span><strong>Signed:</strong> Dr. T.M. Thanthriwatta (Director of UG Studies)</span>
+            </div>
+          </div>
+
+          <!-- Hardware Tech Stack Card -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Hardware & Embedded Stack</h3>
+            <div class="stack-tags-list">
+              {project.techStack.map(tech => (
+                <span class="tech-pill">{tech}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Team Members Card (Batch 23 Roster) -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Batch 23 Project Team</h3>
+            <ul class="team-list">
+              {project.team.map(m => (
+                <li class="team-member-item">
+                  <div>
+                    <span class="member-name"><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 6px;"></i>{m.name}</span>
+                    <span class="member-role">{m.role}</span>
+                  </div>
+                  <span class="member-inst">{m.inst}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Repository CTA Card -->
+          <div class="sidebar-box">
+            <h3 class="sidebar-title">Project Source Code</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Explore the Arduino firmware sketches, encoder state debouncing algorithms, and hardware schematics.
+            </p>
+            <a 
+              href={project.repository} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%; justify-content: center; font-size: 0.9rem;"
+            >
+              <i class="fa-brands fa-github"></i> View GitHub Repository <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bottom Action CTA -->
+      <div class="github-cta-box" style="margin-top: 3.5rem;">
+        <div class="cta-info">
+          <i class="fa-solid fa-microchip cta-icon" style="color: var(--primary);"></i>
+          <div>
+            <h4>Interested in Hardware & Embedded Engineering?</h4>
+            <p>Explore firmware source code, circuit schematics, and pinout diagrams on GitHub.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href={`${baseUrl}#projects`} class="btn btn-primary">
+            <i class="fa-solid fa-folder-open"></i> View All Projects
+          </a>
+          <a href={`${baseUrl}#contact`} class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Contact Sadeepa
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Hero Banner */
+  .hero-banner-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .banner-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-banner-card:hover .banner-image {
+    transform: scale(1.03);
+  }
+
+  .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(7, 10, 18, 0.97) 0%, rgba(7, 10, 18, 0.65) 45%, rgba(7, 10, 18, 0.2) 100%);
+  }
+
+  .banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2.5rem;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+  }
+
+  .pill-gold {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fde68a;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+
+  .pill-sky {
+    background: rgba(56, 189, 248, 0.15);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+  }
+
+  .pill-emerald {
+    background: rgba(62, 207, 142, 0.15);
+    color: #a7f3d0;
+    border: 1px solid rgba(62, 207, 142, 0.4);
+  }
+
+  .banner-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-main);
+    margin-bottom: 0.6rem;
+  }
+
+  .banner-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 820px;
+    line-height: 1.6;
+  }
+
+  /* Metrics Grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .metric-card {
+    padding: 1.4rem 1rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-backdrop);
+    text-align: center;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+  }
+
+  .metric-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    font-weight: 600;
+  }
+
+  /* Layout */
+  .detail-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .content-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+  }
+
+  .section-heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Educational Impact Grid */
+  .impact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  .impact-mini-card {
+    display: flex;
+    gap: 12px;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .impact-mini-icon {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-top: 2px;
+  }
+
+  .impact-mini-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 3px;
+  }
+
+  .impact-mini-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Hardware Stack */
+  .hardware-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hw-item {
+    display: flex;
+    gap: 16px;
+    padding: 1.1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+  }
+
+  .hw-icon-box {
+    font-size: 1.2rem;
+    color: var(--primary);
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    background: rgba(56, 189, 248, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  .hw-content h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 4px;
+  }
+
+  .hw-content p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Modes Grid */
+  .modes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .mode-card {
+    padding: 1.2rem;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+  }
+
+  .mode-badge {
+    font-size: 0.68rem;
+    font-family: var(--font-code);
+    font-weight: 700;
+    color: var(--secondary);
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .mode-card h4 {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 6px;
+  }
+
+  .mode-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Exhibition Showcase */
+  .showcase-image-box {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: rgba(15, 23, 42, 0.9);
+  }
+
+  .showcase-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .showcase-caption {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    background: rgba(7, 10, 18, 0.95);
+    border-top: 1px solid var(--border-color);
+    line-height: 1.5;
+  }
+
+  /* Sidebar */
+  .detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar-box {
+    padding: 1.4rem;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    backdrop-filter: var(--glass-backdrop);
+  }
+
+  .sidebar-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* Certificate Card */
+  .cert-card {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.1);
+  }
+
+  .cert-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.6rem;
+  }
+
+  .cert-icon {
+    font-size: 1.2rem;
+  }
+
+  .cert-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fde68a;
+  }
+
+  .cert-subtext {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .cert-image-wrapper {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    margin-bottom: 0.8rem;
+  }
+
+  .cert-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .cert-img:hover {
+    transform: scale(1.02);
+  }
+
+  .cert-signatures {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-code);
+  }
+
+  /* Stack Tags */
+  .stack-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tech-pill {
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-family: var(--font-code);
+    color: var(--primary);
+  }
+
+  /* Team List */
+  .team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .team-member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+  }
+
+  .member-name {
+    display: block;
+    color: var(--text-main);
+    font-weight: 600;
+  }
+
+  .member-role {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-left: 14px;
+  }
+
+  .member-inst {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: var(--font-code);
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 900px) {
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .detail-layout {
+      grid-template-columns: 1fr;
+    }
+    .banner-image-wrapper {
+      height: 440px;
+    }
+    .banner-content {
+      padding: 1.5rem;
+    }
+    .banner-title {
+      font-size: 1.6rem;
+    }
+    .modes-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .banner-image-wrapper {
+      height: 480px;
+    }
+    .banner-title {
+      font-size: 1.35rem;
+    }
+    .impact-cards-grid {
+      grid-template-columns: 1fr;
+    }
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
