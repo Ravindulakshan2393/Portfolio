@@ -42,11 +42,11 @@ const project = {
   description="IEEE CS R10 Summer School 2026 Mini-Ideathon 2nd Place Winner — Agentic Edge-AI Smart Surveillance System by Team Busy Bees."
   isHome={false}
 >
-  <section class="section aesss-container" style="padding-top: 130px; min-height: 85vh;">
-    <div class="container" style="max-width: 1100px;">
+  <section class="section aesss-container" style="padding-top: 125px; padding-bottom: 4rem; min-height: 85vh;">
+    <div class="container" style="max-width: 1140px;">
       
       <!-- Top Back Navigation -->
-      <div style="margin-bottom: 2rem;">
+      <div style="margin-bottom: 1.8rem;">
         <a href={`${baseUrl}#awards`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
           <i class="fa-solid fa-arrow-left"></i> Back to Awards & Recognition
         </a>
@@ -463,18 +463,11 @@ const project = {
               <span><strong>Signed:</strong> Prof. Supunmali Ahangama (Chairperson)</span>
               <span><strong>Signed:</strong> Dr. Suresha Perera (Secretary)</span>
             </div>
-            <div style="margin-top: 0.9rem; display: flex; flex-direction: column; gap: 8px;">
+            <div style="margin-top: 0.9rem;">
               <div class="cert-status-badge" style="justify-content: center; width: 100%;">
                 <i class="fa-solid fa-shield-halved"></i>
                 <span>Protected Digital Credential</span>
               </div>
-              <a 
-                href={`${baseUrl}awards/ieee-cs-r10`} 
-                class="btn btn-sm btn-secondary" 
-                style="justify-content: center; width: 100%; font-size: 0.8rem;"
-              >
-                <i class="fa-solid fa-award"></i> View Dedicated Award Page <i class="fa-solid fa-arrow-right"></i>
-              </a>
             </div>
           </div>
 
@@ -543,11 +536,11 @@ const project = {
           </div>
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href={`${baseUrl}awards/ieee-cs-r10`} class="btn btn-primary">
-            <i class="fa-solid fa-award"></i> View Official Certificate Page
-          </a>
-          <a href={`${baseUrl}#awards`} class="btn btn-secondary">
+          <a href={`${baseUrl}#awards`} class="btn btn-primary">
             <i class="fa-solid fa-trophy"></i> View All Awards
+          </a>
+          <a href={project.repository} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <i class="fa-brands fa-github"></i> View GitHub Repo
           </a>
           <a href={`${baseUrl}#contact`} class="btn btn-secondary">
             <i class="fa-solid fa-envelope"></i> Contact Sadeepa
@@ -1122,7 +1115,7 @@ const project = {
   }
 
   /* Responsive Breakpoints */
-  @media (max-width: 900px) {
+  @media (max-width: 992px) {
     .metrics-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -1143,7 +1136,7 @@ const project = {
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .banner-image-wrapper {
       height: 480px;
     }

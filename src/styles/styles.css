@@ -1910,3 +1910,88 @@ body.light-theme .avatar-inner {
         visibility: hidden !important;
     }
 }
+
+/* ==========================================================================
+   Subpages Global Polish & Light Theme Support
+   ========================================================================== */
+.abacus-container,
+.aesss-container,
+.contrack-container,
+.award-detail-container {
+    padding-top: 125px;
+    padding-bottom: 4rem;
+    min-height: 85vh;
+}
+
+@media (max-width: 992px) {
+    .abacus-container,
+    .aesss-container,
+    .contrack-container,
+    .award-detail-container {
+        padding-top: 115px;
+    }
+}
+
+@media (max-width: 768px) {
+    .abacus-container,
+    .aesss-container,
+    .contrack-container,
+    .award-detail-container {
+        padding-top: 100px;
+    }
+}
+
+/* Light Theme Overrides for Subpage Cards, Headers & Badges */
+body.light-theme .hw-item,
+body.light-theme .impact-mini-card,
+body.light-theme .mode-card,
+body.light-theme .arch-card,
+body.light-theme .tier-card,
+body.light-theme .sdg-card,
+body.light-theme .social-impact-card,
+body.light-theme .initiative-card,
+body.light-theme .client-supervision-card,
+body.light-theme .terminal-header,
+body.light-theme .spec-item,
+body.light-theme .spec-row {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-card);
+}
+
+body.light-theme .award-header-card {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-card);
+}
+
+body.light-theme .pill-gold {
+    background: rgba(245, 158, 11, 0.14);
+    color: #92400e;
+    border-color: rgba(245, 158, 11, 0.35);
+}
+
+body.light-theme .pill-sky {
+    background: rgba(2, 132, 199, 0.1);
+    color: #0369a1;
+    border-color: rgba(2, 132, 199, 0.35);
+}
+
+body.light-theme .pill-emerald {
+    background: rgba(16, 185, 129, 0.1);
+    color: #065f46;
+    border-color: rgba(16, 185, 129, 0.35);
+}
+
+body.light-theme .pill-purple {
+    background: rgba(147, 51, 234, 0.1);
+    color: #6b21a8;
+    border-color: rgba(147, 51, 234, 0.35);
+}
+
+body.light-theme .code-block,
+body.light-theme pre {
+    background: #f1f5f9;
+    border-color: var(--border-color);
+    color: #0f172a;
+}

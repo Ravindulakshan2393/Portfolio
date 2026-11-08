@@ -5,6 +5,10 @@ interface Props {
 
 const { isHome = true } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const pathname = Astro.url.pathname;
+const isProjectPage = pathname.includes('/projects/');
+const isAwardPage = pathname.includes('/awards/');
 ---
 
 <header class="navbar" id="navbar">
@@ -15,11 +19,11 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         </a>
 
         <nav class="nav-menu" id="nav-menu">
-            <a href={`${baseUrl}#hero`} class={`nav-link ${isHome ? 'active' : ''}`} id="nav-link-hero">Home</a>
+            <a href={`${baseUrl}#hero`} class={`nav-link ${isHome && !isProjectPage && !isAwardPage ? 'active' : ''}`} id="nav-link-hero">Home</a>
             <a href={`${baseUrl}#about`} class="nav-link" id="nav-link-about">About</a>
             <a href={`${baseUrl}#skills`} class="nav-link" id="nav-link-skills">Skills</a>
-            <a href={`${baseUrl}#projects`} class="nav-link" id="nav-link-projects">Projects</a>
-            <a href={`${baseUrl}#awards`} class="nav-link" id="nav-link-awards">Awards</a>
+            <a href={`${baseUrl}#projects`} class={`nav-link ${isProjectPage ? 'active' : ''}`} id="nav-link-projects">Projects</a>
+            <a href={`${baseUrl}#awards`} class={`nav-link ${isAwardPage ? 'active' : ''}`} id="nav-link-awards">Awards</a>
             <a href={`${baseUrl}#github-stats`} class="nav-link" id="nav-link-stats">Stats</a>
             <a href={`${baseUrl}#contact`} class="nav-link" id="nav-link-contact">Contact</a>
         </nav>
