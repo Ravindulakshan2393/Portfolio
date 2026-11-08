@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sadeepa Lakshan | Software Engineering & Full-Stack Developer</title>
     <meta name="description" content="Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ University of Moratuwa. Software Engineering Intern & Full-Stack Web Developer.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <!-- Favicon Symbol -->
     <link rel="icon" type="image/png" href="assets/symbol.png">
@@ -744,22 +745,22 @@
                         <input type="hidden" name="from_name" value="Sadeepa Lakshan Portfolio Visitor">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <input type="text" id="name" name="name" placeholder="John Doe" maxlength="100" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" maxlength="150" required>
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Software Engineering Internship / Inquiry" required>
+                            <input type="text" id="subject" name="subject" placeholder="Software Engineering Internship / Inquiry" maxlength="200" required>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Hi Sadeepa, I'd like to invite you for an interview..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Hi Sadeepa, I'd like to invite you for an interview..." maxlength="3000" required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block" id="submit-btn">

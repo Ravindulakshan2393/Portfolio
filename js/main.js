@@ -353,6 +353,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.status === 200 && result.success) {
                     showToast("Thank you! Your message has been sent directly to Sadeepa's inbox.");
                     contactForm.reset();
+
+                    // Anti-Spam Rate-Limiting: 30-second cooldown timer
+                    let cooldown = 30;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fa-solid fa-clock"></i> Sent! Cooldown (' + cooldown + 's)';
+
+                    const cooldownInterval = setInterval(() => {
+                        cooldown--;
+                        if (cooldown > 0) {
+                            submitBtn.innerHTML = '<i class="fa-solid fa-clock"></i> Sent! Cooldown (' + cooldown + 's)';
+                        } else {
+                            clearInterval(cooldownInterval);
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalText;
+                        }
+                    }, 1000);
+                    return;
                 } else {
                     console.error('Web3Forms Error:', result);
                     showToast(result.message || "Message delivery failed. Please email pererawslr@gmail.com directly.");

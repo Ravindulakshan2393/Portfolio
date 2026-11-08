@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-08 19:28:00 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-08 19:54:30 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -46,7 +46,7 @@ dist/
 ├── _astro/
 │   ├── abacus.B1ut6qA6.css  (8.2 KB)
 │   ├── ae-sss.k9qI7r_Y.css  (10.3 KB)
-│   ├── BaseLayout.astro_astro_type_script_index_0_lang.P9bk7Kar.js  (7.2 KB)
+│   ├── BaseLayout.astro_astro_type_script_index_0_lang.r483-Q_V.js  (7.5 KB)
 │   ├── BaseLayout.BFLit4ov.css  (29.4 KB)
 │   ├── contrack.By9xvxXX.css  (7.9 KB)
 │   ├── deputy-head-prefect.uYyajMVY.css  (9.7 KB)
@@ -70,19 +70,19 @@ dist/
 │   └── symbol.png  (954.6 KB)
 ├── awards/
 │   ├── deputy-head-prefect/
-│   │   └── index.html  (21.5 KB)
+│   │   └── index.html  (21.6 KB)
 │   ├── nena-aruna/
-│   │   └── index.html  (22.0 KB)
+│   │   └── index.html  (22.1 KB)
 │   └── spirit-of-service/
-│       └── index.html  (21.4 KB)
+│       └── index.html  (21.5 KB)
 ├── projects/
 │   ├── abacus/
-│   │   └── index.html  (25.2 KB)
+│   │   └── index.html  (25.3 KB)
 │   ├── ae-sss/
 │   │   └── index.html  (32.0 KB)
 │   └── contrack/
-│       └── index.html  (25.8 KB)
-└── index.html  (30.7 KB)
+│       └── index.html  (25.9 KB)
+└── index.html  (30.8 KB)
 Documents/
 ├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
 ├── ARCHITECTURE.md  (10.4 KB)
@@ -90,7 +90,7 @@ Documents/
 ├── FEATURE_EXPANSION_GUIDE.md  (9.0 KB)
 └── RESUME_DATA.md  (4.0 KB)
 js/
-└── main.js  (18.5 KB)
+└── main.js  (19.3 KB)
 public/
 └── assets/
     ├── awards/
@@ -115,7 +115,7 @@ src/
 ├── components/
 │   ├── About.astro  (6.2 KB)
 │   ├── Awards.astro  (6.1 KB)
-│   ├── Contact.astro  (6.0 KB)
+│   ├── Contact.astro  (5.7 KB)
 │   ├── Footer.astro  (1.4 KB)
 │   ├── Hero.astro  (4.2 KB)
 │   ├── Navbar.astro  (1.8 KB)
@@ -124,7 +124,7 @@ src/
 │   ├── Skills.astro  (5.2 KB)
 │   └── Stats.astro  (1.9 KB)
 ├── layouts/
-│   └── BaseLayout.astro  (1.9 KB)
+│   └── BaseLayout.astro  (2.0 KB)
 ├── pages/
 │   ├── awards/
 │   │   ├── deputy-head-prefect.astro  (29.0 KB)
@@ -136,11 +136,11 @@ src/
 │   │   └── contrack.astro  (29.8 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
-│   └── main.js  (16.5 KB)
+│   └── main.js  (17.3 KB)
 └── styles/
     └── styles.css  (41.9 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (46.0 KB)
+index.html  (46.2 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)
