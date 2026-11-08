@@ -305,14 +305,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const toast = document.getElementById('toast');
     const toastMessage = document.getElementById('toast-message');
+    let toastTimeout;
 
     function showToast(msg) {
-        if (!toast) return;
+        if (!toast || !toastMessage) return;
         toastMessage.textContent = msg;
         toast.classList.add('show');
-        setTimeout(() => {
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
             toast.classList.remove('show');
-        }, 4000);
+        }, 3000);
     }
 
     if (contactForm) {
@@ -332,4 +334,63 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1200);
         });
     }
+
+    // 10. Content Protection & Certificate Security
+    // 1. Disable Right-Click Context Menu Everywhere (Capture Phase)
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        showToast("Right-click is disabled to protect content & certificates.");
+        return false;
+    }, { capture: true });
+
+    // 2. Disable Middle-Click / Auxiliary Context Actions (Capture Phase)
+    document.addEventListener('auxclick', (e) => {
+        if (e.button === 1 || e.button === 2) {
+            e.preventDefault();
+        }
+    }, { capture: true });
+
+    // 3. Disable Image Dragging
+    document.addEventListener('dragstart', (e) => {
+        if (e.target && (e.target.nodeName === 'IMG' || e.target.closest('img'))) {
+            e.preventDefault();
+            return false;
+        }
+    }, { capture: true });
+
+    // 4. Intercept Any Direct Link to Raw Media Files (.jpg, .jpeg, .png, .webp, .svg)
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link) {
+            const href = link.getAttribute('href') || '';
+            if (/\.(jpg|jpeg|png|webp|svg)($|\?)/i.test(href)) {
+                e.preventDefault();
+                showToast("Direct access to raw credentials is restricted.");
+                return false;
+            }
+        }
+    }, { capture: true });
+
+    // 5. Block Print, Save, and Developer Inspection Shortcuts
+    document.addEventListener('keydown', (e) => {
+        // Intercept Ctrl+S / Cmd+S (Save)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
+            e.preventDefault();
+            showToast("Saving page content is disabled.");
+        }
+        // Intercept Ctrl+P / Cmd+P (Print)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 'P')) {
+            e.preventDefault();
+            showToast("Printing page content is disabled.");
+        }
+        // Intercept Ctrl+Shift+I / Cmd+Option+I (Inspect), Ctrl+Shift+J, Ctrl+U (View Source), F12
+        if (
+            ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
+            ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U')) ||
+            e.key === 'F12'
+        ) {
+            e.preventDefault();
+            showToast("Developer shortcuts are disabled to protect credentials.");
+        }
+    }, { capture: true });
 });

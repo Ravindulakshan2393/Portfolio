@@ -76,6 +76,19 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color var(--transition-normal), color var(--transition-normal);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Allow text input and selection for contact form inputs */
+input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 a {
@@ -90,6 +103,71 @@ ul {
 img {
     max-width: 100%;
     display: block;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* Certificate & Media Pointer Shield */
+.certificate-frame,
+.cert-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-frame img,
+.cert-image-wrapper img,
+.certificate-card img,
+.award-card img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Certificate Watermark Overlay */
+.certificate-watermark-overlay {
+    position: absolute;
+    inset: -30%;
+    width: 160%;
+    height: 160%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: rotate(-35deg);
+    opacity: 0.25;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.watermark-row {
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #ffffff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 0 8px rgba(0, 0, 0, 0.8);
+    line-height: 2.8;
+    text-transform: uppercase;
+}
+
+.cert-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
 }
 
 .container {
@@ -1523,5 +1601,13 @@ img {
 
     .hero-title {
         font-size: 2.5rem;
+    }
+}
+
+/* Content Protection & Print Safeguard */
+@media print {
+    html, body {
+        display: none !important;
+        visibility: hidden !important;
     }
 }

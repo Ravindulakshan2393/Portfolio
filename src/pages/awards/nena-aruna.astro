@@ -116,6 +116,16 @@ const recognition = {
             </div>
 
             <div class="certificate-frame">
+              <div class="certificate-watermark-overlay" aria-hidden="true">
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+              </div>
               <img 
                 src={recognition.documentImage} 
                 alt="Official Letter of Appreciation - Sadeepa Lakshan" 
@@ -128,15 +138,10 @@ const recognition = {
               <span class="cert-caption">
                 <i class="fa-solid fa-award" style="color: var(--accent-gold);"></i> RI Year 2024-25 • District 3220
               </span>
-              <a 
-                href={recognition.documentImage} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="link-btn"
-                style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem;"
-              >
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open High-Res
-              </a>
+              <div class="cert-status-badge">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Protected Digital Credential</span>
+              </div>
             </div>
           </div>
         </article>
@@ -557,6 +562,7 @@ const recognition = {
 
   /* Certificate Frame */
   .certificate-frame {
+    position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
     border: 1px solid var(--border-color);
@@ -570,6 +576,9 @@ const recognition = {
     height: auto;
     display: block;
     object-fit: contain;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
   }
 
   .cert-footer-row {

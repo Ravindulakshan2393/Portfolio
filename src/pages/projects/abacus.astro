@@ -328,6 +328,14 @@ const project = {
               Awarded a <strong>Certificate of Appreciation</strong> by the Faculty of Information Technology, University of Moratuwa for active participation and project demonstration.
             </p>
             <div class="cert-image-wrapper">
+              <div class="certificate-watermark-overlay" aria-hidden="true">
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+              </div>
               <img 
                 src={project.certificateImage} 
                 alt="FIT Expo 2025 Certificate of Appreciation - AbacusGenius 1.0" 
@@ -767,6 +775,7 @@ const project = {
   }
 
   .cert-image-wrapper {
+    position: relative;
     border-radius: var(--radius-sm);
     overflow: hidden;
     border: 1px solid rgba(251, 191, 36, 0.3);
@@ -777,6 +786,9 @@ const project = {
     width: 100%;
     height: auto;
     display: block;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
     transition: transform 0.4s ease;
   }
 

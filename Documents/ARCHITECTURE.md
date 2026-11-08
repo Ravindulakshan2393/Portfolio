@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-08 13:01:24 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-08 14:26:41 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -36,15 +36,15 @@ assets/
 ├── profile.jpg  (100.2 KB)
 └── symbol.png  (954.6 KB)
 css/
-└── styles.css  (30.8 KB)
+└── styles.css  (32.7 KB)
 dist/
 ├── _astro/
 │   ├── abacus.BYZPNiGj.css  (8.1 KB)
 │   ├── ae-sss.Bf5_kIlf.css  (9.4 KB)
-│   ├── BaseLayout.astro_astro_type_script_index_0_lang.BP9gLYNk.js  (7.8 KB)
-│   ├── BaseLayout.CHzlbVxb.css  (26.8 KB)
+│   ├── BaseLayout.astro_astro_type_script_index_0_lang.Wxwf_bDo.js  (8.6 KB)
+│   ├── BaseLayout.DTDYj-JO.css  (27.2 KB)
 │   ├── contrack.Baq977qh.css  (7.9 KB)
-│   ├── deputy-head-prefect.DfU33N4L.css  (9.5 KB)
+│   ├── deputy-head-prefect.kYGtwTGw.css  (9.6 KB)
 │   ├── nena-aruna.DZhXQk3b.css  (8.6 KB)
 │   └── spirit-of-service.BRtx3bjx.css  (8.3 KB)
 ├── assets/
@@ -63,7 +63,7 @@ dist/
 │   └── symbol.png  (954.6 KB)
 ├── awards/
 │   ├── deputy-head-prefect/
-│   │   └── index.html  (20.3 KB)
+│   │   └── index.html  (20.1 KB)
 │   ├── nena-aruna/
 │   │   └── index.html  (20.6 KB)
 │   └── spirit-of-service/
@@ -83,7 +83,7 @@ Documents/
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
 └── RESUME_DATA.md  (3.5 KB)
 js/
-└── main.js  (13.0 KB)
+└── main.js  (15.5 KB)
 public/
 └── assets/
     ├── awards/
@@ -118,18 +118,18 @@ src/
 │   └── BaseLayout.astro  (1.9 KB)
 ├── pages/
 │   ├── awards/
-│   │   ├── deputy-head-prefect.astro  (27.6 KB)
-│   │   ├── nena-aruna.astro  (26.5 KB)
-│   │   └── spirit-of-service.astro  (25.6 KB)
+│   │   ├── deputy-head-prefect.astro  (29.0 KB)
+│   │   ├── nena-aruna.astro  (27.8 KB)
+│   │   └── spirit-of-service.astro  (26.9 KB)
 │   ├── projects/
-│   │   ├── abacus.astro  (28.3 KB)
+│   │   ├── abacus.astro  (29.5 KB)
 │   │   ├── ae-sss.astro  (34.9 KB)
 │   │   └── contrack.astro  (29.8 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
-│   └── main.js  (15.3 KB)
+│   └── main.js  (17.9 KB)
 └── styles/
-    └── styles.css  (38.0 KB)
+    └── styles.css  (39.9 KB)
 astro.config.mjs  (0.2 KB)
 index.html  (44.2 KB)
 package-lock.json  (125.8 KB)
