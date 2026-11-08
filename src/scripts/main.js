@@ -314,6 +314,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    
+    // 9.5 Smart Email Direct & Clipboard Copy Handler
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const email = 'pererawslr@gmail.com';
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(() => {
+                    showToast("Opening email app... (pererawslr@gmail.com copied to clipboard!)");
+                }).catch(() => {
+                    showToast("Opening email app...");
+                });
+            } else {
+                showToast("Opening email app...");
+            }
+        });
+    });
+
     // 10. Content Protection & Certificate Security
     // 1. Disable Right-Click Context Menu Everywhere (Capture Phase)
     document.addEventListener('contextmenu', (e) => {

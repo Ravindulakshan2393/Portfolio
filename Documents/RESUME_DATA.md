@@ -1,6 +1,6 @@
 # Sadeepa Lakshan - Master Resume Data Reference
 
-> **Auto-generated** on 2026-11-08 18:39:24 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-08 19:07:16 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -8,7 +8,6 @@
 ## Contact Information
 
 - **Location**: `Moratuwa / Colombo, Sri Lanka`
-- **Email Me**: `pererawslr@gmail.com`
 - **LinkedIn Profile**: `in/sadeepa-lakshan`
 - **GitHub Username**: `@Ravindulakshan2393`
 
