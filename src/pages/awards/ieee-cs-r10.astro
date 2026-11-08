@@ -1,0 +1,915 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const recognition = {
+  title: "IEEE CS R10 Mini-Ideathon 2nd Place Winner (2026)",
+  honor: "Certificate of Achievement (2nd Place)",
+  organization: "IEEE Computer Society Sri Lanka Chapter & Region 10 Asia Pacific",
+  institution: "University of Moratuwa",
+  event: "IEEE CS R10 Summer School 2026 Mini-Ideathon",
+  date: "05th of September 2026",
+  datesHeld: "2nd to 5th of September 2026",
+  team: "Team Busy Bees",
+  project: "AE-SSS (Agentic Edge-AI Smart Surveillance & Response System)",
+  recipient: "W. S. L. R. Perera (Sadeepa Lakshan)",
+  citation: "Awarded for securing 2nd Place in the IEEE Computer Society R10 Summer School Mini-Ideathon Challenge in recognition of outstanding creativity, innovation, and problem-solving.",
+  signatories: [
+    {
+      name: "Prof. Supunmali Ahangama",
+      role: "Chairperson",
+      org: "IEEE Computer Society Sri Lanka Chapter"
+    },
+    {
+      name: "Dr. Suresha Perera",
+      role: "Secretary",
+      org: "IEEE Computer Society Sri Lanka Chapter"
+    }
+  ],
+  metrics: [
+    { label: "Award Position", value: "2nd Place" },
+    { label: "Ideathon Team", value: "Busy Bees" },
+    { label: "Date Awarded", value: "05 Sep 2026" },
+    { label: "Organizing Body", value: "IEEE CS R10" }
+  ],
+  certificateImage: `${baseUrl}assets/awards/ieee-cs-r10-certificate.jpg`,
+  teamImage: `${baseUrl}assets/projects/aesss-team.jpg`,
+  repository: "https://github.com/chamika-u/mini-ideathon-smart-ecosystem.git",
+  teamMembers: [
+    { name: "Sadeepa Lakshan", inst: "University of Moratuwa (UOM)" },
+    { name: "Chamika Umesh", inst: "University of Sri Jayewardenepura (UOS)" },
+    { name: "Aadhil Akuthub", inst: "Open University of Sri Lanka (OUSL)" },
+    { name: "Hiumie Hungampola", inst: "University of Kelaniya (UOK)" },
+    { name: "Rometh De Silva", inst: "University of Kelaniya (UOK)" },
+    { name: "Amanda Ariyaratne", inst: "University of Moratuwa (UOM)" }
+  ]
+};
+---
+
+<BaseLayout 
+  title={`${recognition.title} | Awards & Recognition`}
+  description="Official Certificate of Achievement awarded to Sadeepa Lakshan (W. S. L. R. Perera) for securing 2nd Place in the IEEE CS R10 Summer School 2026 Mini-Ideathon Challenge."
+  isHome={false}
+>
+  <section class="section award-detail-container" style="padding-top: 120px; padding-bottom: 4rem; min-height: 85vh;">
+    <div class="container" style="max-width: 1120px;">
+      
+      <!-- Top Back Navigation -->
+      <div style="margin-bottom: 1.8rem;">
+        <a href={`${baseUrl}#awards`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-arrow-left"></i> Back to Awards & Recognition
+        </a>
+      </div>
+
+      <!-- Hero Header Banner Card with Team Photo Overlay -->
+      <div class="hero-banner-card">
+        <div class="banner-image-wrapper">
+          <img 
+            src={recognition.teamImage} 
+            alt="Team Busy Bees - IEEE CS R10 Summer School 2026 Mini-Ideathon 2nd Place Winners" 
+            class="banner-image"
+          />
+          <div class="banner-overlay"></div>
+        </div>
+        
+        <div class="banner-content">
+          <div class="badge-row">
+            <span class="pill-badge pill-gold">
+              <i class="fa-solid fa-trophy"></i> 2nd Place Winner
+            </span>
+            <span class="pill-badge pill-sky">
+              <i class="fa-solid fa-laptop-code"></i> IEEE CS R10 Summer School 2026
+            </span>
+            <span class="pill-badge pill-emerald">
+              <i class="fa-solid fa-users"></i> Team Busy Bees
+            </span>
+            <span class="pill-badge pill-purple">
+              <i class="fa-solid fa-calendar-check"></i> 05th Sep 2026
+            </span>
+          </div>
+          
+          <h1 class="banner-title">
+            IEEE CS R10 Mini-Ideathon <span class="text-gradient">2nd Place Winner</span>
+          </h1>
+          <p class="banner-desc">
+            Official Certificate of Achievement conferred by the <strong>IEEE Computer Society Sri Lanka Chapter & Region 10 Asia Pacific</strong> recognizing 2nd Place in the flagship Summer School 2026 Mini-Ideathon for the <strong>AE-SSS (Agentic Edge-AI Smart Surveillance System)</strong> architecture.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Core Award Metrics Grid -->
+      <div class="metrics-grid">
+        {recognition.metrics.map(m => (
+          <div class="metric-card">
+            <div class="metric-value">{m.value}</div>
+            <div class="metric-label">{m.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Main Balanced 2-Column Split: Certificate Showcase (Left) & Citation & Credentials (Right) -->
+      <div class="award-split-layout">
+        
+        <!-- Left: Verified Certificate Showcase -->
+        <article class="terminal-card content-card certificate-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">Official Certificate Document</span>
+          </div>
+          
+          <div class="terminal-body" style="padding: 1.4rem 1.5rem;">
+            <div class="card-subtitle-row">
+              <h2 class="section-heading" style="margin-bottom: 0;">
+                <i class="fa-solid fa-file-shield" style="color: var(--primary); margin-right: 8px;"></i>
+                Verified Credential
+              </h2>
+              <span class="verified-pill">
+                <i class="fa-solid fa-circle-check"></i> Authentic Certificate
+              </span>
+            </div>
+
+            <!-- Watermark-Protected Certificate Frame -->
+            <div class="certificate-frame">
+              <div class="certificate-watermark-overlay" aria-hidden="true">
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+              </div>
+              <img 
+                src={recognition.certificateImage} 
+                alt="Official IEEE CS R10 Summer School 2026 Mini-Ideathon 2nd Place Certificate - W. S. L. R. Perera" 
+                class="certificate-full-img"
+                loading="eager"
+              />
+            </div>
+
+            <!-- Footer: Status Pill with Direct Link Deprecation -->
+            <div class="cert-footer-row">
+              <span class="cert-caption">
+                <i class="fa-solid fa-award" style="color: var(--accent-gold);"></i> 05 Sep 2026 • IEEE CS Sri Lanka Chapter
+              </span>
+              <div class="cert-status-badge">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Protected Digital Credential</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Right: Official Citation, Credentials & History -->
+        <article class="terminal-card content-card details-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">Award Citation & Ideathon Credentials</span>
+          </div>
+          
+          <div class="terminal-body" style="padding: 1.4rem 1.5rem;">
+            
+            <div class="card-subtitle-row">
+              <h2 class="section-heading" style="margin-bottom: 0;">
+                <i class="fa-solid fa-quote-left" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                Citation of Achievement
+              </h2>
+              <span class="verified-pill">
+                <i class="fa-solid fa-medal"></i> 2nd Place Honor
+              </span>
+            </div>
+
+            <!-- Citation Blockquote -->
+            <div class="citation-callout">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <blockquote class="citation-text">
+                "{recognition.citation}"
+              </blockquote>
+              <div class="citation-author">
+                — Conferred to <strong>{recognition.recipient}</strong> by IEEE Computer Society Sri Lanka Chapter & Region 10
+              </div>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.55; margin-bottom: 1.1rem;">
+              Competed at the <strong>IEEE Computer Society R10 Summer School 2026 Mini-Ideathon</strong> held from 2nd to 5th of September 2026 at the <strong>University of Moratuwa</strong>, designing an agentic Edge-AI public surveillance infrastructure for high-density transport terminals.
+            </p>
+
+            <!-- 4-Item Credentials Matrix -->
+            <div class="credentials-balanced-grid">
+              <div class="cred-item">
+                <span class="cred-label">Award Honor</span>
+                <span class="cred-value">2nd Place Winner</span>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">Awardee</span>
+                <span class="cred-value">W. S. L. R. Perera</span>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">Team Name</span>
+                <span class="cred-value">Team Busy Bees</span>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">Venue & Host</span>
+                <span class="cred-value">University of Moratuwa</span>
+              </div>
+            </div>
+
+            <!-- Official Signatories Section -->
+            <div class="signatories-section">
+              <span class="cred-label" style="display: block; margin-bottom: 0.6rem;">Institutional Signatories</span>
+              <div class="signatories-balanced-row">
+                {recognition.signatories.map(s => (
+                  <div class="signatory-box">
+                    <div class="signatory-name">
+                      <i class="fa-solid fa-pen-nib" style="color: var(--primary); margin-right: 5px;"></i>
+                      <strong>{s.name}</strong>
+                    </div>
+                    <div class="signatory-role">{s.role}</div>
+                    <div class="signatory-org">{s.org}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Social Impact Note -->
+            <div class="institutional-note" style="margin-top: 1rem;">
+              <i class="fa-solid fa-heart" style="color: #ef4444;"></i>
+              <span>Social Impact: Team Busy Bees donated their entire 2nd Place cash prize to purchase pediatric chemotherapy medications for Apeksha Cancer Hospital, Maharagama.</span>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 2. Team Roster & Technical Innovation Highlights -->
+      <article class="terminal-card content-card" style="margin-top: 1.8rem;">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">Team Busy Bees &amp; Technical Architecture</span>
+        </div>
+        
+        <div class="terminal-body" style="padding: 1.8rem 2rem;">
+          <div class="section-title-bar">
+            <h2 class="section-heading" style="margin-bottom: 0;">
+              <i class="fa-solid fa-microchip" style="color: var(--secondary); margin-right: 8px;"></i>
+              AE-SSS: Agentic Edge-AI Smart Surveillance System
+            </h2>
+            <span class="section-counter-badge">Pettah Central Bus Stand</span>
+          </div>
+
+          <p style="color: var(--text-muted); margin-bottom: 1.4rem; font-size: 0.9rem; line-height: 1.6;">
+            The winning proposal converted passive CCTV infrastructure into an active, autonomous multi-agent guardian system with sub-50ms local edge inference:
+          </p>
+
+          <!-- 3 Technical Pillars -->
+          <div class="initiatives-grid-3col">
+            
+            <div class="initiative-card">
+              <div class="initiative-top">
+                <div class="initiative-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <span class="initiative-pill pill-sky">Multi-Modal Vision</span>
+              </div>
+              <div class="initiative-content">
+                <h4 class="initiative-title">Local Edge Perception</h4>
+                <div class="initiative-role">YOLOv8 + TensorRT INT8</div>
+                <p>
+                  Deploys quantized edge computer vision models running directly on NVIDIA Jetson Orin Nano boards at bus platforms, identifying weapon threats and crowd surges.
+                </p>
+              </div>
+            </div>
+
+            <div class="initiative-card">
+              <div class="initiative-top">
+                <div class="initiative-icon" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24;">
+                  <i class="fa-solid fa-ear-listen"></i>
+                </div>
+                <span class="initiative-pill pill-gold">Acoustic NLP</span>
+              </div>
+              <div class="initiative-content">
+                <h4 class="initiative-title">Trilingual Distress Detection</h4>
+                <div class="initiative-role">Sinhala, Tamil &amp; English</div>
+                <p>
+                  Monitors decibel spikes, distress keywords, and panic acoustics across local Sri Lankan languages, correlating visual anomalies with auditory distress signals.
+                </p>
+              </div>
+            </div>
+
+            <div class="initiative-card">
+              <div class="initiative-top">
+                <div class="initiative-icon" style="background: rgba(62, 207, 142, 0.15); color: #3ecf8e;">
+                  <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <span class="initiative-pill pill-emerald">Privacy First</span>
+              </div>
+              <div class="initiative-content">
+                <h4 class="initiative-title">Ephemeral Zero-Trust Buffer</h4>
+                <div class="initiative-role">10-Min FIFO RAM Buffer</div>
+                <p>
+                  Strict privacy adherence with no continuous video streaming to the cloud. Overwrites non-incident raw video every 10 minutes to protect commuter privacy.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Verified Team Roster -->
+          <div style="margin-top: 1.8rem; padding-top: 1.4rem; border-top: 1px solid var(--border-color);">
+            <span class="cred-label" style="display: block; margin-bottom: 0.8rem; font-size: 0.85rem;">
+              <i class="fa-solid fa-users" style="color: var(--primary); margin-right: 6px;"></i> Verified Team Busy Bees Roster
+            </span>
+            <div class="team-pills-grid">
+              {recognition.teamMembers.map(m => (
+                <div class="team-pill-box">
+                  <span class="team-name"><strong>{m.name}</strong></span>
+                  <span class="team-inst">{m.inst}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Bottom Action CTA -->
+      <div class="github-cta-box" style="margin-top: 2.5rem;">
+        <div class="cta-info">
+          <i class="fa-solid fa-trophy cta-icon" style="color: var(--accent-gold);"></i>
+          <div>
+            <h4>Explore Full System Architecture Case Study</h4>
+            <p>Read the comprehensive technical evaluation report, network schemas, and hardware specs for AE-SSS.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href={`${baseUrl}projects/ae-sss`} class="btn btn-primary">
+            <i class="fa-solid fa-brain"></i> View Full Architecture Case Study
+          </a>
+          <a href={recognition.repository} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <i class="fa-brands fa-github"></i> View GitHub Repo
+          </a>
+          <a href={`${baseUrl}#awards`} class="btn btn-secondary">
+            <i class="fa-solid fa-award"></i> View All Awards
+          </a>
+          <a href={`${baseUrl}#contact`} class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Contact Sadeepa
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Banner Card */
+  .hero-banner-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .banner-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    background: #0b0f19;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: blur(3px);
+    transform: scale(1.04);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.6s ease;
+  }
+
+  .hero-banner-card:hover .banner-image {
+    transform: scale(1.07);
+    filter: blur(2px);
+  }
+
+  .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(7, 10, 18, 0.97) 0%, rgba(7, 10, 18, 0.65) 45%, rgba(7, 10, 18, 0.25) 100%);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+  }
+
+  .banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.8rem 2.2rem;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0.8rem;
+  }
+
+  .pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+  }
+
+  .pill-gold {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fde68a;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+
+  .pill-sky {
+    background: rgba(56, 189, 248, 0.15);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+  }
+
+  .pill-emerald {
+    background: rgba(62, 207, 142, 0.15);
+    color: #a7f3d0;
+    border: 1px solid rgba(62, 207, 142, 0.4);
+  }
+
+  .pill-purple {
+    background: rgba(168, 85, 247, 0.15);
+    color: #e9d5ff;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+  }
+
+  .banner-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+  }
+
+  .banner-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 880px;
+    line-height: 1.5;
+  }
+
+  /* Metrics Grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .metric-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1rem;
+    text-align: center;
+    transition: var(--transition-normal);
+  }
+
+  .metric-card:hover {
+    border-color: rgba(251, 191, 36, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .metric-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    color: var(--accent-gold);
+    margin-bottom: 0.25rem;
+  }
+
+  .metric-label {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  /* Award Split Layout */
+  .award-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .content-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+
+  .terminal-header {
+    background: rgba(15, 23, 42, 0.6);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .terminal-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .dot.red { background: #ef4444; }
+  .dot.yellow { background: #f59e0b; }
+  .dot.green { background: #10b981; }
+
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .card-subtitle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .section-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+  }
+
+  .verified-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+  }
+
+  /* Certificate Frame */
+  .certificate-frame {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.8rem;
+  }
+
+  .certificate-full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+
+  .cert-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .cert-caption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* Citation Callout */
+  .citation-callout {
+    position: relative;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border-left: 3px solid var(--accent-gold);
+    padding: 1rem 1.25rem 1rem 2rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 1.1rem;
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    opacity: 0.5;
+  }
+
+  .citation-text {
+    font-style: italic;
+    color: var(--text-main);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .citation-author {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* Credentials Grid */
+  .credentials-balanced-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+  }
+
+  .cred-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .cred-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+  }
+
+  .cred-value {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  /* Signatories */
+  .signatories-balanced-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .signatory-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.9rem;
+  }
+
+  .signatory-name {
+    font-size: 0.86rem;
+    color: var(--text-main);
+    margin-bottom: 2px;
+  }
+
+  .signatory-role {
+    font-size: 0.76rem;
+    color: var(--accent-gold);
+  }
+
+  .signatory-org {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
+
+  .institutional-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Section Title Bar */
+  .section-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0.6rem;
+  }
+
+  .section-counter-badge {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--accent-gold);
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    padding: 2px 9px;
+    border-radius: var(--radius-full);
+  }
+
+  .initiatives-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .initiative-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-normal);
+  }
+
+  .initiative-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .initiative-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .initiative-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .initiative-pill {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+  }
+
+  .initiative-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+  }
+
+  .initiative-role {
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    font-family: var(--font-mono);
+    margin-bottom: 0.75rem;
+  }
+
+  .initiative-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Team Pills Grid */
+  .team-pills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .team-pill-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .team-name {
+    font-size: 0.85rem;
+    color: var(--text-main);
+  }
+
+  .team-inst {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 960px) {
+    .banner-image-wrapper {
+      height: 380px;
+    }
+
+    .banner-content {
+      padding: 1.5rem;
+    }
+
+    .banner-title {
+      font-size: 1.55rem;
+    }
+
+    .award-split-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .initiatives-grid-3col {
+      grid-template-columns: 1fr;
+    }
+
+    .team-pills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .signatories-balanced-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .banner-image-wrapper {
+      height: 440px;
+    }
+
+    .banner-title {
+      font-size: 1.35rem;
+    }
+
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .credentials-balanced-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-pills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+

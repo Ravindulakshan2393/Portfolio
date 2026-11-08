@@ -100,3 +100,4 @@ checkPage('dist/projects/contrack/index.html');
 checkPage('dist/awards/spirit-of-service/index.html');
 checkPage('dist/awards/nena-aruna/index.html');
 checkPage('dist/awards/deputy-head-prefect/index.html');
+checkPage('dist/awards/ieee-cs-r10/index.html');

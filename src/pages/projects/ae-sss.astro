@@ -18,6 +18,7 @@ const project = {
   ],
   repository: "https://github.com/chamika-u/mini-ideathon-smart-ecosystem.git",
   image: `${baseUrl}assets/projects/aesss-team.jpg`,
+  certificateImage: `${baseUrl}assets/awards/ieee-cs-r10-certificate.jpg`,
   techStack: [
     "NVIDIA Jetson Orin Nano (8GB)",
     "YOLOv8 + TensorRT INT8",
@@ -434,6 +435,49 @@ const project = {
         <!-- Right Sidebar Info Cards -->
         <aside class="detail-sidebar">
           
+          <!-- Official Certificate of Achievement Card -->
+          <div class="sidebar-box cert-card">
+            <div class="cert-header">
+              <span class="cert-icon">🏆</span>
+              <h3>Official Award Certificate</h3>
+            </div>
+            <p class="cert-subtext">
+              Awarded <strong>2nd Place</strong> in the IEEE Computer Society R10 Summer School 2026 Mini-Ideathon for outstanding creativity, innovation, and problem-solving.
+            </p>
+            <div class="cert-image-wrapper">
+              <div class="certificate-watermark-overlay" aria-hidden="true">
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+                <div class="watermark-row">OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN • OFFICIAL PORTFOLIO VERIFICATION ONLY — SADEEPA LAKSHAN</div>
+              </div>
+              <img 
+                src={project.certificateImage} 
+                alt="Official IEEE CS R10 Summer School 2026 Mini-Ideathon 2nd Place Certificate - W. S. L. R. Perera" 
+                class="cert-img"
+              />
+            </div>
+            <div class="cert-signatures">
+              <span><strong>Signed:</strong> Prof. Supunmali Ahangama (Chairperson)</span>
+              <span><strong>Signed:</strong> Dr. Suresha Perera (Secretary)</span>
+            </div>
+            <div style="margin-top: 0.9rem; display: flex; flex-direction: column; gap: 8px;">
+              <div class="cert-status-badge" style="justify-content: center; width: 100%;">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Protected Digital Credential</span>
+              </div>
+              <a 
+                href={`${baseUrl}awards/ieee-cs-r10`} 
+                class="btn btn-sm btn-secondary" 
+                style="justify-content: center; width: 100%; font-size: 0.8rem;"
+              >
+                <i class="fa-solid fa-award"></i> View Dedicated Award Page <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
           <!-- Social Impact Box (Medicine Purchase Highlight) -->
           <div class="sidebar-box social-impact-card">
             <div class="social-impact-header">
@@ -499,8 +543,11 @@ const project = {
           </div>
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href={`${baseUrl}#awards`} class="btn btn-primary">
-            <i class="fa-solid fa-award"></i> View All Awards
+          <a href={`${baseUrl}awards/ieee-cs-r10`} class="btn btn-primary">
+            <i class="fa-solid fa-award"></i> View Official Certificate Page
+          </a>
+          <a href={`${baseUrl}#awards`} class="btn btn-secondary">
+            <i class="fa-solid fa-trophy"></i> View All Awards
           </a>
           <a href={`${baseUrl}#contact`} class="btn btn-secondary">
             <i class="fa-solid fa-envelope"></i> Contact Sadeepa
@@ -935,6 +982,68 @@ const project = {
     background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%);
     border: 1px solid rgba(251, 191, 36, 0.35);
     box-shadow: 0 0 25px rgba(251, 191, 36, 0.1);
+  }
+
+  /* Certificate Card */
+  .cert-card {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.1);
+  }
+
+  .cert-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.6rem;
+  }
+
+  .cert-icon {
+    font-size: 1.2rem;
+  }
+
+  .cert-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fde68a;
+  }
+
+  .cert-subtext {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .cert-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    margin-bottom: 0.8rem;
+  }
+
+  .cert-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    transition: transform 0.4s ease;
+  }
+
+  .cert-img:hover {
+    transform: scale(1.02);
+  }
+
+  .cert-signatures {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-code);
   }
 
   .social-impact-header {
