@@ -296,38 +296,82 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const submitBtn = document.getElementById('submit-btn');
             const originalText = submitBtn.innerHTML;
 
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending...`;
+            const emailInput = document.getElementById('email');
+            const emailVal = emailInput ? emailInput.value.trim() : '';
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailVal)) {
+                showToast("Please enter a valid email address.");
+                if (emailInput) emailInput.focus();
+                return;
+            }
 
-            setTimeout(() => {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+
+                const result = await response.json();
+                if (response.status === 200 && result.success) {
+                    showToast("Thank you! Your message has been sent directly to Sadeepa's inbox.");
+                    contactForm.reset();
+                } else {
+                    console.error('Web3Forms Error:', result);
+                    showToast(result.message || "Message delivery failed. Please email pererawslr@gmail.com directly.");
+                }
+            } catch (err) {
+                console.error('Submission Network Error:', err);
+                showToast("Network error. Please email pererawslr@gmail.com directly.");
+            } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
-                contactForm.reset();
-                showToast("Thank you! Your message has been sent to Sadeepa.");
-            }, 1200);
+            }
         });
     }
 
     
-    // 9.5 Smart Email Direct & Clipboard Copy Handler
+        // 9.5 Smart Email Handler (PC Browser Gmail vs Mobile App)
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     emailLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
             const email = 'pererawslr@gmail.com';
+            const subject = 'Software Engineering Internship Inquiry - Sadeepa Lakshan';
+            const body = 'Hi Sadeepa,\n\nI came across your portfolio and would like to connect regarding a Software Engineering opportunity.\n\nBest regards,';
+
+            // Auto-copy email address to clipboard
             if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(email).then(() => {
-                    showToast("Opening email app... (pererawslr@gmail.com copied to clipboard!)");
-                }).catch(() => {
-                    showToast("Opening email app...");
-                });
+                navigator.clipboard.writeText(email).catch(() => {});
+            }
+
+            // Detect mobile devices (Android / iOS)
+            const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+            if (!isMobile) {
+                // On PC / Desktop: Open Gmail directly in a new browser tab
+                e.preventDefault();
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+                showToast("Opening Gmail in browser... (pererawslr@gmail.com copied to clipboard!)");
             } else {
-                showToast("Opening email app...");
+                // On Mobile: Open native Gmail / Mail app via mailto:
+                showToast("Opening email app... (pererawslr@gmail.com copied!)");
             }
         });
     });
