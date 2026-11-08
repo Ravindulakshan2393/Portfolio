@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-08 19:54:30 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-08 20:15:29 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -41,13 +41,13 @@ assets/
 ├── profile.jpg  (100.2 KB)
 └── symbol.png  (954.6 KB)
 css/
-└── styles.css  (32.7 KB)
+└── styles.css  (39.9 KB)
 dist/
 ├── _astro/
 │   ├── abacus.B1ut6qA6.css  (8.2 KB)
 │   ├── ae-sss.k9qI7r_Y.css  (10.3 KB)
 │   ├── BaseLayout.astro_astro_type_script_index_0_lang.r483-Q_V.js  (7.5 KB)
-│   ├── BaseLayout.BFLit4ov.css  (29.4 KB)
+│   ├── BaseLayout.SBX1wTyh.css  (32.6 KB)
 │   ├── contrack.By9xvxXX.css  (7.9 KB)
 │   ├── deputy-head-prefect.uYyajMVY.css  (9.7 KB)
 │   ├── nena-aruna.Be_6G87p.css  (8.7 KB)
@@ -138,7 +138,7 @@ src/
 ├── scripts/
 │   └── main.js  (17.3 KB)
 └── styles/
-    └── styles.css  (41.9 KB)
+    └── styles.css  (47.2 KB)
 astro.config.mjs  (0.2 KB)
 index.html  (46.2 KB)
 package-lock.json  (125.8 KB)

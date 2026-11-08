@@ -67,6 +67,9 @@ body.light-theme {
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
 }
 
 body {
@@ -75,6 +78,8 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
     transition: background-color var(--transition-normal), color var(--transition-normal);
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1574,11 +1579,70 @@ img {
     .stats-grid {
         grid-template-columns: 1fr;
     }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+
+    .awards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+
+    .focus-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-header {
+        margin-bottom: 2.8rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-actions {
+        gap: 0.5rem;
+    }
+
+    .nav-actions .btn {
+        display: none;
+    }
+
     .mobile-menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: var(--transition-fast);
+    }
+
+    .mobile-menu-btn:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+    .nav-brand .brand-name {
+        font-size: 1.05rem;
     }
 
     .nav-menu {
@@ -1586,21 +1650,380 @@ img {
         top: 80px;
         left: 0;
         width: 100%;
-        background: var(--bg-dark);
+        height: calc(100vh - 80px);
+        background: rgba(7, 10, 18, 0.97);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--border-color);
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 2rem;
-        gap: 1.5rem;
-        transform: translateY(-150%);
+        gap: 2rem;
+        transform: translateX(-100%);
         transition: transform var(--transition-normal);
+        z-index: 999;
     }
 
     .nav-menu.active {
-        transform: translateY(0);
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: clamp(1.85rem, 6.5vw, 2.3rem);
+        line-height: 1.2;
+    }
+
+    /* Mobile: show avatar below content but keep it visible */
+    .hero {
+        min-height: auto;
+        padding: 110px 0 60px;
+        align-items: flex-start;
+    }
+
+    .hero-visual {
+        margin-top: 2.5rem;
+    }
+
+    .avatar-card {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    .floating-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .badge-top-right {
+        top: -8px;
+        right: -5px;
+    }
+
+    .badge-bottom-left {
+        bottom: 20px;
+        left: -5px;
+    }
+
+    .badge-middle-right {
+        bottom: -5px;
+        right: -5px;
+    }
+
+    .status-pill {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.8rem;
+        max-width: 100%;
+    }
+
+    .status-text {
+        white-space: normal;
+        line-height: 1.3;
+    }
+
+    .hero-cta {
+        gap: 0.8rem;
+        margin-bottom: 2.2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+        width: 100%;
+        padding-top: 1.2rem;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .stat-box {
+        align-items: center;
+        text-align: center;
+        min-width: 80px;
+        flex: 1 1 80px;
+    }
+
+    .category-filters {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+
+    .filter-btn, .project-filter-btn {
+        padding: 0.45rem 1rem;
+        font-size: 0.84rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+        width: 100%;
+    }
+
+    .skill-card {
+        padding: 1.1rem 0.6rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .skill-name {
+        font-size: 0.88rem;
+    }
+
+    .skill-badge {
+        font-size: 0.72rem;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .focus-card {
+        padding: 1.4rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-content {
+        padding: 1.4rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-graphic {
+        padding: 0.85rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .window-title {
+        max-width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .award-card {
+        padding: 1.4rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .contact-form-card {
+        padding: 1.6rem 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-item {
+        padding: 0.9rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .terminal-body {
+        padding: 1.1rem 0.9rem;
+        font-size: 0.82rem;
+    }
+
+    .github-cta-box {
+        padding: 1.4rem;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cta-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .github-cta-box .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .modal-content {
+        max-height: 90vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.85rem;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-header {
+        margin-bottom: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .hero {
+        padding: 95px 0 45px;
+    }
+
+    .hero-title {
+        font-size: 1.85rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-cta .btn:not(.btn-icon) {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats-row {
+        gap: 0.75rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.72rem;
+    }
+
+    .stat-text-badge {
+        font-size: 0.95rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+    }
+
+    .skill-card {
+        padding: 0.9rem 0.4rem;
+    }
+
+    .skill-icon {
+        font-size: 1.8rem;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
+
+    .skill-badge {
+        font-size: 0.66rem;
+    }
+
+    .project-image-wrapper {
+        height: 180px;
+    }
+
+    .iot-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .project-content {
+        padding: 1.15rem;
+    }
+
+    .project-title {
+        font-size: 1.12rem;
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+
+    .project-links .link-btn {
+        justify-content: center;
+        padding: 0.35rem 0;
+    }
+
+    .award-card {
+        padding: 1.15rem;
+    }
+
+    .award-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .award-info p {
+        font-size: 0.84rem;
+    }
+
+    .contact-form-card {
+        padding: 1.25rem 0.85rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.88rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+        align-items: center;
     }
 }
 
