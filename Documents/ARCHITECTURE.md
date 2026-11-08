@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-08 20:44:15 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-08 20:53:58 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -15,7 +15,7 @@
 | **Total Skills** | 15 skills across 4 categories |
 | **Total Featured Projects** | 3 showcase projects |
 | **Total Awards & Leadership** | 6 honors & positions |
-| **Total Dedicated Subpages** | 7 dedicated case study & award subpages |
+| **Total Dedicated Subpages** | 6 dedicated case study & award subpages |
 | **Deployment Target** | GitHub Pages (`https://Ravindulakshan2393.github.io/Portfolio/`) via GitHub Actions |
 
 ---
@@ -50,7 +50,6 @@ dist/
 │   ├── BaseLayout.SBX1wTyh.css  (32.6 KB)
 │   ├── contrack.By9xvxXX.css  (7.9 KB)
 │   ├── deputy-head-prefect.uYyajMVY.css  (9.7 KB)
-│   ├── ieee-cs-r10.BeFcCBJJ.css  (5.6 KB)
 │   ├── nena-aruna.Be_6G87p.css  (8.7 KB)
 │   └── spirit-of-service.BBN6iYDo.css  (8.3 KB)
 ├── assets/
@@ -72,8 +71,6 @@ dist/
 ├── awards/
 │   ├── deputy-head-prefect/
 │   │   └── index.html  (21.6 KB)
-│   ├── ieee-cs-r10/
-│   │   └── index.html  (14.6 KB)
 │   ├── nena-aruna/
 │   │   └── index.html  (22.1 KB)
 │   └── spirit-of-service/
@@ -85,10 +82,10 @@ dist/
 │   │   └── index.html  (32.0 KB)
 │   └── contrack/
 │       └── index.html  (25.9 KB)
-└── index.html  (31.0 KB)
+└── index.html  (30.8 KB)
 Documents/
 ├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
-├── ARCHITECTURE.md  (10.4 KB)
+├── ARCHITECTURE.md  (10.7 KB)
 ├── DEPLOYMENT_GUIDE.md  (4.3 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (9.0 KB)
 └── RESUME_DATA.md  (4.0 KB)
@@ -117,7 +114,7 @@ scripts/
 src/
 ├── components/
 │   ├── About.astro  (6.2 KB)
-│   ├── Awards.astro  (6.4 KB)
+│   ├── Awards.astro  (6.1 KB)
 │   ├── Contact.astro  (5.7 KB)
 │   ├── Footer.astro  (1.4 KB)
 │   ├── Hero.astro  (4.2 KB)
@@ -131,7 +128,6 @@ src/
 ├── pages/
 │   ├── awards/
 │   │   ├── deputy-head-prefect.astro  (29.0 KB)
-│   │   ├── ieee-cs-r10.astro  (17.0 KB)
 │   │   ├── nena-aruna.astro  (27.8 KB)
 │   │   └── spirit-of-service.astro  (26.9 KB)
 │   ├── projects/
@@ -144,7 +140,7 @@ src/
 └── styles/
     └── styles.css  (47.2 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (46.2 KB)
+index.html  (45.8 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)
@@ -189,7 +185,6 @@ README.md  (2.6 KB)
 
 ### Dedicated Subpages:
 - **`/awards/deputy-head-prefect`** → Source: [`src/pages/awards/deputy-head-prefect.astro`](../src/pages/awards/deputy-head-prefect.astro)
-- **`/awards/ieee-cs-r10`** → Source: [`src/pages/awards/ieee-cs-r10.astro`](../src/pages/awards/ieee-cs-r10.astro)
 - **`/awards/nena-aruna`** → Source: [`src/pages/awards/nena-aruna.astro`](../src/pages/awards/nena-aruna.astro)
 - **`/awards/spirit-of-service`** → Source: [`src/pages/awards/spirit-of-service.astro`](../src/pages/awards/spirit-of-service.astro)
 - **`/projects/abacus`** → Source: [`src/pages/projects/abacus.astro`](../src/pages/projects/abacus.astro)
