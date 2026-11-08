@@ -664,12 +664,24 @@ img {
     font-size: 0.88rem;
     line-height: 1.7;
     color: #e6edf3;
-    overflow-x: auto;
+    overflow-x: hidden;
+}
+
+.terminal-body pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
 }
 
 .yaml-key { color: #79c0ff; }
 .yaml-str { color: #a5d6ff; }
 .yaml-val { color: #7ee787; }
+.yaml-val-block {
+    display: inline-block;
+    vertical-align: top;
+    max-width: calc(100% - 15ch);
+}
 
 /* About Text */
 .about-text-content h3 {

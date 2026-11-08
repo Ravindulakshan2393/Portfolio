@@ -1,0 +1,866 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const recognition = {
+  title: "Project Co-Chairperson (Project Nena Aruna 2024/25)",
+  honor: "Letter of Appreciation",
+  organization: "Rotaract Club of University of Moratuwa",
+  district: "Rotary International District 3220 (Sponsored by Rotary Club of Colombo West)",
+  year: "RI Year 2024-25",
+  recipient: "Mr. W.S.L.R. Perera (Sadeepa Lakshan)",
+  citation: "In recognition of your role as a Project Co-chairperson of project Nena Aruna 2024/25, we extend our deepest gratitude for your invaluable contributions. Your dedication, professionalism, and passion for service have greatly enhanced the success of our initiatives, leaving a meaningful impact on both the club and the community we serve.",
+  signatories: [
+    {
+      name: "Rtr. Hiruni Perera",
+      role: "President 2024-25",
+      org: "Rotaract Club of University of Moratuwa"
+    },
+    {
+      name: "Rtr. Brinstan Peries",
+      role: "Secretary 2024-25",
+      org: "Rotaract Club of University of Moratuwa"
+    },
+    {
+      name: "Rtr. Buvani Guruge",
+      role: "Senior Director - Membership Development 2024-25",
+      org: "Rotaract Club of University of Moratuwa"
+    }
+  ],
+  metrics: [
+    { label: "Leadership Role", value: "Co-Chairperson" },
+    { label: "Flagship Project", value: "Nena Aruna" },
+    { label: "Host Organization", value: "Rotaract UoM" },
+    { label: "Administrative Year", value: "RI 2024-25" }
+  ],
+  documentImage: `${baseUrl}assets/awards/nena-aruna-appreciation-letter.jpg`
+};
+---
+
+<BaseLayout 
+  title={`${recognition.title} | Awards & Recognition`}
+  description="Letter of Appreciation awarded to Sadeepa Lakshan (Mr. W.S.L.R. Perera) as Project Co-Chairperson for Project Nena Aruna 2024/25 by the Rotaract Club of University of Moratuwa."
+  isHome={false}
+>
+  <section class="section award-detail-container" style="padding-top: 110px; padding-bottom: 4rem; min-height: 85vh;">
+    <div class="container" style="max-width: 1120px;">
+      
+      <!-- Top Back Navigation -->
+      <div style="margin-bottom: 1.5rem;">
+        <a href={`${baseUrl}#awards`} class="link-btn" style="display: inline-flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-arrow-left"></i> Back to Awards & Recognition
+        </a>
+      </div>
+
+      <!-- Compact Hero Header Card -->
+      <div class="award-header-card">
+        <div class="award-header-main">
+          <div class="badge-row">
+            <span class="pill-badge pill-gold">
+              <i class="fa-solid fa-medal"></i> Letter of Appreciation
+            </span>
+            <span class="pill-badge pill-sky">
+              <i class="fa-solid fa-graduation-cap"></i> Project Co-Chairperson
+            </span>
+            <span class="pill-badge pill-emerald">
+              <i class="fa-solid fa-building-columns"></i> Rotaract UoM (RI 2024-25)
+            </span>
+            <span class="pill-badge pill-purple">
+              <i class="fa-solid fa-certificate"></i> RI District 3220
+            </span>
+          </div>
+          
+          <h1 class="award-page-title">
+            Project Co-Chairperson <span class="text-gradient">(Project Nena Aruna 2024/25)</span>
+          </h1>
+          <p class="award-page-desc">
+            Official Letter of Appreciation conferred by the Rotaract Club of University of Moratuwa honoring leadership, organizational excellence, and dedication in steering the flagship youth education and community empowerment initiative.
+          </p>
+        </div>
+
+        <!-- 4 Inline Quick Metrics -->
+        <div class="inline-metrics-bar">
+          {recognition.metrics.map(m => (
+            <div class="inline-metric-item">
+              <span class="inline-metric-label">{m.label}</span>
+              <span class="inline-metric-value">{m.value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Main Balanced 2-Column Split: Verified Document (Left) & Recognition Details (Right) -->
+      <div class="award-split-layout">
+        
+        <!-- Left: Verified Document Showcase -->
+        <article class="terminal-card content-card certificate-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">Official Letter Document</span>
+          </div>
+          
+          <div class="terminal-body" style="padding: 1.4rem 1.5rem;">
+            <div class="card-subtitle-row">
+              <h2 class="section-heading" style="margin-bottom: 0;">
+                <i class="fa-solid fa-file-invoice" style="color: var(--primary); margin-right: 8px;"></i>
+                Verified Credential
+              </h2>
+              <span class="verified-pill">
+                <i class="fa-solid fa-circle-check"></i> Authentic Document
+              </span>
+            </div>
+
+            <div class="certificate-frame">
+              <img 
+                src={recognition.documentImage} 
+                alt="Official Letter of Appreciation - Sadeepa Lakshan" 
+                class="certificate-full-img"
+                loading="eager"
+              />
+            </div>
+
+            <div class="cert-footer-row">
+              <span class="cert-caption">
+                <i class="fa-solid fa-award" style="color: var(--accent-gold);"></i> RI Year 2024-25 • District 3220
+              </span>
+              <a 
+                href={recognition.documentImage} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="link-btn"
+                style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem;"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open High-Res
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Right: Recognition Citation, Credentials & Signatories -->
+        <article class="terminal-card content-card details-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">Official Recognition Citation & Verification</span>
+          </div>
+          
+          <div class="terminal-body" style="padding: 1.4rem 1.5rem;">
+            
+            <div class="card-subtitle-row">
+              <h2 class="section-heading" style="margin-bottom: 0;">
+                <i class="fa-solid fa-quote-left" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                Citation of Recognition
+              </h2>
+              <span class="verified-pill">
+                <i class="fa-solid fa-medal"></i> Leadership Honor
+              </span>
+            </div>
+
+            <!-- Citation Blockquote -->
+            <div class="citation-callout">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <blockquote class="citation-text">
+                "{recognition.citation}"
+              </blockquote>
+              <div class="citation-author">
+                — Conferred to <strong>{recognition.recipient}</strong> by Rotaract Club of University of Moratuwa
+              </div>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.55; margin-bottom: 1.1rem;">
+              Conferred in recognition of distinguished leadership in steering <strong>Project Nena Aruna 2024/25</strong>, coordinating volunteer teams and educational supply drives to empower underprivileged school students.
+            </p>
+
+            <!-- 4-Item Credentials Matrix -->
+            <div class="credentials-balanced-grid">
+              <div class="cred-item">
+                <span class="cred-label">Leadership Role</span>
+                <span class="cred-value">Project Co-Chairperson</span>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">Awardee</span>
+                <span class="cred-value">{recognition.recipient}</span>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">Host Organization</span>
+                <span class="cred-value">{recognition.organization}</span>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">Charter Year</span>
+                <span class="cred-value">29th Year • RI 2024-25</span>
+              </div>
+            </div>
+
+            <!-- Official Signatories Section -->
+            <div class="signatories-section">
+              <span class="cred-label" style="display: block; margin-bottom: 0.6rem;">Official Signatories</span>
+              <div class="signatories-balanced-row-3">
+                {recognition.signatories.map(s => (
+                  <div class="signatory-box">
+                    <div class="signatory-name">
+                      <i class="fa-solid fa-pen-nib" style="color: var(--primary); margin-right: 5px;"></i>
+                      <strong>{s.name}</strong>
+                    </div>
+                    <div class="signatory-role">{s.role}</div>
+                    <div class="signatory-org">{s.org}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Verification Institutional Note -->
+            <div class="institutional-note">
+              <i class="fa-solid fa-shield-halved" style="color: #10b981;"></i>
+              <span>Sponsored by Rotary Club of Colombo West • RI District 3220 Sri Lanka &amp; Maldives</span>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 2. Project Nena Aruna: Leadership Pillars & Workstreams -->
+      <article class="terminal-card content-card" style="margin-top: 1.8rem;">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">Project Nena Aruna 2024/25 — Leadership Portfolio</span>
+        </div>
+        
+        <div class="terminal-body" style="padding: 1.8rem 2rem;">
+          <div class="section-title-bar">
+            <h2 class="section-heading" style="margin-bottom: 0;">
+              <i class="fa-solid fa-hands-holding-child" style="color: var(--secondary); margin-right: 8px;"></i>
+              Flagship Educational &amp; Youth Empowerment Workstreams
+            </h2>
+            <span class="section-counter-badge">Co-Chair Leadership</span>
+          </div>
+
+          <p style="color: var(--text-muted); margin-bottom: 1.4rem; font-size: 0.9rem; line-height: 1.6;">
+            As Project Co-Chairperson, Sadeepa orchestrated operations, partner outreach, volunteer deployment, and logistics across three core educational workstreams:
+          </p>
+
+          <div class="initiatives-grid-3col">
+            
+            <div class="initiative-card">
+              <div class="initiative-top">
+                <div class="initiative-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <span class="initiative-pill pill-sky">Academic Tutoring</span>
+              </div>
+              <div class="initiative-content">
+                <h4 class="initiative-title">Academic Mentoring &amp; Tutoring</h4>
+                <div class="initiative-role">Structured Knowledge Delivery</div>
+                <p>
+                  Organized curriculum-aligned tutoring sessions, study groups, and revision seminars for school students preparing for vital national exams, ensuring equitable educational support.
+                </p>
+              </div>
+            </div>
+
+            <div class="initiative-card">
+              <div class="initiative-top">
+                <div class="initiative-icon" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24;">
+                  <i class="fa-solid fa-box-archive"></i>
+                </div>
+                <span class="initiative-pill pill-gold">Supply Distribution</span>
+              </div>
+              <div class="initiative-content">
+                <h4 class="initiative-title">Educational Resource Drives</h4>
+                <div class="initiative-role">Material Aid Coordination</div>
+                <p>
+                  Spearheaded stationery, textbook, and educational equipment donation drives, managing logistics to distribute learning resources to underprivileged rural schools and students.
+                </p>
+              </div>
+            </div>
+
+            <div class="initiative-card">
+              <div class="initiative-top">
+                <div class="initiative-icon" style="background: rgba(62, 207, 142, 0.15); color: #3ecf8e;">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <span class="initiative-pill pill-emerald">Youth Empowerment</span>
+              </div>
+              <div class="initiative-content">
+                <h4 class="initiative-title">Motivational &amp; Skills Workshops</h4>
+                <div class="initiative-role">Confidence Building</div>
+                <p>
+                  Facilitated interactive sessions focusing on personal development, study habits, digital literacy, and future academic pathways to inspire student confidence and ambitions.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Core Leadership Attributes -->
+      <article class="terminal-card content-card" style="margin-top: 1.8rem;">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">Leadership Core Values</span>
+        </div>
+        
+        <div class="terminal-body" style="padding: 1.8rem 2rem;">
+          <h2 class="section-heading" style="margin-bottom: 1.2rem;">
+            <i class="fa-solid fa-compass" style="color: var(--accent-gold); margin-right: 8px;"></i>
+            Attributes Demonstrated as Project Co-Chairperson
+          </h2>
+
+          <div class="pillars-grid-4col">
+            <div class="pillar-box">
+              <div class="pillar-num">01</div>
+              <h4>Project Governance</h4>
+              <p>Managing milestone roadmaps, volunteer committee synchronization, and timeline execution.</p>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-num">02</div>
+              <h4>Stakeholder Alignment</h4>
+              <p>Liaising between university club leadership, school administration, teachers, and community sponsors.</p>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-num">03</div>
+              <h4>Team Empowerment</h4>
+              <p>Delegating sub-committee responsibilities, fostering high morale, and maintaining open communication.</p>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-num">04</div>
+              <h4>Measurable Impact</h4>
+              <p>Creating sustainable positive outcomes for students and strengthening Rotaract UoM's outreach footprint.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bottom Action CTA -->
+      <div class="github-cta-box" style="margin-top: 2.5rem;">
+        <div class="cta-info">
+          <i class="fa-solid fa-award cta-icon" style="color: var(--accent-gold);"></i>
+          <div>
+            <h4>Explore Recognition &amp; Technical Projects</h4>
+            <p>Discover technical case studies in IoT, Edge-AI, and full-stack software development.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href={`${baseUrl}awards/spirit-of-service`} class="btn btn-primary">
+            <i class="fa-solid fa-medal"></i> View Spirit of Service Award
+          </a>
+          <a href={`${baseUrl}#awards`} class="btn btn-secondary">
+            <i class="fa-solid fa-award"></i> View All Awards
+          </a>
+          <a href={`${baseUrl}#projects`} class="btn btn-secondary">
+            <i class="fa-solid fa-folder-open"></i> View Projects
+          </a>
+          <a href={`${baseUrl}#contact`} class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Contact Sadeepa
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Compact Header Card */
+  .award-header-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(12px);
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0.8rem;
+  }
+
+  .pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .pill-gold {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fde68a;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+
+  .pill-sky {
+    background: rgba(56, 189, 248, 0.15);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+  }
+
+  .pill-emerald {
+    background: rgba(62, 207, 142, 0.15);
+    color: #a7f3d0;
+    border: 1px solid rgba(62, 207, 142, 0.4);
+  }
+
+  .pill-purple {
+    background: rgba(168, 85, 247, 0.15);
+    color: #e9d5ff;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+  }
+
+  .award-page-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .award-page-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    max-width: 880px;
+    line-height: 1.55;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Inline Metrics Bar */
+  .inline-metrics-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .inline-metric-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.9rem;
+    text-align: center;
+  }
+
+  .inline-metric-label {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+  }
+
+  .inline-metric-value {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    font-family: var(--font-mono);
+  }
+
+  /* Award Split Layout (Balanced 2 Columns) */
+  .award-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .content-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+
+  .terminal-header {
+    background: rgba(15, 23, 42, 0.6);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .terminal-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .dot.red { background: #ef4444; }
+  .dot.yellow { background: #f59e0b; }
+  .dot.green { background: #10b981; }
+
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .card-subtitle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .section-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+  }
+
+  .verified-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+  }
+
+  /* Certificate Frame */
+  .certificate-frame {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.8rem;
+  }
+
+  .certificate-full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .cert-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .cert-caption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* Citation Callout */
+  .citation-callout {
+    position: relative;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.1rem;
+    font-size: 1.6rem;
+    color: rgba(251, 191, 36, 0.15);
+  }
+
+  .citation-text {
+    font-size: 0.94rem;
+    font-style: italic;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .citation-author {
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    font-weight: 500;
+  }
+
+  /* Credentials Balanced Grid */
+  .credentials-balanced-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem 1.1rem;
+    margin-bottom: 1.1rem;
+    padding: 0.9rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+  }
+
+  .cred-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .cred-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .cred-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  /* Signatories Section */
+  .signatories-section {
+    border-top: 1px dashed var(--border-color);
+    padding-top: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .signatories-balanced-row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .signatory-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.7rem;
+  }
+
+  .signatory-name {
+    font-size: 0.8rem;
+    color: var(--text-main);
+    line-height: 1.3;
+  }
+
+  .signatory-role {
+    font-size: 0.72rem;
+    color: var(--accent-gold);
+    margin-top: 0.15rem;
+  }
+
+  .signatory-org {
+    font-size: 0.66rem;
+    color: var(--text-muted);
+    margin-top: 0.1rem;
+  }
+
+  .institutional-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    padding: 0.5rem 0.8rem;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.18);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Workstreams & Pillars */
+  .section-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0.6rem;
+  }
+
+  .section-counter-badge {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--accent-gold);
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    padding: 2px 9px;
+    border-radius: var(--radius-full);
+  }
+
+  .initiatives-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .initiative-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-normal);
+  }
+
+  .initiative-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .initiative-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .initiative-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .initiative-pill {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+  }
+
+  .initiative-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+  }
+
+  .initiative-role {
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+    font-family: var(--font-mono);
+    margin-bottom: 0.75rem;
+  }
+
+  .initiative-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .pillars-grid-4col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .pillar-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 1.1rem 1rem;
+    transition: var(--transition-normal);
+  }
+
+  .pillar-box:hover {
+    border-color: rgba(251, 191, 36, 0.35);
+  }
+
+  .pillar-num {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .pillar-box h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+  }
+
+  .pillar-box p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 960px) {
+    .award-split-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .inline-metrics-bar {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .initiatives-grid-3col {
+      grid-template-columns: 1fr;
+    }
+
+    .pillars-grid-4col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .signatories-balanced-row-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .inline-metrics-bar {
+      grid-template-columns: 1fr;
+    }
+
+    .pillars-grid-4col {
+      grid-template-columns: 1fr;
+    }
+
+    .credentials-balanced-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

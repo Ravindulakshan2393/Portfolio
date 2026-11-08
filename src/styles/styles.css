@@ -806,12 +806,24 @@ body.light-theme .avatar-inner {
     font-size: 0.88rem;
     line-height: 1.7;
     color: #e6edf3;
-    overflow-x: auto;
+    overflow-x: hidden;
+}
+
+.terminal-body pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 0;
 }
 
 .yaml-key { color: #79c0ff; }
 .yaml-str { color: #a5d6ff; }
 .yaml-val { color: #7ee787; }
+.yaml-val-block {
+    display: inline-block;
+    vertical-align: top;
+    max-width: calc(100% - 15ch);
+}
 
 /* About Text */
 .about-text-content h3 {
@@ -1520,7 +1532,9 @@ body.light-theme .avatar-inner {
 }
 
 .modal-content {
-    background: var(--bg-dark);
+    background: rgba(11, 15, 25, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     max-width: 650px;
@@ -1677,8 +1691,40 @@ body.light-theme .avatar-inner {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-actions {
+        gap: 0.5rem;
+    }
+
+    .nav-actions .btn {
+        display: none;
+    }
+
     .mobile-menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: var(--transition-fast);
+    }
+
+    .mobile-menu-btn:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+    .nav-brand .brand-name {
+        font-size: 1.05rem;
     }
 
     .nav-menu {
@@ -1710,7 +1756,8 @@ body.light-theme .avatar-inner {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: clamp(1.85rem, 6.5vw, 2.3rem);
+        line-height: 1.2;
     }
 
     /* Mobile: show avatar below content but keep it visible */

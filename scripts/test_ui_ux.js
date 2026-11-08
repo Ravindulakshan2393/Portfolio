@@ -97,3 +97,6 @@ checkPage('dist/index.html');
 checkPage('dist/projects/abacus/index.html');
 checkPage('dist/projects/ae-sss/index.html');
 checkPage('dist/projects/contrack/index.html');
+checkPage('dist/awards/spirit-of-service/index.html');
+checkPage('dist/awards/nena-aruna/index.html');
+checkPage('dist/awards/deputy-head-prefect/index.html');

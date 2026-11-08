@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-07 12:37:32 UTC by `scripts/update_docs.js`
+> **Auto-generated** on 2026-11-08 13:01:24 UTC by `scripts/update_docs.js`
 > Run `node scripts/update_docs.js` to refresh this document.
 
 ---
@@ -13,7 +13,7 @@
 | **Meta Description** | Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ University of Moratuwa. Software Engineering Intern & Full-Stack Web Developer. |
 | **Total Skills** | 15 |
 | **Total Projects** | 3 |
-| **Total Awards** | 5 |
+| **Total Awards** | 6 |
 
 ---
 
@@ -22,6 +22,11 @@
 ```
 Portfolio/
 assets/
+├── awards/
+│   ├── deputy-head-prefect-certificate.jpg  (149.2 KB)
+│   ├── nena-aruna-appreciation-letter.jpg  (174.8 KB)
+│   ├── prefect-guild-ceremony.jpg  (144.5 KB)
+│   └── spirit-of-service-certificate.jpg  (158.6 KB)
 ├── projects/
 │   ├── abacus-certificate.jpg  (153.0 KB)
 │   ├── abacus-hardware-setup.jpg  (172.2 KB)
@@ -31,15 +36,23 @@ assets/
 ├── profile.jpg  (100.2 KB)
 └── symbol.png  (954.6 KB)
 css/
-└── styles.css  (30.5 KB)
+└── styles.css  (30.8 KB)
 dist/
 ├── _astro/
 │   ├── abacus.BYZPNiGj.css  (8.1 KB)
 │   ├── ae-sss.Bf5_kIlf.css  (9.4 KB)
 │   ├── BaseLayout.astro_astro_type_script_index_0_lang.BP9gLYNk.js  (7.8 KB)
-│   ├── BaseLayout.B79Ns7_N.css  (26.1 KB)
-│   └── contrack.Baq977qh.css  (7.9 KB)
+│   ├── BaseLayout.CHzlbVxb.css  (26.8 KB)
+│   ├── contrack.Baq977qh.css  (7.9 KB)
+│   ├── deputy-head-prefect.DfU33N4L.css  (9.5 KB)
+│   ├── nena-aruna.DZhXQk3b.css  (8.6 KB)
+│   └── spirit-of-service.BRtx3bjx.css  (8.3 KB)
 ├── assets/
+│   ├── awards/
+│   │   ├── deputy-head-prefect-certificate.jpg  (149.2 KB)
+│   │   ├── nena-aruna-appreciation-letter.jpg  (174.8 KB)
+│   │   ├── prefect-guild-ceremony.jpg  (144.5 KB)
+│   │   └── spirit-of-service-certificate.jpg  (158.6 KB)
 │   ├── projects/
 │   │   ├── abacus-certificate.jpg  (153.0 KB)
 │   │   ├── abacus-hardware-setup.jpg  (172.2 KB)
@@ -48,6 +61,13 @@ dist/
 │   │   └── contrack-banner.jpg  (178.5 KB)
 │   ├── profile.jpg  (100.2 KB)
 │   └── symbol.png  (954.6 KB)
+├── awards/
+│   ├── deputy-head-prefect/
+│   │   └── index.html  (20.3 KB)
+│   ├── nena-aruna/
+│   │   └── index.html  (20.6 KB)
+│   └── spirit-of-service/
+│       └── index.html  (20.0 KB)
 ├── projects/
 │   ├── abacus/
 │   │   └── index.html  (24.0 KB)
@@ -55,17 +75,22 @@ dist/
 │   │   └── index.html  (29.2 KB)
 │   └── contrack/
 │       └── index.html  (25.7 KB)
-└── index.html  (28.0 KB)
+└── index.html  (29.8 KB)
 Documents/
 ├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
-├── ARCHITECTURE.md  (6.1 KB)
+├── ARCHITECTURE.md  (7.4 KB)
 ├── DEPLOYMENT_GUIDE.md  (2.4 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
-└── RESUME_DATA.md  (3.0 KB)
+└── RESUME_DATA.md  (3.5 KB)
 js/
 └── main.js  (13.0 KB)
 public/
 └── assets/
+    ├── awards/
+    │   ├── deputy-head-prefect-certificate.jpg  (149.2 KB)
+    │   ├── nena-aruna-appreciation-letter.jpg  (174.8 KB)
+    │   ├── prefect-guild-ceremony.jpg  (144.5 KB)
+    │   └── spirit-of-service-certificate.jpg  (158.6 KB)
     ├── projects/
     │   ├── abacus-certificate.jpg  (153.0 KB)
     │   ├── abacus-hardware-setup.jpg  (172.2 KB)
@@ -75,11 +100,12 @@ public/
     ├── profile.jpg  (100.2 KB)
     └── symbol.png  (954.6 KB)
 scripts/
+├── test_ui_ux.js  (4.6 KB)
 └── update_docs.js  (15.0 KB)
 src/
 ├── components/
-│   ├── About.astro  (6.3 KB)
-│   ├── Awards.astro  (4.0 KB)
+│   ├── About.astro  (6.5 KB)
+│   ├── Awards.astro  (6.1 KB)
 │   ├── Contact.astro  (5.1 KB)
 │   ├── Footer.astro  (1.0 KB)
 │   ├── Hero.astro  (3.9 KB)
@@ -91,6 +117,10 @@ src/
 ├── layouts/
 │   └── BaseLayout.astro  (1.9 KB)
 ├── pages/
+│   ├── awards/
+│   │   ├── deputy-head-prefect.astro  (27.6 KB)
+│   │   ├── nena-aruna.astro  (26.5 KB)
+│   │   └── spirit-of-service.astro  (25.6 KB)
 │   ├── projects/
 │   │   ├── abacus.astro  (28.3 KB)
 │   │   ├── ae-sss.astro  (34.9 KB)
@@ -99,9 +129,9 @@ src/
 ├── scripts/
 │   └── main.js  (15.3 KB)
 └── styles/
-    └── styles.css  (37.0 KB)
+    └── styles.css  (38.0 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (41.9 KB)
+index.html  (44.2 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)

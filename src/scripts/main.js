@@ -108,8 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const id = entry.target.getAttribute('id');
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    const href = link.getAttribute('href');
-                    if (href === `#${id}` || href?.endsWith(`#${id}`)) {
+                    if (link.getAttribute('href') === `#${id}`) {
                         link.classList.add('active');
                     }
                 });
@@ -350,6 +349,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
 
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', () => {
