@@ -1,66 +1,117 @@
 # GitHub Pages Deployment & Hosting Guide
 
-This guide covers deploying Sadeepa Lakshan's Portfolio website to **GitHub Pages**, setting up custom domain DNS records, and automating deployments.
+This guide covers deploying Sadeepa Lakshan's Portfolio website to **GitHub Pages**, configuring the automated CI/CD pipeline, setting up custom domain DNS records, and troubleshooting common issues.
 
 ---
 
-## 1. Quick Initial Deployment (GitHub Pages)
+## 1. Automated GitHub Actions CI/CD Pipeline
 
-### Step 1: Initialize Git & Push Repository
-Open PowerShell or Git Bash in `d:\Projects\SoftProject\GitHub\Portfolio`:
+The portfolio uses an automated GitHub Actions workflow defined in [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml) that automatically builds the Astro application and publishes the static distribution (`dist/`) on every push to `main`.
 
-```bash
-git init
-git add .
-git commit -m "Initial commit - Portfolio site"
-git branch -M main
-git remote add origin https://github.com/Ravindulakshan2393/Portfolio.git
-git push -u origin main
+### Workflow Pipeline Steps:
+1. **Trigger**: Executes on push to `main` branch or manual `workflow_dispatch`.
+2. **Environment**: Ubuntu Linux with Node.js 22.
+3. **Dependency Installation**: `npm install` with npm cache.
+4. **Static Build**: `npm run build` compiles `src/` into the optimized static folder `dist/`.
+5. **Artifact Upload**: `actions/upload-pages-artifact@v3` packages `dist/`.
+6. **Deployment**: `actions/deploy-pages@v4` deploys the site to the official GitHub Pages environment.
+
+### Live URL:
+- **`https://Ravindulakshan2393.github.io/Portfolio/`**
+
+---
+
+## 2. Astro Base URL & Routing Configuration
+
+The project is hosted under the subpath `/Portfolio/`. This is managed inside [`astro.config.mjs`](../astro.config.mjs):
+
+```javascript
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  site: 'https://Ravindulakshan2393.github.io',
+  base: '/Portfolio',
+});
 ```
 
-### Step 2: Enable GitHub Pages in Repo Settings
-1. Navigate to your repository on GitHub: `https://github.com/Ravindulakshan2393/Portfolio`
-2. Click **Settings** (top navigation tab).
-3. On the left sidebar, click **Pages**.
-4. Under **Build and deployment**:
-   - **Source**: Select **`GitHub Actions`**.
-5. The included [deploy.yml](file:///.github/workflows/deploy.yml) workflow will automatically build and publish your Astro site on every `git push origin main`.
-6. Your website will be live at:
-   - **`https://Ravindulakshan2393.github.io/Portfolio/`**
+### Best Practice for Internal Links & Assets in `.astro` Files:
+Always use `baseUrl` dynamically to avoid broken URLs on both local preview (`localhost:4321/Portfolio/`) and production:
 
+```astro
+---
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<a href={`${baseUrl}projects/contrack`}>Case Study</a>
+<img src={`${baseUrl}assets/symbol.png`} alt="Symbol" />
+```
 
 ---
 
-## 2. Deploying to Root Domain (`Ravindulakshan2393.github.io`)
+## 3. Pre-Deployment Verification Checklist
 
-If you want your website URL to be `https://Ravindulakshan2393.github.io` (without `/Portfolio/`):
+Before pushing commits to GitHub, run the local quality assurance suite:
 
-1. Create a repository on GitHub specifically named: **`Ravindulakshan2393.github.io`**
-2. Push your files to that repository's `main` branch.
-3. GitHub Pages will automatically publish it at `https://Ravindulakshan2393.github.io`.
+```bash
+# 1. Verify Astro build generates cleanly
+npm run build
+
+# 2. Run automated link, image, and route integrity tests
+node scripts/test_ui_ux.js
+
+# 3. Synchronize documentation with the latest code state
+npm run docs
+
+# 4. Commit and push
+git add -A
+git commit -m "chore: update documentation and verify build"
+git push origin main
+```
 
 ---
 
-## 3. Custom Domain Setup (Optional)
+## 4. Deploying to Root Domain (`Ravindulakshan2393.github.io`)
 
-If you purchase a custom domain (e.g., `sadeepalakshan.dev` or `sadeepa.com`):
+If you want the portfolio to live directly at `https://Ravindulakshan2393.github.io` (without `/Portfolio/`):
 
-1. In GitHub Pages settings, enter your domain in **Custom domain**.
-2. Add a `CNAME` file in the root folder containing your domain name.
-3. Update your domain registrar's DNS records:
-   - **A Records** pointing to GitHub Pages IPs:
+1. Rename the GitHub repository to: **`Ravindulakshan2393.github.io`**
+2. In `astro.config.mjs`, update `base`:
+   ```javascript
+   export default defineConfig({
+     site: 'https://Ravindulakshan2393.github.io',
+     base: '/',
+   });
+   ```
+3. Commit and push to `main`. GitHub Pages will automatically serve the site from the domain root.
+
+---
+
+## 5. Custom Domain Setup (e.g., `sadeepalakshan.dev`)
+
+If you purchase a custom domain name:
+
+1. **GitHub Pages Settings**:
+   - Go to repository **Settings** → **Pages** → **Custom domain**.
+   - Enter your domain (e.g., `sadeepalakshan.dev`).
+   - Check **Enforce HTTPS**.
+2. **Add CNAME file**:
+   - Place a `CNAME` file in `public/CNAME` containing your domain name (e.g., `sadeepalakshan.dev`).
+3. **DNS Configuration** (at your domain registrar, e.g. Namecheap, Cloudflare, GoDaddy):
+   - **Apex / Root A Records** pointing to GitHub Pages IP addresses:
      - `185.199.108.153`
      - `185.199.109.153`
      - `185.199.110.153`
      - `185.199.111.153`
-   - **CNAME Record**: `www` -> `Ravindulakshan2393.github.io`
+   - **CNAME Record** for `www` subdomain:
+     - Host: `www` → Value: `Ravindulakshan2393.github.io`
 
 ---
 
-## 4. Troubleshooting Checklist
+## 6. Troubleshooting Checklist
 
-| Issue | Solution |
-| :--- | :--- |
-| **404 Not Found** | Check that `index.html` is in the root directory (not inside a subfolder). |
-| **CSS/JS paths broken** | Ensure paths in `index.html` are relative (`css/styles.css` and `js/main.js`). |
-| **Images not loading** | Verify case-sensitivity in file paths (`assets/symbol.png`). |
+| Issue | Cause | Solution |
+| :--- | :--- | :--- |
+| **GitHub Actions Build Failed** | Missing import, syntax error, or unclosed tag in `.astro` file | Run `npm run build` locally in terminal to see the exact error line and stack trace. |
+| **404 on Subpages (`/projects/contrack`)** | Missing subpage file or incorrect base path | Ensure the file exists in `src/pages/projects/contrack.astro` and uses `${baseUrl}`. |
+| **Images or Fonts Not Loading** | File name case mismatch or missing in `public/assets/` | Linux GitHub runners are case-sensitive. Verify exact file name casing in `public/assets/`. |
+| **Custom CSS Not Applied** | Missing `import '../styles/styles.css'` in layout | Ensure `BaseLayout.astro` imports `styles.css`. |

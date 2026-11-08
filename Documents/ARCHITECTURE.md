@@ -1,19 +1,22 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-08 15:55:18 UTC by `scripts/update_docs.js`
-> Run `node scripts/update_docs.js` to refresh this document.
+> **Auto-generated** on 2026-11-08 18:39:24 UTC by `scripts/update_docs.js`  
+> Run `npm run docs` to refresh this document.
 
 ---
 
-## 1. Overview
+## 1. Overview & Key Metrics
 
-| Field | Value |
+| Metric / Property | Value |
 | :--- | :--- |
-| **Page Title** | Sadeepa Lakshan | Software Engineering & Full-Stack Developer |
+| **Project Title** | Sadeepa Lakshan | Software Engineering & Full-Stack Developer |
 | **Meta Description** | Official Portfolio of Sadeepa Lakshan - BSc (Hons) IT & Management Undergrad @ University of Moratuwa. Software Engineering Intern & Full-Stack Web Developer. |
-| **Total Skills** | 15 |
-| **Total Projects** | 3 |
-| **Total Awards** | 6 |
+| **Core Architecture** | Modern Astro 5.x Component SSG + Fallback Vanilla Offline Bundle |
+| **Total Skills** | 15 skills across 4 categories |
+| **Total Featured Projects** | 3 showcase projects |
+| **Total Awards & Leadership** | 6 honors & positions |
+| **Total Dedicated Subpages** | 6 dedicated case study & award subpages |
+| **Deployment Target** | GitHub Pages (`https://Ravindulakshan2393.github.io/Portfolio/`) via GitHub Actions |
 
 ---
 
@@ -41,15 +44,14 @@ css/
 └── styles.css  (32.7 KB)
 dist/
 ├── _astro/
-│   ├── abacus.MyTOqq88.css  (8.2 KB)
-│   ├── ae-sss.DGeqZyNo.css  (9.8 KB)
-│   ├── BaseLayout.astro_astro_type_script_index_0_lang.BfTMxS_l.js  (9.0 KB)
-│   ├── BaseLayout.CP8EGalj.css  (28.1 KB)
-│   ├── contrack.Baq977qh.css  (7.9 KB)
-│   ├── deputy-head-prefect.C987dxDL.css  (9.7 KB)
-│   ├── ieee-cs-r10.DYy1n2V1.css  (9.1 KB)
-│   ├── nena-aruna.axoovgdV.css  (8.7 KB)
-│   └── spirit-of-service.ipFrrEW-.css  (8.3 KB)
+│   ├── abacus.B1ut6qA6.css  (8.2 KB)
+│   ├── ae-sss.k9qI7r_Y.css  (10.3 KB)
+│   ├── BaseLayout.astro_astro_type_script_index_0_lang.Ck28UOz6.js  (5.8 KB)
+│   ├── BaseLayout.BFLit4ov.css  (29.4 KB)
+│   ├── contrack.By9xvxXX.css  (7.9 KB)
+│   ├── deputy-head-prefect.uYyajMVY.css  (9.7 KB)
+│   ├── nena-aruna.Be_6G87p.css  (8.7 KB)
+│   └── spirit-of-service.BBN6iYDo.css  (8.3 KB)
 ├── assets/
 │   ├── awards/
 │   │   ├── deputy-head-prefect-certificate.jpg  (149.2 KB)
@@ -68,27 +70,25 @@ dist/
 │   └── symbol.png  (954.6 KB)
 ├── awards/
 │   ├── deputy-head-prefect/
-│   │   └── index.html  (21.4 KB)
-│   ├── ieee-cs-r10/
-│   │   └── index.html  (20.3 KB)
+│   │   └── index.html  (21.2 KB)
 │   ├── nena-aruna/
-│   │   └── index.html  (22.0 KB)
+│   │   └── index.html  (21.7 KB)
 │   └── spirit-of-service/
-│       └── index.html  (21.3 KB)
+│       └── index.html  (21.1 KB)
 ├── projects/
 │   ├── abacus/
-│   │   └── index.html  (25.1 KB)
+│   │   └── index.html  (24.8 KB)
 │   ├── ae-sss/
-│   │   └── index.html  (31.8 KB)
+│   │   └── index.html  (31.6 KB)
 │   └── contrack/
-│       └── index.html  (25.7 KB)
-└── index.html  (30.0 KB)
+│       └── index.html  (25.4 KB)
+└── index.html  (29.3 KB)
 Documents/
 ├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
-├── ARCHITECTURE.md  (7.7 KB)
-├── DEPLOYMENT_GUIDE.md  (2.4 KB)
-├── FEATURE_EXPANSION_GUIDE.md  (3.6 KB)
-└── RESUME_DATA.md  (3.5 KB)
+├── ARCHITECTURE.md  (10.4 KB)
+├── DEPLOYMENT_GUIDE.md  (4.3 KB)
+├── FEATURE_EXPANSION_GUIDE.md  (9.0 KB)
+└── RESUME_DATA.md  (4.0 KB)
 js/
 └── main.js  (15.5 KB)
 public/
@@ -110,17 +110,17 @@ public/
     └── symbol.png  (954.6 KB)
 scripts/
 ├── test_ui_ux.js  (4.6 KB)
-└── update_docs.js  (15.0 KB)
+└── update_docs.js  (20.7 KB)
 src/
 ├── components/
-│   ├── About.astro  (6.5 KB)
-│   ├── Awards.astro  (6.4 KB)
+│   ├── About.astro  (6.2 KB)
+│   ├── Awards.astro  (6.1 KB)
 │   ├── Contact.astro  (5.1 KB)
 │   ├── Footer.astro  (1.0 KB)
 │   ├── Hero.astro  (3.9 KB)
-│   ├── Navbar.astro  (1.6 KB)
-│   ├── ProjectModal.astro  (0.6 KB)
-│   ├── Projects.astro  (10.6 KB)
+│   ├── Navbar.astro  (1.8 KB)
+│   ├── ProjectModal.astro  (0.3 KB)
+│   ├── Projects.astro  (10.8 KB)
 │   ├── Skills.astro  (5.2 KB)
 │   └── Stats.astro  (1.9 KB)
 ├── layouts/
@@ -128,18 +128,17 @@ src/
 ├── pages/
 │   ├── awards/
 │   │   ├── deputy-head-prefect.astro  (29.0 KB)
-│   │   ├── ieee-cs-r10.astro  (28.3 KB)
 │   │   ├── nena-aruna.astro  (27.8 KB)
 │   │   └── spirit-of-service.astro  (26.9 KB)
 │   ├── projects/
 │   │   ├── abacus.astro  (29.5 KB)
-│   │   ├── ae-sss.astro  (39.1 KB)
+│   │   ├── ae-sss.astro  (38.8 KB)
 │   │   └── contrack.astro  (29.8 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
-│   └── main.js  (17.9 KB)
+│   └── main.js  (13.5 KB)
 └── styles/
-    └── styles.css  (39.9 KB)
+    └── styles.css  (41.9 KB)
 astro.config.mjs  (0.2 KB)
 index.html  (44.5 KB)
 package-lock.json  (125.8 KB)
@@ -149,17 +148,33 @@ README.md  (2.6 KB)
 
 ---
 
-## 3. Technology Stack & Dependencies
+## 3. Technology Stack & Framework Architecture
 
-- **HTML5**: Semantic elements (`<header>`, `<nav>`, `<section>`, `<footer>`).
-- **CSS3**: Custom Properties, Glassmorphism (`backdrop-filter`), Flexbox, CSS Grid, keyframe animations, CSS image filters.
-- **ES6+ JavaScript**: Vanilla DOM, IntersectionObserver API, event delegation.
-- **External CDNs**: Google Fonts (Inter, JetBrains Mono), FontAwesome 6.4.0, DevIcons v2.15.1, Vercel GitHub Summary Cards.
+- **Astro 5.x SSG**:
+  - Pure static HTML generation for blazing-fast load speeds, zero runtime overhead, and optimal SEO.
+  - Component-driven architecture using Astro Islands (`src/components/*.astro`).
+  - Master layout wrapping in `src/layouts/BaseLayout.astro` with standard viewport, OpenGraph metadata, ambient glowing background orbs, and base URL resolution.
+- **Dedicated Subpage Routing (`src/pages/`)**:
+  - Independent, responsive case study and award verification pages replacing legacy modal popups.
+  - Consistent padding (`125px` top offset), standardized max-width containers (`1140px`), tablet/mobile breakpoints (`992px`, `768px`), and back navigation.
+- **CSS3 Design System (`src/styles/styles.css`)**:
+  - Modular CSS Custom Properties (Design Tokens) defining dark/light themes, glowing ambient orbs, and glassmorphic card surfaces.
+  - Full Light Theme support with automatic CSS variable overrides.
+- **Client-Side ES6+ Engine (`src/scripts/main.js`)**:
+  - Dynamic Role Typing Subtitle (`typeRoles`) cycling through developer specializations.
+  - Interactive Filter Engines for Skills (`data-category`) and Projects (`data-project-category`).
+  - Scroll Spy Navigation system dynamically highlighting the active section based on scroll offset.
+  - Light/Dark theme toggler with `localStorage` state persistence.
+  - Client-side validated contact form with animated floating notification toast.
+- **Dual Site Architecture (Production + Offline Fallback)**:
+  - **Production Site (Astro)**: Source in `src/`, built by `npm run build` into `dist/`, and deployed automatically via `.github/workflows/deploy.yml`.
+  - **Standalone Offline Fallback**: Root `index.html`, `css/`, `js/`, and `assets/` maintained for direct double-click viewing in file managers without requiring a Node.js server.
 
 ---
 
-## 4. Page Sections (Navigation Map)
+## 4. Page Navigation & Route Map
 
+### Home Single-Page Anchors:
 - **Home** → `#hero`
 - **About** → `#about`
 - **Skills** → `#skills`
@@ -167,6 +182,14 @@ README.md  (2.6 KB)
 - **Awards** → `#awards`
 - **Stats** → `#github-stats`
 - **Contact** → `#contact`
+
+### Dedicated Subpages:
+- **`/awards/deputy-head-prefect`** → Source: [`src/pages/awards/deputy-head-prefect.astro`](../src/pages/awards/deputy-head-prefect.astro)
+- **`/awards/nena-aruna`** → Source: [`src/pages/awards/nena-aruna.astro`](../src/pages/awards/nena-aruna.astro)
+- **`/awards/spirit-of-service`** → Source: [`src/pages/awards/spirit-of-service.astro`](../src/pages/awards/spirit-of-service.astro)
+- **`/projects/abacus`** → Source: [`src/pages/projects/abacus.astro`](../src/pages/projects/abacus.astro)
+- **`/projects/ae-sss`** → Source: [`src/pages/projects/ae-sss.astro`](../src/pages/projects/ae-sss.astro)
+- **`/projects/contrack`** → Source: [`src/pages/projects/contrack.astro`](../src/pages/projects/contrack.astro)
 
 ---
 
@@ -204,18 +227,10 @@ README.md  (2.6 KB)
 
 ---
 
-## 6. JS Modal Project Keys
+## 6. Key Interactive Systems
 
-Project detail keys registered in `js/main.js → projectDetails`:
-  - `contrack`
-  - `abacus`
-
----
-
-## 7. Key Interactive Systems
-
-1. **Typing Subtitle Engine**: `typeRoles()` cycles through role strings with type/erase delays.
-2. **Category Filters**: Skill cards (`data-category`) and Project cards (`data-project-category`) toggle visibility.
-3. **Project Detail Modal**: Lightbox overlay populated from the `projectDetails` JS object.
-4. **Theme Switcher**: Toggles `light-theme` class on `<body>`.
-5. **Contact Form Toast**: Client-side validation with animated success notification.
+1. **Typing Subtitle Engine**: `typeRoles()` continuously cycles through role titles with typing, pausing, and backspacing delays.
+2. **Category Filter Engine**: Interactive filter buttons toggle active items in both Skills and Projects grids using data attributes.
+3. **Scroll Spy & Subpage Navbar**: Automatically tracks scroll depth to update active navbar links on Home, while highlighting parent tabs (`Projects`, `Awards`) when navigating dedicated subpages.
+4. **Theme Switcher**: Seamlessly toggles the `light-theme` class on `<body>` and persists preference to `localStorage`.
+5. **Contact Form Toast Notification**: Validates form inputs, simulates asynchronous submission, and displays an animated toast notification.
