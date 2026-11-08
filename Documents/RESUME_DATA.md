@@ -1,6 +1,6 @@
 # Sadeepa Lakshan - Master Resume Data Reference
 
-> **Auto-generated** on 2026-11-08 20:15:29 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-08 20:44:15 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -64,7 +64,7 @@
 
 ## Awards & Leadership
 
-- **2nd Place Winner** — IEEE CS R10 Summer School 2026 Mini-Ideathon: Awarded 2nd Place with Team Busy Bees for innovative technical solution design and presentation. (Details: `/projects/ae-sss`)
+- **2nd Place Winner** — IEEE CS R10 Summer School 2026 Mini-Ideathon: Awarded 2nd Place with Team Busy Bees for innovative technical solution design and presentation. (Details: `/awards/ieee-cs-r10`)
 - **Exhibition Recognition** — Certificate of Appreciation - FIT Expo 2025: Awarded by the Faculty of Information Technology, University of Moratuwa to Batch 23 for microcontroller-based project AbacusGenius 1.0 demonstrated at the exhibition. (Details: `/projects/abacus`)
 - **Rotaract Recognition** — Spirit of Service Award 2024/25: Awarded by the Rotaract Club of University of Moratuwa for showcasing immense drive, passion, and commitment in upholding the true spirit of service and duty throughout the RI year 2024/25 through their dedicated time and effort. (Details: `/awards/spirit-of-service`)
 - **Rotaract Recognition** — Project Co-Chairperson (Project Nena Aruna 2024/25): Awarded by the Rotaract Club of University of Moratuwa in recognition of role as Project Co-chairperson of project Nena Aruna 2024/25 for invaluable contributions, dedication, and community impact. (Details: `/awards/nena-aruna`)

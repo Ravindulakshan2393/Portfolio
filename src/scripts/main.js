@@ -440,15 +440,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 'P')) {
             e.preventDefault();
             showToast("Printing page content is disabled.");
-        }
-        // Intercept Ctrl+Shift+I / Cmd+Option+I (Inspect), Ctrl+Shift+J, Ctrl+U (View Source), F12
-        if (
-            ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
-            ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U')) ||
-            e.key === 'F12'
-        ) {
-            e.preventDefault();
-            showToast("Developer shortcuts are disabled to protect credentials.");
-        }
+        }
     }, { capture: true });
 });
