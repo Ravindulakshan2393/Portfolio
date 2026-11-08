@@ -898,11 +898,28 @@ const project = {
   }
 
   @media (max-width: 768px) {
+    .banner-image-wrapper {
+      height: 220px;
+    }
+    .banner-overlay {
+      display: none;
+    }
+    .banner-content {
+      position: relative;
+      padding: 1.25rem 1rem;
+      background: var(--bg-card);
+    }
     .banner-title {
       font-size: 1.4rem;
     }
     .metrics-grid {
       grid-template-columns: 1fr;
+    }
+    .terminal-body {
+      padding: 1.2rem 1rem !important;
+    }
+    .sidebar-box {
+      padding: 1.2rem 1rem;
     }
   }
 </style>

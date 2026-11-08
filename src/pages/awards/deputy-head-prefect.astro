@@ -923,7 +923,19 @@ const recognition = {
 
   @media (max-width: 768px) {
     .banner-image-wrapper {
-      height: 440px;
+      height: 240px;
+    }
+    .banner-image {
+      filter: none;
+      object-position: center 25%;
+    }
+    .banner-overlay {
+      display: none;
+    }
+    .banner-content {
+      position: relative;
+      padding: 1.25rem 1rem;
+      background: var(--bg-card);
     }
 
     .banner-title {
@@ -940,6 +952,9 @@ const recognition = {
 
     .credentials-balanced-grid {
       grid-template-columns: 1fr;
+    }
+    .terminal-body {
+      padding: 1.2rem 1rem !important;
     }
   }
 </style>

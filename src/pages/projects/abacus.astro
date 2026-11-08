@@ -559,17 +559,26 @@ const project = {
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     align-items: start;
+    width: 100%;
+    min-width: 0;
   }
 
   .detail-main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .content-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .section-heading {
@@ -724,6 +733,9 @@ const project = {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .sidebar-box {
@@ -732,6 +744,10 @@ const project = {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     backdrop-filter: var(--glass-backdrop);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .sidebar-title {
@@ -869,9 +885,10 @@ const project = {
     }
     .detail-layout {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
     .banner-image-wrapper {
-      height: 440px;
+      height: 380px;
     }
     .banner-content {
       padding: 1.5rem;
@@ -886,7 +903,18 @@ const project = {
 
   @media (max-width: 768px) {
     .banner-image-wrapper {
-      height: 480px;
+      height: 240px;
+    }
+    .banner-image {
+      object-position: center 20%;
+    }
+    .banner-overlay {
+      display: none;
+    }
+    .banner-content {
+      position: relative;
+      padding: 1.25rem 1rem;
+      background: var(--bg-card);
     }
     .banner-title {
       font-size: 1.35rem;
@@ -896,6 +924,25 @@ const project = {
     }
     .metrics-grid {
       grid-template-columns: 1fr;
+    }
+    .terminal-body {
+      padding: 1.2rem 1rem !important;
+    }
+    .sidebar-box {
+      padding: 1.2rem 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .badge-row .pill-badge {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+    }
+    .banner-title {
+      font-size: 1.2rem;
+    }
+    .metric-value {
+      font-size: 1.5rem;
     }
   }
 </style>
