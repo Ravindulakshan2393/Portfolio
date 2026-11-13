@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-08 20:53:58 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-13 19:16:44 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -44,12 +44,12 @@ css/
 └── styles.css  (39.9 KB)
 dist/
 ├── _astro/
-│   ├── abacus.B1ut6qA6.css  (8.2 KB)
+│   ├── abacus.Bp3Ys4sK.css  (9.0 KB)
 │   ├── ae-sss.DWm6SpbO.css  (11.1 KB)
 │   ├── BaseLayout.astro_astro_type_script_index_0_lang.BAUlTLV4.js  (7.2 KB)
 │   ├── BaseLayout.SBX1wTyh.css  (32.6 KB)
-│   ├── contrack.By9xvxXX.css  (7.9 KB)
-│   ├── deputy-head-prefect.uYyajMVY.css  (9.7 KB)
+│   ├── contrack.C_hJFCnS.css  (8.2 KB)
+│   ├── deputy-head-prefect.B9zdRgby.css  (10.0 KB)
 │   ├── nena-aruna.Be_6G87p.css  (8.7 KB)
 │   └── spirit-of-service.BBN6iYDo.css  (8.3 KB)
 ├── assets/
@@ -85,7 +85,7 @@ dist/
 └── index.html  (30.8 KB)
 Documents/
 ├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
-├── ARCHITECTURE.md  (10.7 KB)
+├── ARCHITECTURE.md  (10.4 KB)
 ├── DEPLOYMENT_GUIDE.md  (4.3 KB)
 ├── FEATURE_EXPANSION_GUIDE.md  (9.0 KB)
 └── RESUME_DATA.md  (4.0 KB)
@@ -127,20 +127,20 @@ src/
 │   └── BaseLayout.astro  (2.0 KB)
 ├── pages/
 │   ├── awards/
-│   │   ├── deputy-head-prefect.astro  (29.0 KB)
+│   │   ├── deputy-head-prefect.astro  (29.3 KB)
 │   │   ├── nena-aruna.astro  (27.8 KB)
 │   │   └── spirit-of-service.astro  (26.9 KB)
 │   ├── projects/
-│   │   ├── abacus.astro  (29.5 KB)
+│   │   ├── abacus.astro  (30.4 KB)
 │   │   ├── ae-sss.astro  (39.7 KB)
-│   │   └── contrack.astro  (29.8 KB)
+│   │   └── contrack.astro  (30.1 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
 │   └── main.js  (16.8 KB)
 └── styles/
     └── styles.css  (47.2 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (45.8 KB)
+index.html  (45.6 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)
