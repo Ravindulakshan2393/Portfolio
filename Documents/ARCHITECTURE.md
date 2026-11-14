@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-14 06:29:33 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-14 07:10:55 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -47,7 +47,7 @@ dist/
 │   ├── abacus.Bp3Ys4sK.css  (9.0 KB)
 │   ├── ae-sss.DWm6SpbO.css  (11.1 KB)
 │   ├── BaseLayout.astro_astro_type_script_index_0_lang.f2o1OGH3.js  (7.5 KB)
-│   ├── BaseLayout.SBX1wTyh.css  (32.6 KB)
+│   ├── BaseLayout.Bc2o03X8.css  (32.7 KB)
 │   ├── contrack.C_hJFCnS.css  (8.2 KB)
 │   ├── deputy-head-prefect.B9zdRgby.css  (10.0 KB)
 │   ├── nena-aruna.Be_6G87p.css  (8.7 KB)
@@ -82,7 +82,7 @@ dist/
 │   │   └── index.html  (32.0 KB)
 │   └── contrack/
 │       └── index.html  (25.9 KB)
-└── index.html  (31.7 KB)
+└── index.html  (31.4 KB)
 Documents/
 ├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
 ├── ARCHITECTURE.md  (10.4 KB)
@@ -117,7 +117,7 @@ src/
 │   ├── Awards.astro  (6.1 KB)
 │   ├── Contact.astro  (5.7 KB)
 │   ├── Footer.astro  (1.4 KB)
-│   ├── Hero.astro  (4.7 KB)
+│   ├── Hero.astro  (4.9 KB)
 │   ├── Navbar.astro  (1.8 KB)
 │   ├── ProjectModal.astro  (0.3 KB)
 │   ├── Projects.astro  (10.8 KB)
@@ -140,7 +140,7 @@ src/
 └── styles/
     └── styles.css  (47.4 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (46.0 KB)
+index.html  (46.2 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)

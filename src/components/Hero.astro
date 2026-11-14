@@ -1,89 +1,121 @@
 ---
-const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 ---
 
 <!-- Hero Section -->
 <section class="hero" id="hero">
-    <div class="container hero-grid">
-        <div class="hero-content">
-            <div class="status-pill">
-                <span class="status-dot"></span>
-                <span class="status-text">Seeking Software Engineering / Software Development Internships</span>
-            </div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span class="status-text"
+          >Seeking Software Engineering / Software Development Internships</span
+        >
+      </div>
 
-            <h1 class="hero-title">
-                Hi, I'm <span class="text-gradient">Sadeepa Lakshan</span>
-            </h1>
+      <h1 class="hero-title">
+        Hi, I'm <span class="text-gradient">Sadeepa Lakshan</span>
+      </h1>
 
-            <h2 class="hero-subtitle">
-                <span id="typing-text"></span><span class="cursor">|</span>
-            </h2>
+      <h2 class="hero-subtitle">
+        <span id="typing-text"></span><span class="cursor">|</span>
+      </h2>
 
-            <p class="hero-description">
-                BSc (Hons) IT & Management Undergraduate at <strong class="highlight-text">University of Moratuwa</strong> (Level 3 | Grad 2028). Building practical software solutions in full-stack web engineering, database architecture, and IoT systems.
-            </p>
+      <p class="hero-description">
+        BSc (Hons) IT & Management Undergraduate at <strong
+          class="highlight-text">University of Moratuwa</strong
+        > (Level 3 | Grad 2028). Building practical software solutions in full-stack
+        web engineering, database architecture, and IoT systems.
+      </p>
 
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary btn-glow">
-                    <i class="fa-solid fa-rocket"></i> View My Projects
-                </a>
-                <a href="mailto:pererawslr@gmail.com?subject=Request%20for%20Full%20CV%20-%20Sadeepa%20Lakshan&body=Hi%20Sadeepa%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20request%20a%20copy%20of%20your%20full%20CV%20for%20potential%20internship%20opportunities.%0A%0ABest%20regards%2C" class="btn btn-secondary email-link" title="Request Full CV via email">
-                    <i class="fa-solid fa-file-lines"></i> Request Full CV
-                </a>
-                <div class="hero-social-links">
-                    <a href="mailto:pererawslr@gmail.com?subject=Software%20Engineering%20Internship%20Inquiry%20-%20Sadeepa%20Lakshan&body=Hi%20Sadeepa%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20Software%20Engineering%20opportunity.%0D%0A%0D%0ABest%20regards%2C" class="btn btn-icon email-link" title="Email: pererawslr@gmail.com (auto-copies address)" aria-label="Send Email to Sadeepa Lakshan">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <a href="https://github.com/Ravindulakshan2393" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sadeepa-lakshan-587690308" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="LinkedIn Profile">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-stats-row">
-                <div class="stat-box">
-                    <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
-                    <span class="stat-label">Tech Skills</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-box">
-                    <span class="stat-number" data-target="2028">0</span>
-                    <span class="stat-label">Exp Graduation</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-box">
-                    <span class="stat-text-badge">2nd Place</span>
-                    <span class="stat-label">IEEE Mini-Ideathon</span>
-                </div>
-            </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary btn-glow">
+          <i class="fa-solid fa-rocket"></i> View My Projects
+        </a>
+        <a
+          href="mailto:pererawslr@gmail.com?subject=Request%20for%20Full%20CV%20-%20Sadeepa%20Lakshan&body=Hi%20Sadeepa%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20request%20a%20copy%20of%20your%20full%20CV%20for%20potential%20internship%20opportunities.%0A%0AHere%20are%20my%20details%3A%0A-%20Name%3A%20%5BYour%20Name%5D%0A-%20Company%20%2F%20Organization%3A%20%5BCompany%20Name%5D%0A-%20Role%20%2F%20Position%3A%20%5Be.g.%2C%20Software%20Engineering%20Intern%5D%0A%0ABest%20regards%2C"
+          class="btn btn-secondary email-link"
+          title="Request CV via email"
+        >
+          <i class="fa-solid fa-file-lines"></i> Request CV
+        </a>
+        <div class="hero-social-links">
+          <a
+            href="mailto:pererawslr@gmail.com?subject=Software%20Engineering%20Internship%20Inquiry%20-%20Sadeepa%20Lakshan&body=Hi%20Sadeepa%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20Software%20Engineering%20opportunity.%0D%0A%0D%0ABest%20regards%2C"
+            class="btn btn-icon email-link"
+            title="Email: pererawslr@gmail.com (auto-copies address)"
+            aria-label="Send Email to Sadeepa Lakshan"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a
+            href="https://github.com/Ravindulakshan2393"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-icon"
+            title="GitHub Profile"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sadeepa-lakshan-587690308"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-icon"
+            title="LinkedIn Profile"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
         </div>
+      </div>
 
-        <div class="hero-visual">
-            <div class="avatar-card">
-                <div class="avatar-ring">
-                    <div class="avatar-inner">
-                        <img src={`${baseUrl}assets/profile.jpg`} alt="Sadeepa Lakshan - Software Engineering & Full-Stack Developer" class="avatar-img-profile" />
-                    </div>
-                </div>
-                
-                <div class="floating-badge badge-top-right">
-                    <i class="devicon-react-original colored"></i>
-                    <span>React Developer</span>
-                </div>
-
-                <div class="floating-badge badge-bottom-left">
-                    <i class="devicon-express-original colored"></i>
-                    <span>Node & Supabase</span>
-                </div>
-
-                <div class="floating-badge badge-middle-right">
-                    <i class="devicon-arduino-plain colored"></i>
-                    <span>Arduino / ESP8266</span>
-                </div>
-            </div>
+      <div class="hero-stats-row">
+        <div class="stat-box">
+          <span class="stat-number" data-target="15">0</span><span
+            class="stat-plus">+</span
+          >
+          <span class="stat-label">Tech Skills</span>
         </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-number" data-target="2028">0</span>
+          <span class="stat-label">Exp Graduation</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-text-badge">2nd Place</span>
+          <span class="stat-label">IEEE Mini-Ideathon</span>
+        </div>
+      </div>
     </div>
+
+    <div class="hero-visual">
+      <div class="avatar-card">
+        <div class="avatar-ring">
+          <div class="avatar-inner">
+            <img
+              src={`${baseUrl}assets/profile.jpg`}
+              alt="Sadeepa Lakshan - Software Engineering & Full-Stack Developer"
+              class="avatar-img-profile"
+            />
+          </div>
+        </div>
+
+        <div class="floating-badge badge-top-right">
+          <i class="devicon-react-original colored"></i>
+          <span>React Developer</span>
+        </div>
+
+        <div class="floating-badge badge-bottom-left">
+          <i class="devicon-express-original colored"></i>
+          <span>Node & Supabase</span>
+        </div>
+
+        <div class="floating-badge badge-middle-right">
+          <i class="devicon-arduino-plain colored"></i>
+          <span>Arduino / ESP8266</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
