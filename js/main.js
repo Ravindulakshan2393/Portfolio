@@ -389,9 +389,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     emailLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            const email = 'pererawslr@gmail.com';
-            const subject = 'Software Engineering Internship Inquiry - Sadeepa Lakshan';
-            const body = 'Hi Sadeepa,\n\nI came across your portfolio and would like to connect regarding a Software Engineering opportunity.\n\nBest regards,';
+            const rawHref = link.getAttribute('href') || '';
+            let email = 'pererawslr@gmail.com';
+            let subject = 'Software Engineering Internship Inquiry - Sadeepa Lakshan';
+            let body = 'Hi Sadeepa,\n\nI came across your portfolio and would like to connect regarding a Software Engineering opportunity.\n\nBest regards,';
+
+            try {
+                if (rawHref.startsWith('mailto:')) {
+                    const withoutScheme = rawHref.slice(7);
+                    const [mailToAddress, queryString] = withoutScheme.split('?');
+                    if (mailToAddress && mailToAddress.trim()) {
+                        email = decodeURIComponent(mailToAddress.trim());
+                    }
+                    if (queryString) {
+                        const params = new URLSearchParams(queryString);
+                        if (params.has('subject')) subject = params.get('subject');
+                        if (params.has('body')) body = params.get('body');
+                    }
+                }
+            } catch (err) {
+                // fallback to defaults
+            }
 
             // Auto-copy email address to clipboard
             if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -406,10 +424,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 window.open(gmailUrl, '_blank', 'noopener,noreferrer');
-                showToast("Opening Gmail in browser... (pererawslr@gmail.com copied to clipboard!)");
+                showToast(`Opening Gmail in browser... (${email} copied to clipboard!)`);
             } else {
                 // On Mobile: Open native Gmail / Mail app via mailto:
-                showToast("Opening email app... (pererawslr@gmail.com copied!)");
+                showToast(`Opening email app... (${email} copied!)`);
             }
         });
     });

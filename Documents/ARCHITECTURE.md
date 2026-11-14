@@ -1,6 +1,6 @@
 # Portfolio Web Application - Architecture Documentation
 
-> **Auto-generated** on 2026-11-13 19:16:44 UTC by `scripts/update_docs.js`  
+> **Auto-generated** on 2026-11-14 06:29:33 UTC by `scripts/update_docs.js`  
 > Run `npm run docs` to refresh this document.
 
 ---
@@ -41,12 +41,12 @@ assets/
 ├── profile.jpg  (100.2 KB)
 └── symbol.png  (954.6 KB)
 css/
-└── styles.css  (39.9 KB)
+└── styles.css  (40.1 KB)
 dist/
 ├── _astro/
 │   ├── abacus.Bp3Ys4sK.css  (9.0 KB)
 │   ├── ae-sss.DWm6SpbO.css  (11.1 KB)
-│   ├── BaseLayout.astro_astro_type_script_index_0_lang.BAUlTLV4.js  (7.2 KB)
+│   ├── BaseLayout.astro_astro_type_script_index_0_lang.f2o1OGH3.js  (7.5 KB)
 │   ├── BaseLayout.SBX1wTyh.css  (32.6 KB)
 │   ├── contrack.C_hJFCnS.css  (8.2 KB)
 │   ├── deputy-head-prefect.B9zdRgby.css  (10.0 KB)
@@ -82,7 +82,7 @@ dist/
 │   │   └── index.html  (32.0 KB)
 │   └── contrack/
 │       └── index.html  (25.9 KB)
-└── index.html  (30.8 KB)
+└── index.html  (31.7 KB)
 Documents/
 ├── AE_SSS_SMART_ECOSYSTEM_REPORT.md  (18.4 KB)
 ├── ARCHITECTURE.md  (10.4 KB)
@@ -90,7 +90,7 @@ Documents/
 ├── FEATURE_EXPANSION_GUIDE.md  (9.0 KB)
 └── RESUME_DATA.md  (4.0 KB)
 js/
-└── main.js  (18.8 KB)
+└── main.js  (19.6 KB)
 public/
 └── assets/
     ├── awards/
@@ -117,7 +117,7 @@ src/
 │   ├── Awards.astro  (6.1 KB)
 │   ├── Contact.astro  (5.7 KB)
 │   ├── Footer.astro  (1.4 KB)
-│   ├── Hero.astro  (4.2 KB)
+│   ├── Hero.astro  (4.7 KB)
 │   ├── Navbar.astro  (1.8 KB)
 │   ├── ProjectModal.astro  (0.3 KB)
 │   ├── Projects.astro  (10.8 KB)
@@ -136,11 +136,11 @@ src/
 │   │   └── contrack.astro  (30.1 KB)
 │   └── index.astro  (0.6 KB)
 ├── scripts/
-│   └── main.js  (16.8 KB)
+│   └── main.js  (17.6 KB)
 └── styles/
-    └── styles.css  (47.2 KB)
+    └── styles.css  (47.4 KB)
 astro.config.mjs  (0.2 KB)
-index.html  (45.6 KB)
+index.html  (46.0 KB)
 package-lock.json  (125.8 KB)
 package.json  (0.4 KB)
 README.md  (2.6 KB)

@@ -502,6 +502,12 @@ img {
     margin-bottom: 3rem;
 }
 
+.hero-social-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
 .hero-stats-row {
     display: flex;
     align-items: center;
@@ -1921,6 +1927,12 @@ img {
     .hero-cta .btn:not(.btn-icon) {
         width: 100%;
         justify-content: center;
+    }
+
+    .hero-social-links {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
     }
 
     .hero-stats-row {
